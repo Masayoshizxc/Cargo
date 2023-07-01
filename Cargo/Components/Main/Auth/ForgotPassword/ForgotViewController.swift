@@ -1,21 +1,21 @@
 //
-//  LoginViewController.swift
+//  ForgotViewController.swift
 //  Cargo
 //
-//  Created by Adilet on 30/6/23.
+//  Created by Adilet on 1/7/23.
 //
 
 import UIKit
 import SnapKit
 
-class LoginViewController: UIViewController {
+class ForgotViewController: UIViewController {
     
     var coordinator: MainCoordinator?
-    var ui = LoginView()
+    var ui = ForgotView()
     
     private lazy var image: UIImageView = {
         let i = UIImageView()
-        i.image = R.image.auth()
+        i.image = R.image.forgot()
         return i
     }()
     
@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
     
 }
 
-extension LoginViewController {
+extension ForgotViewController {
     
     func setupSubviews() {
         view.addSubview(image)
@@ -50,3 +50,4 @@ extension LoginViewController {
         }
     }
 }
+

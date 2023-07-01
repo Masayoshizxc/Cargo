@@ -55,7 +55,7 @@ struct _R {
       var backgroundYellow: RswiftResources.ColorResource { .init(name: "BackgroundYellow", path: [], bundle: bundle)}
       var lightYellow: RswiftResources.ColorResource { .init(name: "LightYellow", path: [], bundle: bundle)}
       var goldYellow: RswiftResources.ColorResource { .init(name: "GoldYellow", path: [], bundle: bundle)}
-      
+      var textGray: RswiftResources.ColorResource { .init(name: "TextGray", path: [], bundle: bundle)}
 //
 //    /// Color `yellow`.
 //    var yellow: RswiftResources.ColorResource { .init(name: "yellow", path: [], bundle: bundle) }
@@ -66,6 +66,7 @@ struct _R {
   struct image {
     let bundle: Foundation.Bundle
       var auth: RswiftResources.ImageResource { .init(name: "Auth", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var forgot: RswiftResources.ImageResource { .init(name: "Forgot", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
 
   }
 

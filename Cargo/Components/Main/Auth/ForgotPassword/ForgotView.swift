@@ -1,15 +1,14 @@
 //
-//  LoginView.swift
+//  ForgotView.swift
 //  Cargo
 //
-//  Created by Adilet on 30/6/23.
+//  Created by Adilet on 1/7/23.
 //
 
 import UIKit
-import SnapKit
 
-class LoginView: UIViewController {
-    var coordinator: MainCoordinator?
+class ForgotView: UIViewController {
+    
     private lazy var headerTitle: UILabel = {
         let l = UILabel()
         l.text = "Авторизация"
@@ -88,7 +87,8 @@ class LoginView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = R.color.backgroundYellow()
+//        view.backgroundColor = R.color.backgroundYellow()
+        view.backgroundColor = .red
         setupSubviews()
         setupConstraints()
     }
@@ -115,12 +115,12 @@ class LoginView: UIViewController {
     
     @objc func forgetTapped() {
         print("Tapped")
-        coordinator?.forgot()
+//        let vc
     }
     
 }
 
-extension LoginView {
+extension ForgotView {
     
     func setupSubviews() {
         view.addSubview(headerTitle)

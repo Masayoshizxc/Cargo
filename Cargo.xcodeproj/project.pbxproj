@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE406D072A4FE5C300601D8E /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D062A4FE5C300601D8E /* Extension + UIView.swift */; };
+		AE406D092A502B3600601D8E /* ForgotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D082A502B3600601D8E /* ForgotModel.swift */; };
+		AE406D0B2A502B3F00601D8E /* ForgotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D0A2A502B3F00601D8E /* ForgotViewModel.swift */; };
+		AE406D0D2A502B4900601D8E /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D0C2A502B4900601D8E /* ForgotView.swift */; };
+		AE406D0F2A502B5600601D8E /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D0E2A502B5600601D8E /* ForgotViewController.swift */; };
 		AE4ADD3B2A4B58CD00E0B3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4ADD3A2A4B58CD00E0B3E6 /* AppDelegate.swift */; };
 		AE4ADD3D2A4B58CD00E0B3E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4ADD3C2A4B58CD00E0B3E6 /* SceneDelegate.swift */; };
 		AE4ADD3F2A4B58CD00E0B3E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4ADD3E2A4B58CD00E0B3E6 /* ViewController.swift */; };
 		AE4ADD442A4B58CE00E0B3E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE4ADD432A4B58CE00E0B3E6 /* Assets.xcassets */; };
 		AE4ADD472A4B58CE00E0B3E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4ADD452A4B58CE00E0B3E6 /* LaunchScreen.storyboard */; };
+		AE55B7AE2A4EF4CD00C57812 /* Extension + UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE55B7AD2A4EF4CD00C57812 /* Extension + UISegmentedControl.swift */; };
 		AEAE9F422A4E94190007B898 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE9F412A4E94190007B898 /* HomeViewController.swift */; };
 		AEAE9F452A4E946B0007B898 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE9F442A4E946B0007B898 /* BaseViewController.swift */; };
 		AEAE9F482A4E94D50007B898 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE9F472A4E94D50007B898 /* Coordinator.swift */; };
@@ -35,6 +41,11 @@
 
 /* Begin PBXFileReference section */
 		AC3B3A4EFF82FC92AF61EC6A /* Pods_Cargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE406D062A4FE5C300601D8E /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
+		AE406D082A502B3600601D8E /* ForgotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotModel.swift; sourceTree = "<group>"; };
+		AE406D0A2A502B3F00601D8E /* ForgotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewModel.swift; sourceTree = "<group>"; };
+		AE406D0C2A502B4900601D8E /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
+		AE406D0E2A502B5600601D8E /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		AE4ADD372A4B58CD00E0B3E6 /* Cargo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cargo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4ADD3A2A4B58CD00E0B3E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE4ADD3C2A4B58CD00E0B3E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +53,7 @@
 		AE4ADD432A4B58CE00E0B3E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE4ADD462A4B58CE00E0B3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE4ADD482A4B58CE00E0B3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE55B7AD2A4EF4CD00C57812 /* Extension + UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UISegmentedControl.swift"; sourceTree = "<group>"; };
 		AEAE9F412A4E94190007B898 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AEAE9F442A4E946B0007B898 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AEAE9F472A4E94D50007B898 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -127,9 +139,19 @@
 			path = Cargo;
 			sourceTree = "<group>";
 		};
+		AE55B7AC2A4EF4B900C57812 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE55B7AD2A4EF4CD00C57812 /* Extension + UISegmentedControl.swift */,
+				AE406D062A4FE5C300601D8E /* Extension + UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AEAE9F3A2A4E92DE0007B898 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AE55B7AC2A4EF4B900C57812 /* Extensions */,
 				AEAE9F462A4E94CD0007B898 /* Coordinator */,
 				AEAE9F432A4E94600007B898 /* Reusable */,
 				AEAE9F3B2A4E92E90007B898 /* Main */,
@@ -236,6 +258,10 @@
 		AEAE9F4E2A4E98D20007B898 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				AE406D082A502B3600601D8E /* ForgotModel.swift */,
+				AE406D0A2A502B3F00601D8E /* ForgotViewModel.swift */,
+				AE406D0C2A502B4900601D8E /* ForgotView.swift */,
+				AE406D0E2A502B5600601D8E /* ForgotViewController.swift */,
 			);
 			path = ForgotPassword;
 			sourceTree = "<group>";
@@ -385,17 +411,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEAE9F452A4E946B0007B898 /* BaseViewController.swift in Sources */,
+				AE406D0F2A502B5600601D8E /* ForgotViewController.swift in Sources */,
 				AEAE9F4A2A4E96780007B898 /* MainCoordinator.swift in Sources */,
 				AEAE9F572A4E99090007B898 /* LoginViewModel.swift in Sources */,
 				AE4ADD3F2A4B58CD00E0B3E6 /* ViewController.swift in Sources */,
+				AE55B7AE2A4EF4CD00C57812 /* Extension + UISegmentedControl.swift in Sources */,
 				AEAE9F592A4E9A650007B898 /* ForText.swift in Sources */,
 				AEAE9F532A4E98F60007B898 /* LoginView.swift in Sources */,
 				AEAE9F5C2A4E9C510007B898 /* R.generated.swift in Sources */,
 				AEAE9F482A4E94D50007B898 /* Coordinator.swift in Sources */,
 				AE4ADD3B2A4B58CD00E0B3E6 /* AppDelegate.swift in Sources */,
 				AEAE9F512A4E98E90007B898 /* LoginModel.swift in Sources */,
+				AE406D0D2A502B4900601D8E /* ForgotView.swift in Sources */,
+				AE406D072A4FE5C300601D8E /* Extension + UIView.swift in Sources */,
 				AE4ADD3D2A4B58CD00E0B3E6 /* SceneDelegate.swift in Sources */,
 				AEAE9F552A4E99000007B898 /* LoginViewController.swift in Sources */,
+				AE406D0B2A502B3F00601D8E /* ForgotViewModel.swift in Sources */,
+				AE406D092A502B3600601D8E /* ForgotModel.swift in Sources */,
 				AEAE9F422A4E94190007B898 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

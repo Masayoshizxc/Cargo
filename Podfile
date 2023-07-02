@@ -9,4 +9,5 @@ target 'Cargo' do
 pod 'SnapKit'
 pod 'Alamofire'
 pod 'R.swift'
+# pod 'MicrosoftMapsSDK', '~> 1.2.0'
 end

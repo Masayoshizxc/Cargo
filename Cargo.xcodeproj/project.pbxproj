@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4511E1425F011DAD2A8B5FC5 /* Pods_Cargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F710DD1677D05FC0AE7C099 /* Pods_Cargo.framework */; };
 		AE406D072A4FE5C300601D8E /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D062A4FE5C300601D8E /* Extension + UIView.swift */; };
 		AE406D092A502B3600601D8E /* ForgotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D082A502B3600601D8E /* ForgotModel.swift */; };
 		AE406D0B2A502B3F00601D8E /* ForgotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D0A2A502B3F00601D8E /* ForgotViewModel.swift */; };
@@ -36,11 +37,11 @@
 		AEAE9F6B2A4EC4DE0007B898 /* SFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEAE9F632A4EC4DE0007B898 /* SFRegular.otf */; };
 		AEAE9F6C2A4EC4DE0007B898 /* SFSemibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEAE9F642A4EC4DE0007B898 /* SFSemibold.otf */; };
 		AEAE9F6D2A4EC4DE0007B898 /* SFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEAE9F652A4EC4DE0007B898 /* SFBold.otf */; };
-		E7CEE622EA1E65FCD443BB4E /* Pods_Cargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3B3A4EFF82FC92AF61EC6A /* Pods_Cargo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC3B3A4EFF82FC92AF61EC6A /* Pods_Cargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B1B5B93D27206CA1306DA3A /* Pods-Cargo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo.debug.xcconfig"; path = "Target Support Files/Pods-Cargo/Pods-Cargo.debug.xcconfig"; sourceTree = "<group>"; };
+		5F710DD1677D05FC0AE7C099 /* Pods_Cargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE406D062A4FE5C300601D8E /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		AE406D082A502B3600601D8E /* ForgotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotModel.swift; sourceTree = "<group>"; };
 		AE406D0A2A502B3F00601D8E /* ForgotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewModel.swift; sourceTree = "<group>"; };
@@ -72,8 +73,7 @@
 		AEAE9F632A4EC4DE0007B898 /* SFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFRegular.otf; sourceTree = "<group>"; };
 		AEAE9F642A4EC4DE0007B898 /* SFSemibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFSemibold.otf; sourceTree = "<group>"; };
 		AEAE9F652A4EC4DE0007B898 /* SFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFBold.otf; sourceTree = "<group>"; };
-		BDA4A76C673F9AFB66CB4EFA /* Pods-Cargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo.release.xcconfig"; path = "Target Support Files/Pods-Cargo/Pods-Cargo.release.xcconfig"; sourceTree = "<group>"; };
-		C3B667EE0FD88179413C88D5 /* Pods-Cargo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo.debug.xcconfig"; path = "Target Support Files/Pods-Cargo/Pods-Cargo.debug.xcconfig"; sourceTree = "<group>"; };
+		C209E93313F1B0B833911304 /* Pods-Cargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo.release.xcconfig"; path = "Target Support Files/Pods-Cargo/Pods-Cargo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,26 +81,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7CEE622EA1E65FCD443BB4E /* Pods_Cargo.framework in Frameworks */,
+				4511E1425F011DAD2A8B5FC5 /* Pods_Cargo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1471C0B8FFF174C5816E452D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AC3B3A4EFF82FC92AF61EC6A /* Pods_Cargo.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		A45F35444B3658DFA2A6B2D4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C3B667EE0FD88179413C88D5 /* Pods-Cargo.debug.xcconfig */,
-				BDA4A76C673F9AFB66CB4EFA /* Pods-Cargo.release.xcconfig */,
+				2B1B5B93D27206CA1306DA3A /* Pods-Cargo.debug.xcconfig */,
+				C209E93313F1B0B833911304 /* Pods-Cargo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -111,7 +103,7 @@
 				AE4ADD392A4B58CD00E0B3E6 /* Cargo */,
 				AE4ADD382A4B58CD00E0B3E6 /* Products */,
 				A45F35444B3658DFA2A6B2D4 /* Pods */,
-				1471C0B8FFF174C5816E452D /* Frameworks */,
+				D85E9720E095768B98F0CF6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -288,6 +280,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		D85E9720E095768B98F0CF6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F710DD1677D05FC0AE7C099 /* Pods_Cargo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,11 +295,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE4ADD4B2A4B58CE00E0B3E6 /* Build configuration list for PBXNativeTarget "Cargo" */;
 			buildPhases = (
-				A563B14E22C220E43943A29D /* [CP] Check Pods Manifest.lock */,
+				4EAFEAD5FB6DEA7AE7272128 /* [CP] Check Pods Manifest.lock */,
 				AE4ADD332A4B58CD00E0B3E6 /* Sources */,
 				AE4ADD342A4B58CD00E0B3E6 /* Frameworks */,
 				AE4ADD352A4B58CD00E0B3E6 /* Resources */,
-				5F5FC07723F307F4F5A14E31 /* [CP] Embed Pods Frameworks */,
+				4656AEE4FF766E631490B2FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,7 +364,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F5FC07723F307F4F5A14E31 /* [CP] Embed Pods Frameworks */ = {
+		4656AEE4FF766E631490B2FF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -381,7 +381,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cargo/Pods-Cargo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A563B14E22C220E43943A29D /* [CP] Check Pods Manifest.lock */ = {
+		4EAFEAD5FB6DEA7AE7272128 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -553,6 +553,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -562,13 +563,14 @@
 		};
 		AE4ADD4C2A4B58CE00E0B3E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3B667EE0FD88179413C88D5 /* Pods-Cargo.debug.xcconfig */;
+			baseConfigurationReference = 2B1B5B93D27206CA1306DA3A /* Pods-Cargo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7K5H82MGKM;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cargo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -590,13 +592,14 @@
 		};
 		AE4ADD4D2A4B58CE00E0B3E6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDA4A76C673F9AFB66CB4EFA /* Pods-Cargo.release.xcconfig */;
+			baseConfigurationReference = C209E93313F1B0B833911304 /* Pods-Cargo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7K5H82MGKM;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cargo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -8,8 +8,15 @@
 import UIKit
 import SnapKit
 
+
+
+
 class LoginView: UIViewController {
-    var coordinator: MainCoordinator?
+//    var pvc: LoginViewController?
+//    var pvc = LoginViewController()
+    
+    var didDismiss: (() -> Void)?
+    
     private lazy var headerTitle: UILabel = {
         let l = UILabel()
         l.text = "Авторизация"
@@ -114,8 +121,9 @@ class LoginView: UIViewController {
     }
     
     @objc func forgetTapped() {
-        print("Tapped")
-        coordinator?.forgot()
+        self.dismiss(animated: true) { [weak self] in
+            self?.didDismiss?()
+        }
     }
     
 }

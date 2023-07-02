@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 
+
+
 class LoginViewController: UIViewController {
     
     var coordinator: MainCoordinator?
@@ -21,17 +23,51 @@ class LoginViewController: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupSubviews()
         setupConstraints()
-        if let vc = ui.presentationController as? UISheetPresentationController {
+//        presentChild()
+        hideKeyboardWhenTappedAround()
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presentChild()
+    }
+    
+    
+    
+    func presentChild() {
+            let childVC = LoginView()
+            childVC.didDismiss = { [weak self] in
+                self?.performActionAfterDismissal()
+            }
+        if let vc = childVC.presentationController as? UISheetPresentationController {
             vc.detents = [.medium(), .large()]
         }
-        ui.isModalInPresentation = true
-        self.navigationController?.present(ui, animated: false)
-        hideKeyboardWhenTappedAround()
+        childVC.isModalInPresentation = true
+
+            present(childVC, animated: true, completion: nil)
+        }
+
+        func performActionAfterDismissal() {
+            
+            self.dismiss(animated: true)
+            coordinator?.forgot()
+        }
+    
+//    @objc func imageTapped()
+//    {
+////        coordinator?.forgot()
+//        print("image tapped")
+//    }
+    
+    func qprint(){
+        print("Works")
     }
     
 }

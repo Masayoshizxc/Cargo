@@ -27,6 +27,7 @@ class MainCoordinator: Coordinator {
     }
     
     func forgot() {
+        print("pushing...")
         let vc = ForgotViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)

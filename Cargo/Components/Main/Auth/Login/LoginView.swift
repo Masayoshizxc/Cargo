@@ -100,13 +100,8 @@ class LoginView: UIViewController {
         setupConstraints()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("blyaaaa")
-    }
-    
     @objc func logTapped() {
-        print("Tapped")
+        print("Login tapped")
     }
     
     @objc func textFieldChanged() {

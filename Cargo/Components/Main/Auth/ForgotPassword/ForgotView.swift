@@ -79,7 +79,7 @@ class ForgotView: UIViewController {
         b.setTitleColor(.white, for: .normal)
         b.layer.cornerRadius = 8
         if b.layer.opacity == 1 {
-            b.addTarget(self, action: #selector(logTapped), for: .touchUpInside)
+            b.addTarget(self, action: #selector(regTapped), for: .touchUpInside)
         }
         return b
     }()
@@ -100,13 +100,9 @@ class ForgotView: UIViewController {
         setupConstraints()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("blyaaaa")
-    }
     
-    @objc func logTapped() {
-        print("Tapped")
+    @objc func regTapped() {
+        print("Registration tapped")
     }
     
     @objc func textFieldChanged() {

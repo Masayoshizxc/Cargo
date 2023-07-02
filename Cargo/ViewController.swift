@@ -7,11 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
+    var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPurple
+        navigationItem.leftBarButtonItem = nil
         
     }
 

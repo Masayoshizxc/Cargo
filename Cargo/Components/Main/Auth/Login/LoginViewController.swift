@@ -31,21 +31,31 @@ class LoginViewController: UIViewController {
         setupConstraints()
 //        presentChild()
         hideKeyboardWhenTappedAround()
-
+        navigationItem.leftBarButtonItem = nil
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         presentChild()
     }
     
     
     
     func presentChild() {
-            let childVC = LoginView()
-            childVC.didDismiss = { [weak self] in
-                self?.performActionAfterDismissal()
-            }
+        let childVC = LoginView()
+        childVC.regDismiss = { [weak self] in
+            self?.registrationPush()
+        }
+        childVC.logDismiss = { [weak self] in
+            self?.loginPush()
+        }
+        childVC.forgotDismiss = { [weak self] in
+            self?.forgotPush()
+        }
+//        let childVC = LoginView()
+//        childVC.regDismiss = { [weak self] in
+//            self?.registrationPush()
+//        }
         if let vc = childVC.presentationController as? UISheetPresentationController {
             vc.detents = [.medium(), .large()]
         }
@@ -54,11 +64,21 @@ class LoginViewController: UIViewController {
             present(childVC, animated: true, completion: nil)
         }
 
-        func performActionAfterDismissal() {
+        func registrationPush() {
             
             self.dismiss(animated: true)
-            coordinator?.forgot()
+            coordinator?.register()
         }
+    
+    func loginPush() {
+        
+        self.dismiss(animated: true)
+        coordinator?.goTabBar()
+    }
+    func forgotPush() {
+        self.dismiss(animated: true)
+        coordinator?.forgot()
+    }
     
 //    @objc func imageTapped()
 //    {

@@ -23,13 +23,29 @@ class MainCoordinator: Coordinator {
     func start() {
         let vc = LoginViewController()
         vc.coordinator = self
+        vc.navigationItem.leftBarButtonItem = nil
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func register() {
+        print("pushing...")
+        let vc = RegisterViewController()
+        vc.coordinator = self
+        vc.navigationItem.leftBarButtonItem = nil
         navigationController.pushViewController(vc, animated: true)
     }
     
     func forgot() {
-        print("pushing...")
         let vc = ForgotViewController()
         vc.coordinator = self
+        vc.navigationItem.leftBarButtonItem = nil
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goTabBar() {
+        let vc = ViewController()
+        vc.coordinator = self
+        vc.navigationItem.leftBarButtonItem = nil
         navigationController.pushViewController(vc, animated: true)
     }
     

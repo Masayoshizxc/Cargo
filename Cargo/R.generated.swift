@@ -67,6 +67,7 @@ struct _R {
     let bundle: Foundation.Bundle
       var auth: RswiftResources.ImageResource { .init(name: "Auth", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var forgot: RswiftResources.ImageResource { .init(name: "Forgot", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var reg: RswiftResources.ImageResource { .init(name: "Registration", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
 
   }
 

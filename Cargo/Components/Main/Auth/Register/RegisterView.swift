@@ -1,24 +1,20 @@
 //
-//  LoginView.swift
+//  RegisterView.swift
 //  Cargo
 //
-//  Created by Adilet on 30/6/23.
+//  Created by Adilet on 2/7/23.
 //
 
 import UIKit
 import SnapKit
 
-class LoginView: UIViewController {
-//    var pvc: LoginViewController?
-//    var pvc = LoginViewController()
+class RegisterView: UIViewController {
     
-    var regDismiss: (() -> Void)?
-    var logDismiss: (() -> Void)?
-    var forgotDismiss: (() -> Void)?
+    var didDismiss: (() -> Void)?
     
     private lazy var headerTitle: UILabel = {
         let l = UILabel()
-        l.text = "Авторизация"
+        l.text = "Регистрация"
         l.font = R.font.semiBold(size: 22)
         return l
     }()
@@ -33,12 +29,20 @@ class LoginView: UIViewController {
         s.backgroundColor = .white
         s.layer.borderWidth = 1
         s.layer.cornerRadius = 8
+        s.isSelected = true
         return s
     }()
     
     private lazy var emailField: ForText = {
         let t = ForText()
         t.placeholder = "Email"
+        t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        return t
+    }()
+    
+    private lazy var numberField: ForText = {
+        let t = ForText()
+        t.placeholder = "Phone number"
         t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         return t
     }()
@@ -50,43 +54,37 @@ class LoginView: UIViewController {
         return t
     }()
     
-    private lazy var forgotPassword: UIButton = {
-        let b = UIButton()
-        b.backgroundColor = .none
-        b.setTitle("Забыли пароль?", for: .normal)
-        b.titleLabel?.font = R.font.medium(size: 14)
-        b.setTitleColor(R.color.textGray(), for: .normal)
-        b.addTarget(self, action: #selector(forgetTapped), for: .touchUpInside)
-        return b
-    }()
-    
-    private lazy var regButton: UIButton = {
-        let b = UIButton()
-        b.setTitle("Зарегестрируйтесь", for: .normal)
-        b.setTitleColor(.black, for: .normal)
-        b.titleLabel?.font = R.font.light(size: 12)
-        b.addTarget(self, action: #selector(regTapped), for: .touchUpInside)
-        return b
+    private lazy var confirmPasswordField: ForText = {
+        let t = ForText()
+        t.placeholder = "Confirm password"
+        t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        return t
     }()
     
     private lazy var loginButton: UIButton = {
         let b = UIButton()
         b.setTitle("Войти", for: .normal)
+        b.setTitleColor(.black, for: .normal)
+        b.titleLabel?.font = R.font.light(size: 12)
+        b.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
+        return b
+    }()
+    
+    private lazy var registerButton: UIButton = {
+        let b = UIButton()
+        b.setTitle("Зарегистрироваться", for: .normal)
         b.backgroundColor = R.color.goldYellow()
         b.layer.opacity = 0.7
         b.titleLabel?.textAlignment = .center
         b.titleLabel?.font = R.font.medium(size: 16)
         b.setTitleColor(.white, for: .normal)
         b.layer.cornerRadius = 8
-        if b.layer.opacity == 1 {
-            b.addTarget(self, action: #selector(logTapped), for: .touchUpInside)
-        }
         return b
     }()
     
-    private lazy var forgotLabel: UILabel = {
+    private lazy var remindLabel: UILabel = {
         let l = UILabel()
-        l.text = "У вас нет аккаунта? "
+        l.text = "У вас есть аккаунт? "
         l.font = R.font.light(size: 12)
         l.textColor = R.color.textGray()
         return l
@@ -101,50 +99,42 @@ class LoginView: UIViewController {
     }
     
     
+    @objc func regTapped() {
+        print("Registration tapped")
+    }
     
     @objc func textFieldChanged() {
-        if (emailField.text != "" && passwordField.text != "") {
-            loginButton.layer.opacity = 1
-            loginButton.addTarget(self, action: #selector(logTapped), for: .touchUpInside)
+        if (emailField.text != "" && passwordField.text != "" && numberField.text != "" && confirmPasswordField.text != "") {
+            registerButton.layer.opacity = 1
+            registerButton.addTarget(self, action: #selector(regTapped), for: .touchUpInside)
         }
         else {
-            loginButton.layer.opacity = 0.7
-            loginButton.removeTarget(self, action: #selector(logTapped), for: .touchUpInside)
+            registerButton.layer.opacity = 0.7
+            registerButton.removeTarget(self, action: #selector(regTapped), for: .touchUpInside)
         }
     }
     
-    @objc func forgetTapped() {
+    @objc func loginTapped() {
         self.dismiss(animated: true) { [weak self] in
-            self?.forgotDismiss?()
+            self?.didDismiss?()
         }
+
     }
-    
-    @objc func regTapped() {
-        self.dismiss(animated: true) { [weak self] in
-            self?.regDismiss?()
-        }
-    }
-    
-    @objc func logTapped() {
-        self.dismiss(animated: true) { [weak self] in
-            self?.logDismiss?()
-        }
-    }
-    
     
 }
 
-extension LoginView {
+extension RegisterView {
     
     func setupSubviews() {
-        view.addSubview(headerTitle)
-        view.addSubview(segmentControl)
-        view.addSubview(emailField)
-        view.addSubview(passwordField)
-        view.addSubview(forgotPassword)
-        view.addSubview(loginButton)
-        view.addSubview(forgotLabel)
-        view.addSubview(regButton)
+        view.addSubviews(headerTitle,
+                         segmentControl,
+                         emailField,
+                         numberField,
+                         passwordField,
+                         confirmPasswordField,
+                         registerButton,
+                         remindLabel,
+                         loginButton)
     }
     
     func setupConstraints() {
@@ -164,31 +154,38 @@ extension LoginView {
             make.left.right.equalToSuperview().inset(12)
             make.height.equalTo(48)
         }
-        passwordField.snp.makeConstraints{make in
+        numberField.snp.makeConstraints{make in
             make.centerX.equalToSuperview()
             make.top.equalTo(emailField.snp.bottom).offset(24)
             make.left.right.equalToSuperview().inset(12)
             make.height.equalTo(48)
         }
-        forgotPassword.snp.makeConstraints{make in
-            make.top.equalTo(passwordField.snp.bottom).offset(12)
-            make.height.equalTo(17)
-            make.right.equalToSuperview().inset(12)
+        passwordField.snp.makeConstraints{make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(numberField.snp.bottom).offset(24)
+            make.left.right.equalToSuperview().inset(12)
+            make.height.equalTo(48)
         }
-        loginButton.snp.makeConstraints{make in
+        confirmPasswordField.snp.makeConstraints{make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(passwordField.snp.bottom).offset(24)
+            make.left.right.equalToSuperview().inset(12)
+            make.height.equalTo(48)
+        }
+        registerButton.snp.makeConstraints{make in
             make.centerX.equalToSuperview()
             make.left.right.equalToSuperview().inset(12)
             make.height.equalTo(48)
-            make.top.equalTo(passwordField.snp.bottom).offset(53)
+            make.top.equalTo(confirmPasswordField.snp.bottom).offset(53)
         }
-        forgotLabel.snp.makeConstraints{make in
-            make.top.equalTo(loginButton.snp.bottom).offset(18)
-            make.right.equalTo(loginButton.snp.centerX)
+        remindLabel.snp.makeConstraints{make in
+            make.top.equalTo(registerButton.snp.bottom).offset(18)
+            make.right.equalTo(registerButton.snp.centerX)
             
         }
-        regButton.snp.makeConstraints{make in
-            make.left.equalTo(forgotLabel.snp.right)
-            make.centerY.equalTo(forgotLabel)
+        loginButton.snp.makeConstraints{make in
+            make.left.equalTo(remindLabel.snp.right)
+            make.centerY.equalTo(remindLabel)
             
         }
     }

@@ -13,6 +13,10 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = R.color.backgroundYellow()
         hideKeyboardWhenTappedAround()
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        backButton.tintColor = R.color.goldYellow()
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
 }

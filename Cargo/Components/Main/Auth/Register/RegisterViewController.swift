@@ -1,24 +1,23 @@
 //
-//  ForgotViewController.swift
+//  RegisterViewController.swift
 //  Cargo
 //
-//  Created by Adilet on 1/7/23.
+//  Created by Adilet on 2/7/23.
 //
 
 import UIKit
 import SnapKit
 
-class ForgotViewController: UIViewController {
+class RegisterViewController: UIViewController {
     
     var coordinator: MainCoordinator?
-    var ui = LoginView()
+    var ui = RegisterView()
     
     private lazy var image: UIImageView = {
         let i = UIImageView()
-        i.image = R.image.forgot()
+        i.image = R.image.reg()
         return i
     }()
-    
     
     
     
@@ -27,8 +26,8 @@ class ForgotViewController: UIViewController {
         view.backgroundColor = .white
         setupSubviews()
         setupConstraints()
-//        presentChild()
         hideKeyboardWhenTappedAround()
+//        presentChild()
         navigationItem.leftBarButtonItem = nil
     }
     
@@ -36,31 +35,27 @@ class ForgotViewController: UIViewController {
         super.viewDidAppear(animated)
         presentChild()
     }
-    
-    
-    
     func presentChild() {
-            let childVC = ForgotView()
-            childVC.recoveredDismiss = { [weak self] in
-                self?.recoveredPush()
-            }
+        let childVC = RegisterView()
+        childVC.didDismiss = { [weak self] in
+            self?.performActionAfterDismissal()
+        }
         if let vc = childVC.presentationController as? UISheetPresentationController {
             vc.detents = [.medium(), .large()]
         }
         childVC.isModalInPresentation = true
-
-            present(childVC, animated: true, completion: nil)
-        }
-
+        present(childVC, animated: true,completion: nil)
+    }
     
-    func recoveredPush() {
+    func performActionAfterDismissal() {
         
-        coordinator?.start()
+        self.dismiss(animated: true)
+        coordinator?.forgot()
     }
     
 }
 
-extension ForgotViewController {
+extension RegisterViewController {
     
     func setupSubviews() {
         view.addSubview(image)
@@ -74,3 +69,4 @@ extension ForgotViewController {
         }
     }
 }
+

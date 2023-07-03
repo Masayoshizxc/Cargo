@@ -18,12 +18,12 @@ class LoginView: UIViewController {
     
     private lazy var headerTitle: UILabel = {
         let l = UILabel()
-        l.text = "Авторизация"
+        l.text = "Log in"
         l.font = R.font.semiBold(size: 22)
         return l
     }()
     
-    let items = ["Клиент", "Грузоперевозчик"]
+    let items = ["Client", "Transporter"]
     private lazy var segmentControl: UISegmentedControl = {
         let s = UISegmentedControl(items: items)
         s.selectedSegmentIndex = 0
@@ -53,7 +53,7 @@ class LoginView: UIViewController {
     private lazy var forgotPassword: UIButton = {
         let b = UIButton()
         b.backgroundColor = .none
-        b.setTitle("Забыли пароль?", for: .normal)
+        b.setTitle("Forgot password?", for: .normal)
         b.titleLabel?.font = R.font.medium(size: 14)
         b.setTitleColor(R.color.textGray(), for: .normal)
         b.addTarget(self, action: #selector(forgetTapped), for: .touchUpInside)
@@ -62,7 +62,7 @@ class LoginView: UIViewController {
     
     private lazy var regButton: UIButton = {
         let b = UIButton()
-        b.setTitle("Зарегестрируйтесь", for: .normal)
+        b.setTitle("Register", for: .normal)
         b.setTitleColor(.black, for: .normal)
         b.titleLabel?.font = R.font.light(size: 12)
         b.addTarget(self, action: #selector(regTapped), for: .touchUpInside)
@@ -71,7 +71,7 @@ class LoginView: UIViewController {
     
     private lazy var loginButton: UIButton = {
         let b = UIButton()
-        b.setTitle("Войти", for: .normal)
+        b.setTitle("Log in", for: .normal)
         b.backgroundColor = R.color.goldYellow()
         b.layer.opacity = 0.7
         b.titleLabel?.textAlignment = .center
@@ -86,7 +86,7 @@ class LoginView: UIViewController {
     
     private lazy var forgotLabel: UILabel = {
         let l = UILabel()
-        l.text = "У вас нет аккаунта? "
+        l.text = "Don't you have an account? "
         l.font = R.font.light(size: 12)
         l.textColor = R.color.textGray()
         return l
@@ -166,7 +166,7 @@ extension LoginView {
         }
         passwordField.snp.makeConstraints{make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(emailField.snp.bottom).offset(24)
+            make.top.equalTo(emailField.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(12)
             make.height.equalTo(48)
         }
@@ -183,7 +183,7 @@ extension LoginView {
         }
         forgotLabel.snp.makeConstraints{make in
             make.top.equalTo(loginButton.snp.bottom).offset(18)
-            make.right.equalTo(loginButton.snp.centerX)
+            make.centerX.equalToSuperview()
             
         }
         regButton.snp.makeConstraints{make in

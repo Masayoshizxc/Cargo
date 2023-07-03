@@ -119,7 +119,7 @@ extension ForgotView {
         }
         passwordField.snp.makeConstraints{make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(emailField.snp.bottom).offset(24)
+            make.top.equalTo(emailField.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(12)
             make.height.equalTo(48)
         }

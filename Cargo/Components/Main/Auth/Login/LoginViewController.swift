@@ -29,7 +29,6 @@ class LoginViewController: UIViewController {
         view.backgroundColor = .white
         setupSubviews()
         setupConstraints()
-//        presentChild()
         hideKeyboardWhenTappedAround()
         navigationItem.leftBarButtonItem = nil
     }
@@ -52,10 +51,6 @@ class LoginViewController: UIViewController {
         childVC.forgotDismiss = { [weak self] in
             self?.forgotPush()
         }
-//        let childVC = LoginView()
-//        childVC.regDismiss = { [weak self] in
-//            self?.registrationPush()
-//        }
         if let vc = childVC.presentationController as? UISheetPresentationController {
             vc.detents = [.medium(), .large()]
         }
@@ -79,12 +74,6 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true)
         coordinator?.forgot()
     }
-    
-//    @objc func imageTapped()
-//    {
-////        coordinator?.forgot()
-//        print("image tapped")
-//    }
     
     func qprint(){
         print("Works")

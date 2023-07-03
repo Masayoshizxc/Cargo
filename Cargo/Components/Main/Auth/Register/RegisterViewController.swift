@@ -27,7 +27,6 @@ class RegisterViewController: UIViewController {
         setupSubviews()
         setupConstraints()
         hideKeyboardWhenTappedAround()
-//        presentChild()
         navigationItem.leftBarButtonItem = nil
     }
     
@@ -50,7 +49,7 @@ class RegisterViewController: UIViewController {
     func performActionAfterDismissal() {
         
         self.dismiss(animated: true)
-        coordinator?.forgot()
+        coordinator?.start()
     }
     
 }

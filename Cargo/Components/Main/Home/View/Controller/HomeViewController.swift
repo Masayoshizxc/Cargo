@@ -10,11 +10,16 @@ import SnapKit
 
 class HomeViewController: BaseViewController {
     
-    var coordinator: MainCoordinator?
+    var coordinator: HomeCoordinator?
+    var ui = HomeView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Home is here")
+        view = ui
+    }
+    
+    func openNotifications() {
+        
     }
     
 }

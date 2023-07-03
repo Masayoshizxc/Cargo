@@ -10,4 +10,5 @@ pod 'SnapKit'
 pod 'Alamofire'
 pod 'R.swift'
 # pod 'MicrosoftMapsSDK', '~> 1.2.0'
+pod 'IQKeyboardManager'
 end

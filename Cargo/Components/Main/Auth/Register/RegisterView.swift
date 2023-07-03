@@ -14,12 +14,12 @@ class RegisterView: UIViewController {
     
     private lazy var headerTitle: UILabel = {
         let l = UILabel()
-        l.text = "Регистрация"
+        l.text = "Registration"
         l.font = R.font.semiBold(size: 22)
         return l
     }()
     
-    let items = ["Клиент", "Грузоперевозчик"]
+    let items = ["Client", "Transporter"]
     private lazy var segmentControl: UISegmentedControl = {
         let s = UISegmentedControl(items: items)
         s.selectedSegmentIndex = 0
@@ -31,6 +31,21 @@ class RegisterView: UIViewController {
         s.layer.cornerRadius = 8
         s.isSelected = true
         return s
+    }()
+    
+    
+    private lazy var fName: ForText = {
+        let t = ForText()
+        t.placeholder = "First name"
+        t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        return t
+    }()
+    
+    private lazy var lName: ForText = {
+        let t = ForText()
+        t.placeholder = "Last name"
+        t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        return t
     }()
     
     private lazy var emailField: ForText = {
@@ -63,7 +78,7 @@ class RegisterView: UIViewController {
     
     private lazy var loginButton: UIButton = {
         let b = UIButton()
-        b.setTitle("Войти", for: .normal)
+        b.setTitle("Log in", for: .normal)
         b.setTitleColor(.black, for: .normal)
         b.titleLabel?.font = R.font.light(size: 12)
         b.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
@@ -72,7 +87,7 @@ class RegisterView: UIViewController {
     
     private lazy var registerButton: UIButton = {
         let b = UIButton()
-        b.setTitle("Зарегистрироваться", for: .normal)
+        b.setTitle("Register", for: .normal)
         b.backgroundColor = R.color.goldYellow()
         b.layer.opacity = 0.7
         b.titleLabel?.textAlignment = .center
@@ -84,7 +99,7 @@ class RegisterView: UIViewController {
     
     private lazy var remindLabel: UILabel = {
         let l = UILabel()
-        l.text = "У вас есть аккаунт? "
+        l.text = "Do you have an account? "
         l.font = R.font.light(size: 12)
         l.textColor = R.color.textGray()
         return l
@@ -134,7 +149,9 @@ extension RegisterView {
                          confirmPasswordField,
                          registerButton,
                          remindLabel,
-                         loginButton)
+                         loginButton,
+                         fName,
+                         lName)
     }
     
     func setupConstraints() {
@@ -148,27 +165,39 @@ extension RegisterView {
             make.left.right.equalToSuperview().inset(12)
             make.height.equalTo(40)
         }
+        fName.snp.makeConstraints{make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(segmentControl.snp.bottom).offset(24)
+            make.left.right.equalToSuperview().inset(12)
+            make.height.equalTo(48)
+        }
+        lName.snp.makeConstraints{make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(fName.snp.bottom).offset(16)
+            make.left.right.equalToSuperview().inset(12)
+            make.height.equalTo(48)
+        }
         emailField.snp.makeConstraints{make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(segmentControl.snp.bottom).offset(32)
+            make.top.equalTo(lName.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(12)
             make.height.equalTo(48)
         }
         numberField.snp.makeConstraints{make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(emailField.snp.bottom).offset(24)
+            make.top.equalTo(emailField.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(12)
             make.height.equalTo(48)
         }
         passwordField.snp.makeConstraints{make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(numberField.snp.bottom).offset(24)
+            make.top.equalTo(numberField.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(12)
             make.height.equalTo(48)
         }
         confirmPasswordField.snp.makeConstraints{make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(passwordField.snp.bottom).offset(24)
+            make.top.equalTo(passwordField.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(12)
             make.height.equalTo(48)
         }
@@ -180,7 +209,9 @@ extension RegisterView {
         }
         remindLabel.snp.makeConstraints{make in
             make.top.equalTo(registerButton.snp.bottom).offset(18)
-            make.right.equalTo(registerButton.snp.centerX)
+//            make.right.equalTo(registerButton.snp.centerX)
+            make.centerX.equalToSuperview()
+//            make.left.equalToSuperview().inset()
             
         }
         loginButton.snp.makeConstraints{make in

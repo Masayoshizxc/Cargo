@@ -56,6 +56,9 @@ struct _R {
       var lightYellow: RswiftResources.ColorResource { .init(name: "LightYellow", path: [], bundle: bundle)}
       var goldYellow: RswiftResources.ColorResource { .init(name: "GoldYellow", path: [], bundle: bundle)}
       var textGray: RswiftResources.ColorResource { .init(name: "TextGray", path: [], bundle: bundle)}
+      var selTab: RswiftResources.ColorResource { .init(name: "SelectedTab", path: [], bundle: bundle)}
+      var unselTab: RswiftResources.ColorResource { .init(name: "UnselectedTab", path: [], bundle: bundle)}
+      var orderLabel: RswiftResources.ColorResource { .init(name: "OrderLabels", path: [], bundle: bundle)}
 //
 //    /// Color `yellow`.
 //    var yellow: RswiftResources.ColorResource { .init(name: "yellow", path: [], bundle: bundle) }
@@ -68,6 +71,12 @@ struct _R {
       var auth: RswiftResources.ImageResource { .init(name: "Auth", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var forgot: RswiftResources.ImageResource { .init(name: "Forgot", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var reg: RswiftResources.ImageResource { .init(name: "Registration", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var orderP: RswiftResources.ImageResource { .init(name: "orderP", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var chatP: RswiftResources.ImageResource { .init(name: "chatP", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var profileP: RswiftResources.ImageResource { .init(name: "profileP", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var filterNav: RswiftResources.ImageResource { .init(name: "filterNav", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var notifNav: RswiftResources.ImageResource { .init(name: "notifNav", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var star: RswiftResources.ImageResource { .init(name: "star", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
 
   }
 

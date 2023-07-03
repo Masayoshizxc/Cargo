@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForText: UITextField {
+class ForText: UITextField, UITextFieldDelegate {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -16,11 +16,23 @@ class ForText: UITextField {
         layer.borderWidth = 1
         autocapitalizationType = .none
         autocorrectionType = .no
+        delegate = self
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = R.color.selTab()?.cgColor
+        textField.layer.borderWidth = 2
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 1
+    }
+    
+    
     
     let padding = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
 

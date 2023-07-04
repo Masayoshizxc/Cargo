@@ -10,6 +10,8 @@ import SnapKit
 
 class OrdersCollectionViewCell: UICollectionViewCell {
     
+    var data: CellData?
+    
     private lazy var trackNumberLabel: UILabel = {
         let l = UILabel()
         l.font = R.font.medium(size: 12)
@@ -120,6 +122,7 @@ class OrdersCollectionViewCell: UICollectionViewCell {
         let l = UILabel()
         l.text = "4.8"
         l.textColor = R.color.rateColor()
+        l.font = R.font.medium(size: 12)
         return l
     }()
     
@@ -165,6 +168,10 @@ class OrdersCollectionViewCell: UICollectionViewCell {
         self.layer.shadowOpacity = 0.12
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
+    }
+    
+    @objc func createTapped() {
+        
     }
     
     

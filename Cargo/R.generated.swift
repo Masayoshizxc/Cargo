@@ -75,12 +75,14 @@ struct _R {
       var orderP: RswiftResources.ImageResource { .init(name: "orderP", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var chatP: RswiftResources.ImageResource { .init(name: "chatP", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var profileP: RswiftResources.ImageResource { .init(name: "profileP", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var mapP: RswiftResources.ImageResource { .init(name: "mapP", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var filterNav: RswiftResources.ImageResource { .init(name: "filterNav", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var notifNav: RswiftResources.ImageResource { .init(name: "notifNav", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var star: RswiftResources.ImageResource { .init(name: "star", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var exAv: RswiftResources.ImageResource { .init(name: "ExAv", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var message: RswiftResources.ImageResource { .init(name: "message", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var routeIcon: RswiftResources.ImageResource { .init(name: "route", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var backButton: RswiftResources.ImageResource { .init(name: "back", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
 
   }
 

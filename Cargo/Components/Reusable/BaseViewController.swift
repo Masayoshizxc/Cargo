@@ -15,7 +15,7 @@ class BaseViewController: UIViewController {
         hideKeyboardWhenTappedAround()
         let backButton = UIBarButtonItem()
         backButton.title = ""
-        backButton.tintColor = R.color.goldYellow()
+        backButton.tintColor = .clear
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     

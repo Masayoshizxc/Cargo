@@ -53,7 +53,7 @@ class HomeView: UIView {
         b.backgroundColor = R.color.goldYellow()
         b.setTitleColor(.white, for: .normal)
         b.layer.cornerRadius = 20
-        b.addTarget(self, action: #selector(createTapped), for: .touchUpInside)
+//        b.addTarget(self, action: #selector(createTapped), for: .touchUpInside)
         b.titleLabel?.font = R.font.medium(size: 16)
         return b
     }()
@@ -78,9 +78,9 @@ class HomeView: UIView {
         self.notifications?()
     }
     
-    @objc func createTapped() {
-        print("Create Tapped")
-    }
+//    @objc func createTapped() {
+//        print("Create Tapped")
+//    }
     
 }
 

@@ -13,6 +13,7 @@ class HomeViewController: BaseViewController {
     var coordinator: HomeCoordinator?
     var ui = HomeView()
     
+    
 //    override func loadView() {
 //        view = ui
 //
@@ -24,6 +25,7 @@ class HomeViewController: BaseViewController {
         
         ui.notif.addTarget(self, action: #selector(openNotifications), for: .touchUpInside)
         ui.filter.addTarget(self, action: #selector(openFilter), for: .touchUpInside)
+        ui.createOrderBtn.addTarget(self, action: #selector(createTapped), for: .touchUpInside)
         ui.ordersCollectionView.delegate = self
         ui.ordersCollectionView.dataSource = self
     }
@@ -39,6 +41,9 @@ class HomeViewController: BaseViewController {
     @objc func openNotifications() {
         print("Notification")
         coordinator?.notifications()
+    }
+    @objc func createTapped() {
+        coordinator?.createOrder()
     }
     
 }
@@ -71,6 +76,16 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let selectedCell = collectionView.cellForItem(at: indexPath) as? OrdersCollectionViewCell
+//        let selectedData = selectedCell?.data
+//
+//        // Create an instance of the destination view controller
+//        let destinationVC = OrderView()
+//        // Set the properties of the destination view controller with the selected data
+//        destinationVC.data = CellData(trackNumber: <#T##String#>, orderName: <#T##String#>, typeOfCargo: <#T##String#>, weight: <#T##String#>, loading: <#T##String#>, unloading: <#T##String#>, price: <#T##String#>)
+//
+//        // Push or present the destination view controller
+//        navigationController?.pushViewController(destinationVC, animated: true)
         coordinator?.order()
     }
     

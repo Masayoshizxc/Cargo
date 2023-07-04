@@ -12,6 +12,7 @@ enum TabBarItems: CaseIterable {
     case first
     case second
     case third
+    case fourth
 
     var tabbarItem: UITabBarItem {
         switch self {
@@ -28,7 +29,15 @@ enum TabBarItems: CaseIterable {
                 image: R.image.chatP(),
                 tag: 1
             )
+            
         case .third:
+            return .init(
+                title: "Map",
+                image: R.image.mapP(),
+                tag: 1
+            )
+            
+        case .fourth:
             return .init(
                 title: "Profile",
                 image: R.image.profileP(),
@@ -44,6 +53,7 @@ class TabBarController: UITabBarController {
     let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
     let chatCoordinator = ChatCoordinator(navigationController: UINavigationController())
     let profileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
+    let mapCoordinator = MapCoordinator(navigationController: UINavigationController())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,10 +83,11 @@ class TabBarController: UITabBarController {
         homeCoordinator.start()
         chatCoordinator.start()
         profileCoordinator.start()
-
+        mapCoordinator.start()
         viewControllers = [
             homeCoordinator.navigationController,
             chatCoordinator.navigationController,
+            mapCoordinator.navigationController,
             profileCoordinator.navigationController
         ]
 //        tabBar.alpha = 0.95

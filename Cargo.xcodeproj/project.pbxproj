@@ -56,6 +56,10 @@
 		AED421262A53EF48009AD18A /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421252A53EF48009AD18A /* OrderViewController.swift */; };
 		AED421282A53F1C6009AD18A /* CreateOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421272A53F1C6009AD18A /* CreateOrderView.swift */; };
 		AED4212A2A53F1CF009AD18A /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421292A53F1CF009AD18A /* CreateOrderViewController.swift */; };
+		AED4212C2A53F3A5009AD18A /* Extension + UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4212B2A53F3A5009AD18A /* Extension + UINavigationBar.swift */; };
+		AED4212E2A54E011009AD18A /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4212D2A54E011009AD18A /* CellData.swift */; };
+		AED421312A54E245009AD18A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421302A54E245009AD18A /* MapViewController.swift */; };
+		AED421332A54E263009AD18A /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421322A54E263009AD18A /* MapCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +115,10 @@
 		AED421252A53EF48009AD18A /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		AED421272A53F1C6009AD18A /* CreateOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderView.swift; sourceTree = "<group>"; };
 		AED421292A53F1CF009AD18A /* CreateOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderViewController.swift; sourceTree = "<group>"; };
+		AED4212B2A53F3A5009AD18A /* Extension + UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UINavigationBar.swift"; sourceTree = "<group>"; };
+		AED4212D2A54E011009AD18A /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
+		AED421302A54E245009AD18A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AED421322A54E263009AD18A /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		C209E93313F1B0B833911304 /* Pods-Cargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo.release.xcconfig"; path = "Target Support Files/Pods-Cargo/Pods-Cargo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +182,7 @@
 			children = (
 				AE406D062A4FE5C300601D8E /* Extension + UIView.swift */,
 				AEA2956B2A51AD24001D55E4 /* Extension + CollectionView.swift */,
+				AED4212B2A53F3A5009AD18A /* Extension + UINavigationBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,6 +339,7 @@
 		AEAE9F3B2A4E92E90007B898 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AED4212F2A54E23A009AD18A /* Maps */,
 				AED4211D2A53EF1F009AD18A /* Orders */,
 				AED421162A52D1BD009AD18A /* Filter */,
 				AEA295712A52A8AD001D55E4 /* Notifications */,
@@ -356,6 +366,7 @@
 		AEAE9F3D2A4E93FE0007B898 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AED4212D2A54E011009AD18A /* CellData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -553,6 +564,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		AED4212F2A54E23A009AD18A /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				AED421302A54E245009AD18A /* MapViewController.swift */,
+				AED421322A54E263009AD18A /* MapCoordinator.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
 		D85E9720E095768B98F0CF6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -686,11 +706,13 @@
 				AEAE9F452A4E946B0007B898 /* BaseViewController.swift in Sources */,
 				AEA295482A515CF0001D55E4 /* RegisterViewController.swift in Sources */,
 				AE406D0F2A502B5600601D8E /* ForgotViewController.swift in Sources */,
+				AED4212E2A54E011009AD18A /* CellData.swift in Sources */,
 				AEA2954F2A519796001D55E4 /* TabBarCoordinator.swift in Sources */,
 				AED421232A53EF3C009AD18A /* OrderView.swift in Sources */,
 				AEA2954D2A51953A001D55E4 /* TabBarController.swift in Sources */,
 				AEAE9F4A2A4E96780007B898 /* MainCoordinator.swift in Sources */,
 				AEAE9F572A4E99090007B898 /* LoginViewModel.swift in Sources */,
+				AED421332A54E263009AD18A /* MapCoordinator.swift in Sources */,
 				AE4ADD3F2A4B58CD00E0B3E6 /* ViewController.swift in Sources */,
 				AEAE9F592A4E9A650007B898 /* ForText.swift in Sources */,
 				AED421282A53F1C6009AD18A /* CreateOrderView.swift in Sources */,
@@ -705,6 +727,7 @@
 				AEAE9F482A4E94D50007B898 /* Coordinator.swift in Sources */,
 				AEA295682A51A877001D55E4 /* HomeView.swift in Sources */,
 				AE4ADD3B2A4B58CD00E0B3E6 /* AppDelegate.swift in Sources */,
+				AED4212C2A53F3A5009AD18A /* Extension + UINavigationBar.swift in Sources */,
 				AEAE9F512A4E98E90007B898 /* LoginModel.swift in Sources */,
 				AED4211C2A52D1EB009AD18A /* FilterViewController.swift in Sources */,
 				AEA2955B2A5198A2001D55E4 /* ChatCoordinator.swift in Sources */,
@@ -713,6 +736,7 @@
 				AE4ADD3D2A4B58CD00E0B3E6 /* SceneDelegate.swift in Sources */,
 				AEAE9F552A4E99000007B898 /* LoginViewController.swift in Sources */,
 				AEA295462A515CE8001D55E4 /* RegisterViewModel.swift in Sources */,
+				AED421312A54E245009AD18A /* MapViewController.swift in Sources */,
 				AEA295562A519873001D55E4 /* HomeCoordinator.swift in Sources */,
 				AEA295662A519982001D55E4 /* ProfileCoordinator.swift in Sources */,
 				AEA295442A515CDD001D55E4 /* RegisterModel.swift in Sources */,

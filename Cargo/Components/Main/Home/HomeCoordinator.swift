@@ -48,5 +48,11 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func createOrder() {
+        let vc = CreateOrderViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 

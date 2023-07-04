@@ -59,6 +59,7 @@ struct _R {
       var selTab: RswiftResources.ColorResource { .init(name: "SelectedTab", path: [], bundle: bundle)}
       var unselTab: RswiftResources.ColorResource { .init(name: "UnselectedTab", path: [], bundle: bundle)}
       var orderLabel: RswiftResources.ColorResource { .init(name: "OrderLabels", path: [], bundle: bundle)}
+      var rateColor: RswiftResources.ColorResource { .init(name: "RateNumber", path: [], bundle: bundle)}
 //
 //    /// Color `yellow`.
 //    var yellow: RswiftResources.ColorResource { .init(name: "yellow", path: [], bundle: bundle) }
@@ -77,6 +78,9 @@ struct _R {
       var filterNav: RswiftResources.ImageResource { .init(name: "filterNav", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var notifNav: RswiftResources.ImageResource { .init(name: "notifNav", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var star: RswiftResources.ImageResource { .init(name: "star", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var exAv: RswiftResources.ImageResource { .init(name: "ExAv", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var message: RswiftResources.ImageResource { .init(name: "message", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var routeIcon: RswiftResources.ImageResource { .init(name: "route", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
 
   }
 

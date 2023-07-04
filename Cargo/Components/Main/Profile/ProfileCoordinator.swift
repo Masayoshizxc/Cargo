@@ -21,12 +21,9 @@ class ProfileCoordinator: NSObject, Coordinator, UINavigationControllerDelegate 
     }
 
     func start() {
-        print("HomeCoordinator")
         let vc = ProfileViewController()
         vc.coordinator = self
         vc.tabBarItem = TabBarItems.third.tabbarItem
-//        vc.tabBarItem.imageInsets = UIEdgeInsets(top: 0, left: 28, bottom: 0, right: -28)
-//        vc.navigationController?.hidesBarsOnSwipe = true
         navigationController.hidesBarsOnSwipe = true
         navigationController.pushViewController(vc, animated: true)
     }

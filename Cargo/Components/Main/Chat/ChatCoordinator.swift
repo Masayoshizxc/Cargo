@@ -21,7 +21,6 @@ class ChatCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
 
     func start() {
-        print("HomeCoordinator")
         let vc = ChatViewController()
         vc.coordinator = self
         vc.tabBarItem = TabBarItems.second.tabbarItem

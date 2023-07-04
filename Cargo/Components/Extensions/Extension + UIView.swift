@@ -25,3 +25,11 @@ extension UIViewController {
     }
 }
 
+extension UIView {
+    func printViewHierarchy() {
+        print(self.debugDescription)
+                for subview in subviews {
+                    subview.printViewHierarchy()
+                }
+    }
+}

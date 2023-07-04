@@ -51,6 +51,11 @@
 		AEAE9F6B2A4EC4DE0007B898 /* SFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEAE9F632A4EC4DE0007B898 /* SFRegular.otf */; };
 		AEAE9F6C2A4EC4DE0007B898 /* SFSemibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEAE9F642A4EC4DE0007B898 /* SFSemibold.otf */; };
 		AEAE9F6D2A4EC4DE0007B898 /* SFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEAE9F652A4EC4DE0007B898 /* SFBold.otf */; };
+		AED4211C2A52D1EB009AD18A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4211B2A52D1EB009AD18A /* FilterViewController.swift */; };
+		AED421232A53EF3C009AD18A /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421222A53EF3C009AD18A /* OrderView.swift */; };
+		AED421262A53EF48009AD18A /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421252A53EF48009AD18A /* OrderViewController.swift */; };
+		AED421282A53F1C6009AD18A /* CreateOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421272A53F1C6009AD18A /* CreateOrderView.swift */; };
+		AED4212A2A53F1CF009AD18A /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421292A53F1CF009AD18A /* CreateOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +106,11 @@
 		AEAE9F632A4EC4DE0007B898 /* SFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFRegular.otf; sourceTree = "<group>"; };
 		AEAE9F642A4EC4DE0007B898 /* SFSemibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFSemibold.otf; sourceTree = "<group>"; };
 		AEAE9F652A4EC4DE0007B898 /* SFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFBold.otf; sourceTree = "<group>"; };
+		AED4211B2A52D1EB009AD18A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		AED421222A53EF3C009AD18A /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		AED421252A53EF48009AD18A /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		AED421272A53F1C6009AD18A /* CreateOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderView.swift; sourceTree = "<group>"; };
+		AED421292A53F1CF009AD18A /* CreateOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderViewController.swift; sourceTree = "<group>"; };
 		C209E93313F1B0B833911304 /* Pods-Cargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo.release.xcconfig"; path = "Target Support Files/Pods-Cargo/Pods-Cargo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -320,6 +330,8 @@
 		AEAE9F3B2A4E92E90007B898 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AED4211D2A53EF1F009AD18A /* Orders */,
+				AED421162A52D1BD009AD18A /* Filter */,
 				AEA295712A52A8AD001D55E4 /* Notifications */,
 				AEA295542A519848001D55E4 /* Profile */,
 				AEA295532A519841001D55E4 /* Chat */,
@@ -458,6 +470,89 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		AED421162A52D1BD009AD18A /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				AED421192A52D1D3009AD18A /* View */,
+				AED421182A52D1CE009AD18A /* ViewModel */,
+				AED421172A52D1C7009AD18A /* Model */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		AED421172A52D1C7009AD18A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AED421182A52D1CE009AD18A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AED421192A52D1D3009AD18A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AED4211A2A52D1D9009AD18A /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AED4211A2A52D1D9009AD18A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AED4211B2A52D1EB009AD18A /* FilterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AED4211D2A53EF1F009AD18A /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				AED421202A53EF2B009AD18A /* ViewModel */,
+				AED4211F2A53EF28009AD18A /* View */,
+				AED4211E2A53EF25009AD18A /* Model */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		AED4211E2A53EF25009AD18A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AED4211F2A53EF28009AD18A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AED421212A53EF2F009AD18A /* Controller */,
+				AED421222A53EF3C009AD18A /* OrderView.swift */,
+				AED421272A53F1C6009AD18A /* CreateOrderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AED421202A53EF2B009AD18A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AED421212A53EF2F009AD18A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AED421252A53EF48009AD18A /* OrderViewController.swift */,
+				AED421292A53F1CF009AD18A /* CreateOrderViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D85E9720E095768B98F0CF6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,11 +687,14 @@
 				AEA295482A515CF0001D55E4 /* RegisterViewController.swift in Sources */,
 				AE406D0F2A502B5600601D8E /* ForgotViewController.swift in Sources */,
 				AEA2954F2A519796001D55E4 /* TabBarCoordinator.swift in Sources */,
+				AED421232A53EF3C009AD18A /* OrderView.swift in Sources */,
 				AEA2954D2A51953A001D55E4 /* TabBarController.swift in Sources */,
 				AEAE9F4A2A4E96780007B898 /* MainCoordinator.swift in Sources */,
 				AEAE9F572A4E99090007B898 /* LoginViewModel.swift in Sources */,
 				AE4ADD3F2A4B58CD00E0B3E6 /* ViewController.swift in Sources */,
 				AEAE9F592A4E9A650007B898 /* ForText.swift in Sources */,
+				AED421282A53F1C6009AD18A /* CreateOrderView.swift in Sources */,
+				AED4212A2A53F1CF009AD18A /* CreateOrderViewController.swift in Sources */,
 				AEA2955E2A5198DA001D55E4 /* ChatViewController.swift in Sources */,
 				AEAE9F532A4E98F60007B898 /* LoginView.swift in Sources */,
 				AEA2954A2A515CF6001D55E4 /* RegisterView.swift in Sources */,
@@ -608,6 +706,7 @@
 				AEA295682A51A877001D55E4 /* HomeView.swift in Sources */,
 				AE4ADD3B2A4B58CD00E0B3E6 /* AppDelegate.swift in Sources */,
 				AEAE9F512A4E98E90007B898 /* LoginModel.swift in Sources */,
+				AED4211C2A52D1EB009AD18A /* FilterViewController.swift in Sources */,
 				AEA2955B2A5198A2001D55E4 /* ChatCoordinator.swift in Sources */,
 				AE406D0D2A502B4900601D8E /* ForgotView.swift in Sources */,
 				AE406D072A4FE5C300601D8E /* Extension + UIView.swift in Sources */,
@@ -621,6 +720,7 @@
 				AEA295772A52A8CD001D55E4 /* NotificationsViewController.swift in Sources */,
 				AE406D092A502B3600601D8E /* ForgotModel.swift in Sources */,
 				AEAE9F422A4E94190007B898 /* HomeViewController.swift in Sources */,
+				AED421262A53EF48009AD18A /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,6 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
 
     func start() {
-        print("HomeCoordinator")
         let vc = HomeViewController()
         vc.coordinator = self
         vc.tabBarItem = TabBarItems.first.tabbarItem
@@ -32,11 +31,22 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
     
     func notifications() {
-        print("notifications")
         let vc = NotificationsViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
 
+    func filter() {
+        let vc = FilterViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+        
+    }
+    
+    func order() {
+        let vc = OrderViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 

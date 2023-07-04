@@ -17,7 +17,6 @@ class BaseViewController: UIViewController {
         backButton.title = ""
         backButton.tintColor = R.color.goldYellow()
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-        
     }
     
 }

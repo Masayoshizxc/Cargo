@@ -20,7 +20,7 @@ class MainCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func goTabBar() {
+    func start() {
         let vc = LoginViewController()
         vc.coordinator = self
         vc.navigationItem.leftBarButtonItem = nil
@@ -42,7 +42,7 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func start() {
+    func goTabBar() {
         let child = TabBarCoordinator(navigationController: navigationController)
         childCoordinators.append(child)
         child.parentCoordinator = self

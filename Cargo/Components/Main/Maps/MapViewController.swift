@@ -6,14 +6,20 @@
 //
 
 import UIKit
+import MapKit
+import SnapKit
 
 class MapViewController: BaseViewController {
     
     var coordinator: MapCoordinator?
-    
+    var mapView: MKMapView = {
+        let m = MKMapView()
+        return m
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupSubviews()
+        setupConstraints()
     }
     
 }
@@ -21,11 +27,13 @@ class MapViewController: BaseViewController {
 extension MapViewController {
     
     func setupSubviews() {
-        
+        view.addSubview(mapView)
     }
     
     func setupConstraints() {
-        
+        mapView.snp.makeConstraints{make in
+            make.top.left.right.bottom.equalToSuperview()
+        }
     }
     
 }

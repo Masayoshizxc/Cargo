@@ -23,7 +23,7 @@ class ProfileCoordinator: NSObject, Coordinator, UINavigationControllerDelegate 
     func start() {
         let vc = ProfileViewController()
         vc.coordinator = self
-        vc.tabBarItem = TabBarItems.third.tabbarItem
+        vc.tabBarItem = TabBarItems.fourth.tabbarItem
         navigationController.hidesBarsOnSwipe = true
         navigationController.pushViewController(vc, animated: true)
     }

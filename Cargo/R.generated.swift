@@ -60,6 +60,7 @@ struct _R {
       var unselTab: RswiftResources.ColorResource { .init(name: "UnselectedTab", path: [], bundle: bundle)}
       var orderLabel: RswiftResources.ColorResource { .init(name: "OrderLabels", path: [], bundle: bundle)}
       var rateColor: RswiftResources.ColorResource { .init(name: "RateNumber", path: [], bundle: bundle)}
+      var since: RswiftResources.ColorResource { .init(name: "Since", path: [], bundle: bundle)}
 //
 //    /// Color `yellow`.
 //    var yellow: RswiftResources.ColorResource { .init(name: "yellow", path: [], bundle: bundle) }
@@ -83,6 +84,15 @@ struct _R {
       var message: RswiftResources.ImageResource { .init(name: "message", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var routeIcon: RswiftResources.ImageResource { .init(name: "route", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
       var backButton: RswiftResources.ImageResource { .init(name: "back", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var defaultAv: RswiftResources.ImageResource { .init(name: "Avatar", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var edit: RswiftResources.ImageResource { .init(name: "edit", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var bonus: RswiftResources.ImageResource { .init(name: "BonusCard", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var pinfo: RswiftResources.ImageResource { .init(name: "pinfo", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var phistory: RswiftResources.ImageResource { .init(name: "phistory", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var ppayment: RswiftResources.ImageResource { .init(name: "ppayment", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var pnotif: RswiftResources.ImageResource { .init(name: "pnotif", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      var plog: RswiftResources.ImageResource { .init(name: "plog", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil)}
+      
 
   }
 

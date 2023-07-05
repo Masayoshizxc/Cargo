@@ -60,6 +60,12 @@
 		AED4212E2A54E011009AD18A /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4212D2A54E011009AD18A /* CellData.swift */; };
 		AED421312A54E245009AD18A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421302A54E245009AD18A /* MapViewController.swift */; };
 		AED421332A54E263009AD18A /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421322A54E263009AD18A /* MapCoordinator.swift */; };
+		AED421472A55046E009AD18A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421462A55046E009AD18A /* ProfileView.swift */; };
+		AED4214A2A5507D5009AD18A /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421492A5507D5009AD18A /* ProfileTableViewCell.swift */; };
+		AED4214D2A5515D1009AD18A /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4214C2A5515D1009AD18A /* PersonalView.swift */; };
+		AED4214F2A5515DC009AD18A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4214E2A5515DC009AD18A /* HistoryView.swift */; };
+		AED421512A5515E8009AD18A /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421502A5515E8009AD18A /* PaymentView.swift */; };
+		AED421532A551745009AD18A /* BonusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421522A551745009AD18A /* BonusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +125,12 @@
 		AED4212D2A54E011009AD18A /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
 		AED421302A54E245009AD18A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AED421322A54E263009AD18A /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		AED421462A55046E009AD18A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AED421492A5507D5009AD18A /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		AED4214C2A5515D1009AD18A /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
+		AED4214E2A5515DC009AD18A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		AED421502A5515E8009AD18A /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		AED421522A551745009AD18A /* BonusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusView.swift; sourceTree = "<group>"; };
 		C209E93313F1B0B833911304 /* Pods-Cargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo.release.xcconfig"; path = "Target Support Files/Pods-Cargo/Pods-Cargo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,7 +276,13 @@
 		AEA295612A51994C001D55E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AED421482A5507CB009AD18A /* Cells */,
 				AEA295622A51994F001D55E4 /* Controller */,
+				AED421462A55046E009AD18A /* ProfileView.swift */,
+				AED4214C2A5515D1009AD18A /* PersonalView.swift */,
+				AED421522A551745009AD18A /* BonusView.swift */,
+				AED4214E2A5515DC009AD18A /* HistoryView.swift */,
+				AED421502A5515E8009AD18A /* PaymentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -573,6 +591,14 @@
 			path = Maps;
 			sourceTree = "<group>";
 		};
+		AED421482A5507CB009AD18A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AED421492A5507D5009AD18A /* ProfileTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D85E9720E095768B98F0CF6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -715,7 +741,10 @@
 				AED421332A54E263009AD18A /* MapCoordinator.swift in Sources */,
 				AE4ADD3F2A4B58CD00E0B3E6 /* ViewController.swift in Sources */,
 				AEAE9F592A4E9A650007B898 /* ForText.swift in Sources */,
+				AED421532A551745009AD18A /* BonusView.swift in Sources */,
+				AED4214D2A5515D1009AD18A /* PersonalView.swift in Sources */,
 				AED421282A53F1C6009AD18A /* CreateOrderView.swift in Sources */,
+				AED421472A55046E009AD18A /* ProfileView.swift in Sources */,
 				AED4212A2A53F1CF009AD18A /* CreateOrderViewController.swift in Sources */,
 				AEA2955E2A5198DA001D55E4 /* ChatViewController.swift in Sources */,
 				AEAE9F532A4E98F60007B898 /* LoginView.swift in Sources */,
@@ -727,8 +756,10 @@
 				AEAE9F482A4E94D50007B898 /* Coordinator.swift in Sources */,
 				AEA295682A51A877001D55E4 /* HomeView.swift in Sources */,
 				AE4ADD3B2A4B58CD00E0B3E6 /* AppDelegate.swift in Sources */,
+				AED4214A2A5507D5009AD18A /* ProfileTableViewCell.swift in Sources */,
 				AED4212C2A53F3A5009AD18A /* Extension + UINavigationBar.swift in Sources */,
 				AEAE9F512A4E98E90007B898 /* LoginModel.swift in Sources */,
+				AED4214F2A5515DC009AD18A /* HistoryView.swift in Sources */,
 				AED4211C2A52D1EB009AD18A /* FilterViewController.swift in Sources */,
 				AEA2955B2A5198A2001D55E4 /* ChatCoordinator.swift in Sources */,
 				AE406D0D2A502B4900601D8E /* ForgotView.swift in Sources */,
@@ -742,6 +773,7 @@
 				AEA295442A515CDD001D55E4 /* RegisterModel.swift in Sources */,
 				AE406D0B2A502B3F00601D8E /* ForgotViewModel.swift in Sources */,
 				AEA295772A52A8CD001D55E4 /* NotificationsViewController.swift in Sources */,
+				AED421512A5515E8009AD18A /* PaymentView.swift in Sources */,
 				AE406D092A502B3600601D8E /* ForgotModel.swift in Sources */,
 				AEAE9F422A4E94190007B898 /* HomeViewController.swift in Sources */,
 				AED421262A53EF48009AD18A /* OrderViewController.swift in Sources */,

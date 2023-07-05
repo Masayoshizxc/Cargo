@@ -1,0 +1,19 @@
+{
+  "commitish" : "2.6.3",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)",
+      "hash" : "fc53c95a70b4411419c09b6c096cbe39dd9755e07511eb19dab1dd1b2c04c5b2",
+      "name" : "JWTDecode",
+      "container" : "JWTDecode.xcframework",
+      "identifier" : "ios-arm64"
+    },
+    {
+      "swiftToolchainVersion" : "5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)",
+      "hash" : "91c13cbe907372b3b9bd64f38641e8e579a38ffeae22ab55faec014f4c7a93c3",
+      "name" : "JWTDecode",
+      "container" : "JWTDecode.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    }
+  ]
+}

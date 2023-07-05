@@ -66,7 +66,32 @@
 		AED4214F2A5515DC009AD18A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4214E2A5515DC009AD18A /* HistoryView.swift */; };
 		AED421512A5515E8009AD18A /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421502A5515E8009AD18A /* PaymentView.swift */; };
 		AED421532A551745009AD18A /* BonusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421522A551745009AD18A /* BonusView.swift */; };
+		AED421582A5528A7009AD18A /* TrimbleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED421542A5528A6009AD18A /* TrimbleMaps.xcframework */; };
+		AED421592A5528A7009AD18A /* TrimbleMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED421542A5528A6009AD18A /* TrimbleMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AED4215A2A5528A7009AD18A /* JWTDecode.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED421552A5528A6009AD18A /* JWTDecode.xcframework */; };
+		AED4215B2A5528A7009AD18A /* JWTDecode.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED421552A5528A6009AD18A /* JWTDecode.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AED4215C2A5528A7009AD18A /* TrimbleMapsAccounts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED421562A5528A6009AD18A /* TrimbleMapsAccounts.xcframework */; };
+		AED4215D2A5528A7009AD18A /* TrimbleMapsAccounts.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED421562A5528A6009AD18A /* TrimbleMapsAccounts.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AED4215E2A5528A7009AD18A /* TrimbleMapsMobileEvents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED421572A5528A7009AD18A /* TrimbleMapsMobileEvents.xcframework */; };
+		AED4215F2A5528A7009AD18A /* TrimbleMapsMobileEvents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED421572A5528A7009AD18A /* TrimbleMapsMobileEvents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AED421602A5528A7009AD18A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AED4215D2A5528A7009AD18A /* TrimbleMapsAccounts.xcframework in Embed Frameworks */,
+				AED421592A5528A7009AD18A /* TrimbleMaps.xcframework in Embed Frameworks */,
+				AED4215B2A5528A7009AD18A /* JWTDecode.xcframework in Embed Frameworks */,
+				AED4215F2A5528A7009AD18A /* TrimbleMapsMobileEvents.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2B1B5B93D27206CA1306DA3A /* Pods-Cargo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo.debug.xcconfig"; path = "Target Support Files/Pods-Cargo/Pods-Cargo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +156,10 @@
 		AED4214E2A5515DC009AD18A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		AED421502A5515E8009AD18A /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		AED421522A551745009AD18A /* BonusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusView.swift; sourceTree = "<group>"; };
+		AED421542A5528A6009AD18A /* TrimbleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TrimbleMaps.xcframework; path = Carthage/Build/TrimbleMaps.xcframework; sourceTree = "<group>"; };
+		AED421552A5528A6009AD18A /* JWTDecode.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JWTDecode.xcframework; path = Carthage/Build/JWTDecode.xcframework; sourceTree = "<group>"; };
+		AED421562A5528A6009AD18A /* TrimbleMapsAccounts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TrimbleMapsAccounts.xcframework; path = Carthage/Build/TrimbleMapsAccounts.xcframework; sourceTree = "<group>"; };
+		AED421572A5528A7009AD18A /* TrimbleMapsMobileEvents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TrimbleMapsMobileEvents.xcframework; path = Carthage/Build/TrimbleMapsMobileEvents.xcframework; sourceTree = "<group>"; };
 		C209E93313F1B0B833911304 /* Pods-Cargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo.release.xcconfig"; path = "Target Support Files/Pods-Cargo/Pods-Cargo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +168,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED421582A5528A7009AD18A /* TrimbleMaps.xcframework in Frameworks */,
+				AED4215E2A5528A7009AD18A /* TrimbleMapsMobileEvents.xcframework in Frameworks */,
+				AED4215A2A5528A7009AD18A /* JWTDecode.xcframework in Frameworks */,
+				AED4215C2A5528A7009AD18A /* TrimbleMapsAccounts.xcframework in Frameworks */,
 				4511E1425F011DAD2A8B5FC5 /* Pods_Cargo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +635,10 @@
 		D85E9720E095768B98F0CF6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AED421552A5528A6009AD18A /* JWTDecode.xcframework */,
+				AED421542A5528A6009AD18A /* TrimbleMaps.xcframework */,
+				AED421562A5528A6009AD18A /* TrimbleMapsAccounts.xcframework */,
+				AED421572A5528A7009AD18A /* TrimbleMapsMobileEvents.xcframework */,
 				5F710DD1677D05FC0AE7C099 /* Pods_Cargo.framework */,
 			);
 			name = Frameworks;
@@ -619,6 +656,7 @@
 				AE4ADD342A4B58CD00E0B3E6 /* Frameworks */,
 				AE4ADD352A4B58CD00E0B3E6 /* Resources */,
 				4656AEE4FF766E631490B2FF /* [CP] Embed Pods Frameworks */,
+				AED421602A5528A7009AD18A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

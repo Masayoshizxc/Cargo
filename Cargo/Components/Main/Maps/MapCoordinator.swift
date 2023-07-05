@@ -21,7 +21,7 @@ class MapCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
 
     func start() {
-        let vc = MapViewController()
+        let vc = BasicMapViewController()
         vc.coordinator = self
         vc.tabBarItem = TabBarItems.third.tabbarItem
 //        navigationController.hidesBarsOnSwipe = true

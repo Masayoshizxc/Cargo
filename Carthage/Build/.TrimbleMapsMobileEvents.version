@@ -1,0 +1,26 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "0.1.5",
+  "iOS" : [
+    {
+      "hash" : "8b4ca49e897479bb87690a8884c08ea117762c381d93b215250562206241eb12",
+      "name" : "TrimbleMapsMobileEvents",
+      "container" : "TrimbleMapsMobileEvents.xcframework",
+      "identifier" : "ios-arm64_i386_x86_64-simulator"
+    },
+    {
+      "hash" : "1542c7f9a70caf33ed9ec44c8c79e9bded179e5bf6ff4c2b98799081cd5e8c7b",
+      "name" : "TrimbleMapsMobileEvents",
+      "container" : "TrimbleMapsMobileEvents.xcframework",
+      "identifier" : "ios-arm64_armv7"
+    }
+  ]
+}

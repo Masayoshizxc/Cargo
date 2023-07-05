@@ -4,6 +4,13 @@
 //
 //  Created by Adilet on 30/6/23.
 //
+//<key>NSLocationWhenInUseUsageDescription</key>
+//    <string>Your precise location is used to calculate turn-by-turn directions, show your location on the map, and help improve the map.</string>
+//    <key>NSLocationTemporaryUsageDescriptionDictionary</key>
+//    <dict>
+//      <key>LocationAccuracyAuthorizationDescription</key>
+//      <string>Please enable precise location. Turn-by-turn directions only work when precise location data is available.</string>
+//    </dict>
 
 import UIKit
 

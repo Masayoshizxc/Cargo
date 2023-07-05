@@ -1,0 +1,26 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "0.1.8",
+  "iOS" : [
+    {
+      "hash" : "d8457e20cd55a2effa5be9e345ec562b63678da3328c06867b6971fe955aa87a",
+      "name" : "TrimbleMaps",
+      "container" : "TrimbleMaps.xcframework",
+      "identifier" : "ios-arm64_i386_x86_64-simulator"
+    },
+    {
+      "hash" : "b5572edb7b69820744b4e445ce7509cc68accef65b5f54eaed8f22441fea2bcd",
+      "name" : "TrimbleMaps",
+      "container" : "TrimbleMaps.xcframework",
+      "identifier" : "ios-arm64_armv7"
+    }
+  ]
+}

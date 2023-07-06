@@ -94,13 +94,13 @@ struct Trans: Codable {
 }
 
 struct LoginModel: Codable {
-    let description, email: String
+    let name, description, email: String
     let phone: String
     let role, createdAt, userID: String
     let accessToken, refreshToken: String
 
     enum CodingKeys: String, CodingKey {
-//        case name = "name"
+        case name = "name"
         case description = "description"
         case email = "email"
         case phone = "phone"
@@ -113,7 +113,7 @@ struct LoginModel: Codable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-//        self.name = try container.decode(String.self, forKey: .name)
+        self.name = try container.decode(String.self, forKey: .name)
         self.description = try container.decode(String.self, forKey: .description)
         self.email = try container.decode(String.self, forKey: .email)
         self.phone = try container.decode(String.self, forKey: .phone)

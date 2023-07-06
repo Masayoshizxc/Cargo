@@ -39,9 +39,11 @@ class LoginViewModel: LoginViewModelProtocol {
                     let userDefaults = UserDefaultsService.shared
                     userDefaults.saveAccessToken(name: model.accessToken)
                     userDefaults.saveRole(role: model.role)
+                    userDefaults.saveName(name: model.name)
     //                userDefaults.saveUserId(id: model.id ?? 0)
                     userDefaults.isSignedIn(signedIn: true)
     //                print(userDefaults.getUserId())
+                    
                     completion(.success)
                 case .badRequest(let error):
                     debugPrint(#function, error)

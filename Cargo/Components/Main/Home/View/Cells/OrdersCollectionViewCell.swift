@@ -40,7 +40,7 @@ class OrdersCollectionViewCell: UICollectionViewCell {
         let l = UILabel()
         l.font = R.font.medium(size: 18)
         l.textColor = .black
-        l.text = "MacBook 14’ Pro, 16 GB ram, 512 SSD "
+        l.text = "MacBookPro"
         return l
     }()
     
@@ -100,7 +100,7 @@ class OrdersCollectionViewCell: UICollectionViewCell {
         let l = UILabel()
         l.font = R.font.semiBold(size: 16)
         l.textColor = .black
-        l.text = "Darrell Steward"
+        l.text = "Kasymbekov Dastan"
         return l
     }()
     
@@ -171,6 +171,14 @@ class OrdersCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func createTapped() {
+        
+    }
+    
+    func setUpData(model: Order) {
+        trackNumber.text = model.order_id
+        loadLabel.text = model.point_a
+        unloadLabel.text = model.point_b
+        driverCompany.text = model.freight
         
     }
     

@@ -110,7 +110,9 @@ class LoginViewController: UIViewController {
                 self.coordinator?.goTabBar()
 //                self.coordinator?.goTabBar()
             case .failure:
+                
                 print("error")
+                
             }
         }
     }

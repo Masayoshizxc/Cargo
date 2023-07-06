@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4511E1425F011DAD2A8B5FC5 /* Pods_Cargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F710DD1677D05FC0AE7C099 /* Pods_Cargo.framework */; };
+		AE32569B2A573D4900DB722C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32569A2A573D4900DB722C /* HomeViewModel.swift */; };
+		AE32569E2A573EC400DB722C /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32569D2A573EC400DB722C /* OrderModel.swift */; };
+		AE3256A02A57428A00DB722C /* OrderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32569F2A57428A00DB722C /* OrderRouter.swift */; };
+		AE3256A22A57695000DB722C /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3256A12A57695000DB722C /* CreateViewModel.swift */; };
+		AE3256A42A57696000DB722C /* CreateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3256A32A57696000DB722C /* CreateModel.swift */; };
 		AE406D072A4FE5C300601D8E /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D062A4FE5C300601D8E /* Extension + UIView.swift */; };
 		AE406D092A502B3600601D8E /* ForgotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D082A502B3600601D8E /* ForgotModel.swift */; };
 		AE406D0B2A502B3F00601D8E /* ForgotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D0A2A502B3F00601D8E /* ForgotViewModel.swift */; };
@@ -130,6 +135,11 @@
 		AE02A4682A5547EF00D4C5B0 /* .TrimbleMapsMobileEvents.version */ = {isa = PBXFileReference; lastKnownFileType = text; path = .TrimbleMapsMobileEvents.version; sourceTree = "<group>"; };
 		AE02A4692A5547EF00D4C5B0 /* TrimbleMapsAccounts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TrimbleMapsAccounts.xcframework; sourceTree = "<group>"; };
 		AE02A46A2A5547EF00D4C5B0 /* TrimbleMapsMobileEvents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TrimbleMapsMobileEvents.xcframework; sourceTree = "<group>"; };
+		AE32569A2A573D4900DB722C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AE32569D2A573EC400DB722C /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		AE32569F2A57428A00DB722C /* OrderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRouter.swift; sourceTree = "<group>"; };
+		AE3256A12A57695000DB722C /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
+		AE3256A32A57696000DB722C /* CreateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateModel.swift; sourceTree = "<group>"; };
 		AE406D062A4FE5C300601D8E /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		AE406D082A502B3600601D8E /* ForgotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotModel.swift; sourceTree = "<group>"; };
 		AE406D0A2A502B3F00601D8E /* ForgotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewModel.swift; sourceTree = "<group>"; };
@@ -283,6 +293,14 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
+		AE32569C2A573EB300DB722C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE32569D2A573EC400DB722C /* OrderModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AE4ADD2E2A4B58CD00E0B3E6 = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				AE8D8D112A56C91C00DD42D3 /* AuthRouter.swift */,
+				AE32569F2A57428A00DB722C /* OrderRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -552,6 +571,7 @@
 		AEAE9F3C2A4E93F70007B898 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AE32569C2A573EB300DB722C /* Models */,
 				AEAE9F3F2A4E94060007B898 /* ViewModel */,
 				AEAE9F3E2A4E94020007B898 /* View */,
 				AEAE9F3D2A4E93FE0007B898 /* Model */,
@@ -581,6 +601,7 @@
 		AEAE9F3F2A4E94060007B898 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AE32569A2A573D4900DB722C /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -731,6 +752,7 @@
 		AED4211E2A53EF25009AD18A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE3256A32A57696000DB722C /* CreateModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -748,6 +770,7 @@
 		AED421202A53EF2B009AD18A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AE3256A12A57695000DB722C /* CreateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -953,18 +976,23 @@
 				AEA295682A51A877001D55E4 /* HomeView.swift in Sources */,
 				AE8D8D142A56C9D700DD42D3 /* BaseRouter.swift in Sources */,
 				AE4ADD3B2A4B58CD00E0B3E6 /* AppDelegate.swift in Sources */,
+				AE3256A02A57428A00DB722C /* OrderRouter.swift in Sources */,
 				AED4214A2A5507D5009AD18A /* ProfileTableViewCell.swift in Sources */,
 				AED4212C2A53F3A5009AD18A /* Extension + UINavigationBar.swift in Sources */,
 				AE8D8D1B2A56CA8700DD42D3 /* ProResult.swift in Sources */,
+				AE32569E2A573EC400DB722C /* OrderModel.swift in Sources */,
 				AE8D8D0C2A56C7A600DD42D3 /* NetworkService.swift in Sources */,
 				AEAE9F512A4E98E90007B898 /* LoginModel.swift in Sources */,
 				AE8D8D1F2A56CAB300DD42D3 /* HttpHeader.swift in Sources */,
 				AED4214F2A5515DC009AD18A /* HistoryView.swift in Sources */,
+				AE3256A22A57695000DB722C /* CreateViewModel.swift in Sources */,
 				AE8D8D122A56C91C00DD42D3 /* AuthRouter.swift in Sources */,
 				AED4211C2A52D1EB009AD18A /* FilterViewController.swift in Sources */,
 				AEA2955B2A5198A2001D55E4 /* ChatCoordinator.swift in Sources */,
+				AE32569B2A573D4900DB722C /* HomeViewModel.swift in Sources */,
 				AE8D8D222A56CAD800DD42D3 /* FailureModel.swift in Sources */,
 				AE406D0D2A502B4900601D8E /* ForgotView.swift in Sources */,
+				AE3256A42A57696000DB722C /* CreateModel.swift in Sources */,
 				AE406D072A4FE5C300601D8E /* Extension + UIView.swift in Sources */,
 				AE4ADD3D2A4B58CD00E0B3E6 /* SceneDelegate.swift in Sources */,
 				AEAE9F552A4E99000007B898 /* LoginViewController.swift in Sources */,

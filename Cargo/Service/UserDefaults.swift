@@ -122,6 +122,13 @@ class UserDefaultsService {
         return false
     }
     
+    func saveName(name: String) {
+        storage.setValue(name, forKey: CreateUser.name.rawValue)
+    }
+//    func getName() -> {
+//        storage.value(forKey: CreateUser.name.rawValue) as! String
+//    }
+    
     func saveRole(role: String) {
         storage.setValue(role, forKey: CreateUser.role.rawValue)
     }

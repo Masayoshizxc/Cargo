@@ -54,10 +54,22 @@ class CreateOrderView: UIView {
         return t
     }()
     
-    lazy var typeOfCargo: ForText = {
-        let t = ForText()
-        t.placeholder = "Type of cargo"
-        return t
+//    lazy var typeOfCargo: ForText = {
+//        let t = ForText()
+//        t.placeholder = "Type of cargo"
+//        return t
+//    }()
+    lazy var typeOfCargo: UIButton = {
+        let b = UIButton()
+        b.backgroundColor = .clear
+        b.layer.cornerRadius = 8
+        b.layer.borderWidth = 1
+        b.tintColor = .black
+        b.addTarget(self, action: #selector(typeTapped), for: .touchUpInside)
+        b.setTitle("Type OF Cargo", for: .normal)
+        b.titleLabel?.font = R.font.medium(size: 15)
+        b.setTitleColor(R.color.orderLabel(), for: .normal)
+        return b
     }()
     
     lazy var weight: ForText = {
@@ -101,10 +113,29 @@ class CreateOrderView: UIView {
         super.init(frame: frame)
         setupSubviews()
         setupConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func typeTapped() {
+        let optionClosure = {(action: UIAction) in
+            print(action.title)
+        }
+
+        typeOfCargo.menu = UIMenu(children: [
+            UIAction(title: "Containers", state: .on, handler: optionClosure),
+            UIAction(title: "Dry Bulk Cargo", handler: optionClosure),
+            UIAction(title: "Liquid Bulk Cargo", handler: optionClosure),
+            UIAction(title: "Break Bulk", handler: optionClosure),
+            UIAction(title: "Roll-On Roll-Off", handler: optionClosure),
+            UIAction(title: "Getting Freight Management Services", handler: optionClosure)
+        ])
+
+        typeOfCargo.showsMenuAsPrimaryAction = true
+        typeOfCargo.changesSelectionAsPrimaryAction = true
     }
     
     @objc func notifTapped() {
@@ -168,16 +199,16 @@ extension CreateOrderView {
             make.top.equalTo(orderName.snp.bottom).offset(16)
         }
         typeOfCargo.snp.makeConstraints{make in
-            make.centerX.equalToSuperview()
-            make.left.right.equalToSuperview().inset(12)
+            make.left.equalToSuperview().inset(12)
+            make.right.equalTo(trackNumber.snp.centerX).inset(5)
             make.height.equalTo(46)
             make.top.equalTo(trackNumber.snp.bottom).offset(16)
         }
         weight.snp.makeConstraints{make in
-            make.centerX.equalToSuperview()
-            make.left.right.equalToSuperview().inset(12)
+            make.left.equalTo(typeOfCargo.snp.right).offset(15)
+            make.right.equalToSuperview().inset(12)
             make.height.equalTo(46)
-            make.top.equalTo(typeOfCargo.snp.bottom).offset(16)
+            make.centerY.equalTo(typeOfCargo)
         }
         loadingPoint.snp.makeConstraints{make in
             make.centerX.equalToSuperview()

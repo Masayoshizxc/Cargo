@@ -11,7 +11,20 @@ import SnapKit
 class HomeViewController: BaseViewController {
     
     var coordinator: HomeCoordinator?
-    var ui = HomeView()
+    private var ui = HomeView()
+    private let viewModel: HomeViewModelProtocol
+//    let userDefaults = UserDefaultsService.saveName(<#T##self: UserDefaultsService##UserDefaultsService#>)
+    
+    init(viewModel: HomeViewModelProtocol = HomeViewModel()){
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+//    private let userView
     
     
 //    override func loadView() {
@@ -22,7 +35,12 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = ui
+        if let savedName = UserDefaults.standard.string(forKey: "name") {
+            ui.headerTitle.text = "Hi, \(savedName)"
+        }
+        getOrders()
         
+        print()
         ui.notif.addTarget(self, action: #selector(openNotifications), for: .touchUpInside)
         ui.filter.addTarget(self, action: #selector(openFilter), for: .touchUpInside)
         ui.createOrderBtn.addTarget(self, action: #selector(createTapped), for: .touchUpInside)
@@ -32,7 +50,43 @@ class HomeViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
+        if viewModel.order.isEmpty {
+//            emptyOrders()
+        }
     }
+    
+    
+    func getOrders(){
+        viewModel.getProduct { result in
+            switch result {
+            case .success:
+                self.ui.ordersCollectionView.reloadData()
+            case .failure:
+                print("Error")
+            }
+        }
+    }
+    
+    func emptyOrders() {
+        
+        var empty = UIImageView()
+        empty.image = UIImage(named: "empty1")
+        view.addSubview(empty)
+        empty.snp.makeConstraints{make in
+            make.centerX.centerY.equalToSuperview()
+        }
+        var label = UILabel()
+        label.text = "There are no orders yet)"
+        label.font = R.font.semiBold(size: 13)
+        label.textColor = R.color.orderLabel()
+        view.addSubview(label)
+        label.snp.makeConstraints{make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(empty.snp.bottom).offset(20)
+        }
+    }
+    
+    
     
     @objc func openFilter() {
         print("Filter")
@@ -61,13 +115,15 @@ extension HomeViewController {
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return viewModel.order.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.getReuseCell(OrdersCollectionViewCell.self, indexPath: indexPath)
         cell.backgroundColor = .white
         cell.layer.cornerRadius = 12
+        cell.setUpData(model: viewModel.order[indexPath.row])
+
         return cell
     }
     

@@ -13,6 +13,7 @@ protocol BaseRouter {
     var queryParameter: [URLQueryItem]? { get }
     var httpBody: Data? { get }
     var httpHeader: [HttpHeader]? { get }
+    var port: Int { get }
 }
 
 extension BaseRouter {
@@ -21,7 +22,10 @@ extension BaseRouter {
         return UserDefaultsService()
     }
     var host: String {
-        return "127.0.0.1;8080"
+        return "127.0.0.1"
+    }
+    var port: Int {
+        return 8081
     }
     var scheme: String {
         return "http"
@@ -31,6 +35,7 @@ extension BaseRouter {
         urlComponents.scheme = scheme
         urlComponents.host = host
         urlComponents.path = path
+        urlComponents.port = port
         urlComponents.queryItems = queryParameter
         guard let url = urlComponents.url else {
             fatalError(URLError(.unsupportedURL).localizedDescription)

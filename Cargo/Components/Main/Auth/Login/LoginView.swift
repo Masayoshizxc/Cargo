@@ -127,11 +127,11 @@ class LoginView: UIViewController {
     }
     
     @objc func logTapped() {
-        self.dismiss(animated: true) { [weak self] in
-            
-            self?.logDismiss?()
-            
-        }
+//        self.dismiss(animated: true) { [weak self] in
+//            
+//            self?.logDismiss?()
+//            
+//        }
     }
     
     

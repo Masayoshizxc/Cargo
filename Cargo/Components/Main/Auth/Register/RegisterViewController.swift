@@ -83,6 +83,7 @@ class RegisterViewController: UIViewController {
             switch result {
             case .success:
                 let sheet = UIAlertController(title: "Success", message: "Confirm registration in your email", preferredStyle: .alert)
+                self.present(sheet, animated: true)
                 self.performActionAfterDismissal()
             case .failure:
                 print("error")

@@ -1,0 +1,28 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "0.1.6",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)",
+      "hash" : "84c3369565ec4e6e892b20218d796cd446d4f94a584311d4cf75fd35b46cb468",
+      "name" : "RoutePlugin",
+      "container" : "RoutePlugin.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    },
+    {
+      "swiftToolchainVersion" : "5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)",
+      "hash" : "6747e82ca28d778f732d95a937e08659e108276d01d4d5d69dce0915c26ec51e",
+      "name" : "RoutePlugin",
+      "container" : "RoutePlugin.xcframework",
+      "identifier" : "ios-arm64"
+    }
+  ]
+}

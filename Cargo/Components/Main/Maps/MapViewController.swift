@@ -41,6 +41,10 @@
 import UIKit
 import TrimbleMaps
 import TrimbleMapsAccounts
+import AppTrackingTransparency
+import Polyline
+import RoutePlugin
+import TrimbleMapsWebservicesClient
 
 
 
@@ -82,6 +86,32 @@ class BasicMapViewController: UIViewController, AccountManagerDelegate {
         
         mapView.setCenter(coord, animated: true)
         
+    }
+    
+    func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
+        self.createSimpleRoute()
+    }
+    
+    func createSimpleRoute() {
+        let origin = CLLocationCoordinate2D(latitude: 42.836278, longitude: 74.624322)
+        let destination = CLLocationCoordinate2D(latitude: 42.844953, longitude: 74.586187)
+        
+        let routePlugin = RoutePlugin(mapView: mapView)
+        let route = Route()
+        
+        let wayPoints = [
+            Waypoint(coordinate: origin, name: "Loading point"),
+            Waypoint(coordinate: destination, name: "Unloading place")
+        ]
+        
+        let options = RouteOptions(waypoints: wayPoints)
+        options.shapeFormat = .polyline6
+        options.routeShapeResolution = .full
+        
+        route.routeOptions = options
+        route.color = .magenta
+        
+        routePlugin.addRoute(route)
     }
     
     

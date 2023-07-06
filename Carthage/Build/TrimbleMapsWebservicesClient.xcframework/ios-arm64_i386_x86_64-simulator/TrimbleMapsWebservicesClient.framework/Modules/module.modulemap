@@ -1,0 +1,11 @@
+framework module TrimbleMapsWebservicesClient {
+  umbrella header "TrimbleMapsWebservicesClient.h"
+
+  export *
+  module * { export * }
+}
+
+module TrimbleMapsWebservicesClient.Swift {
+    header "TrimbleMapsWebservicesClient-Swift.h"
+    requires objc
+}

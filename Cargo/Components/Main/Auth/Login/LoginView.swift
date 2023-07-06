@@ -24,7 +24,7 @@ class LoginView: UIViewController {
     }()
     
     let items = ["Client", "Transporter"]
-    private lazy var segmentControl: UISegmentedControl = {
+    lazy var segmentControl: UISegmentedControl = {
         let s = UISegmentedControl(items: items)
         s.selectedSegmentIndex = 0
         s.translatesAutoresizingMaskIntoConstraints = false
@@ -36,21 +36,21 @@ class LoginView: UIViewController {
         return s
     }()
     
-    private lazy var emailField: ForText = {
+    lazy var emailField: ForText = {
         let t = ForText()
         t.placeholder = "Email"
         t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         return t
     }()
     
-    private lazy var passwordField: ForText = {
+    lazy var passwordField: ForText = {
         let t = ForText()
         t.placeholder = "Password"
         t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         return t
     }()
     
-    private lazy var forgotPassword: UIButton = {
+    lazy var forgotPassword: UIButton = {
         let b = UIButton()
         b.backgroundColor = .none
         b.setTitle("Forgot password?", for: .normal)
@@ -69,7 +69,7 @@ class LoginView: UIViewController {
         return b
     }()
     
-    private lazy var loginButton: UIButton = {
+    lazy var loginButton: UIButton = {
         let b = UIButton()
         b.setTitle("Log in", for: .normal)
         b.backgroundColor = R.color.goldYellow()
@@ -78,8 +78,9 @@ class LoginView: UIViewController {
         b.titleLabel?.font = R.font.medium(size: 16)
         b.setTitleColor(.white, for: .normal)
         b.layer.cornerRadius = 8
+        b.addTarget(self, action: #selector(logTapped), for: .touchUpInside)
         if b.layer.opacity == 1 {
-            b.addTarget(self, action: #selector(logTapped), for: .touchUpInside)
+//            b.addTarget(self, action: #selector(logTapped), for: .touchUpInside)
         }
         return b
     }()
@@ -103,13 +104,11 @@ class LoginView: UIViewController {
     
     
     @objc func textFieldChanged() {
+//        print(emailField.text, passwordField.text)
         if (emailField.text != "" && passwordField.text != "") {
             loginButton.layer.opacity = 1
-            loginButton.addTarget(self, action: #selector(logTapped), for: .touchUpInside)
-        }
-        else {
+        } else {
             loginButton.layer.opacity = 0.7
-            loginButton.removeTarget(self, action: #selector(logTapped), for: .touchUpInside)
         }
     }
     

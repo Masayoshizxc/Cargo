@@ -1,0 +1,19 @@
+{
+  "commitish" : "v5.1.0",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)",
+      "hash" : "55b3fdd0a84d583a96e95d19a5ff14353f9ca62160da970d28ca61a878755784",
+      "name" : "Polyline",
+      "container" : "Polyline.xcframework",
+      "identifier" : "ios-arm64"
+    },
+    {
+      "swiftToolchainVersion" : "5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)",
+      "hash" : "a72082e83007816f8229c130afa35ef81391dd3d9ae712886538a5e18b2d4dfe",
+      "name" : "Polyline",
+      "container" : "Polyline.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    }
+  ]
+}

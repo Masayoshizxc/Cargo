@@ -3,14 +3,14 @@
   "iOS" : [
     {
       "swiftToolchainVersion" : "5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)",
-      "hash" : "fc53c95a70b4411419c09b6c096cbe39dd9755e07511eb19dab1dd1b2c04c5b2",
+      "hash" : "ef763a273d29fbff244c0e1b2f89477dd00c0086f8fa4088812a8bc4947cd328",
       "name" : "JWTDecode",
       "container" : "JWTDecode.xcframework",
       "identifier" : "ios-arm64"
     },
     {
       "swiftToolchainVersion" : "5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)",
-      "hash" : "91c13cbe907372b3b9bd64f38641e8e579a38ffeae22ab55faec014f4c7a93c3",
+      "hash" : "377e0ff26162fda1eb8b49ec995b0558a9fda2a238835deb7ac869399d727aeb",
       "name" : "JWTDecode",
       "container" : "JWTDecode.xcframework",
       "identifier" : "ios-arm64_x86_64-simulator"

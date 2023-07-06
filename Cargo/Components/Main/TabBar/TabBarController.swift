@@ -83,13 +83,18 @@ class TabBarController: UITabBarController {
         homeCoordinator.start()
         chatCoordinator.start()
         profileCoordinator.start()
-        mapCoordinator.start()
+        let role = UserDefaultsService.shared.getRole()
+        if role != "shipper" {
+            mapCoordinator.start()
+        }
         viewControllers = [
             homeCoordinator.navigationController,
             chatCoordinator.navigationController,
-            mapCoordinator.navigationController,
             profileCoordinator.navigationController
         ]
+        if role != "shipper" {
+            viewControllers?.insert(mapCoordinator.navigationController, at: 2)
+        }
 //        tabBar.alpha = 0.95
         let tab = UITabBarAppearance()
         tab.backgroundEffect = .none

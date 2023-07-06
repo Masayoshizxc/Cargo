@@ -1,0 +1,36 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name RoutePlugin
+import Foundation
+@_exported import RoutePlugin
+import Swift
+import SwiftUI
+import TrimbleMaps
+import TrimbleMapsWebservicesClient
+import Turf
+import UIKit
+import _Concurrency
+public class Route {
+  public var id: String
+  public var color: UIColor?
+  public var firstStopOffset: Swift.Int
+  public var routeOptions: RouteOptions?
+  public var requestCallback: Directions.RouteCompletionHandler?
+  public var routeLine: LineString?
+  public var stops: [Point]?
+  public var boundingBox: BoundingBox?
+  public init()
+  @objc deinit
+}
+extension UIColor {
+  convenience public init(hex: String)
+}
+@_hasMissingDesignatedInitializers public class RoutePlugin {
+  public var visible: Bool {
+    get
+    set
+  }
+  public init(mapView: MGLMapView)
+  public func addRoute(_ route: Route)
+  @objc deinit
+}

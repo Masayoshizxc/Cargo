@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4511E1425F011DAD2A8B5FC5 /* Pods_Cargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F710DD1677D05FC0AE7C099 /* Pods_Cargo.framework */; };
-		AE02A46C2A55484700D4C5B0 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = AE02A46B2A55484700D4C5B0 /* Polyline */; };
 		AE406D072A4FE5C300601D8E /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D062A4FE5C300601D8E /* Extension + UIView.swift */; };
 		AE406D092A502B3600601D8E /* ForgotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D082A502B3600601D8E /* ForgotModel.swift */; };
 		AE406D0B2A502B3F00601D8E /* ForgotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE406D0A2A502B3F00601D8E /* ForgotViewModel.swift */; };
@@ -19,6 +18,16 @@
 		AE4ADD3F2A4B58CD00E0B3E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4ADD3E2A4B58CD00E0B3E6 /* ViewController.swift */; };
 		AE4ADD442A4B58CE00E0B3E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE4ADD432A4B58CE00E0B3E6 /* Assets.xcassets */; };
 		AE4ADD472A4B58CE00E0B3E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4ADD452A4B58CE00E0B3E6 /* LaunchScreen.storyboard */; };
+		AE8D8D0C2A56C7A600DD42D3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D8D0B2A56C7A600DD42D3 /* NetworkService.swift */; };
+		AE8D8D0E2A56C86100DD42D3 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D8D0D2A56C86100DD42D3 /* UserDefaults.swift */; };
+		AE8D8D122A56C91C00DD42D3 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D8D112A56C91C00DD42D3 /* AuthRouter.swift */; };
+		AE8D8D142A56C9D700DD42D3 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D8D132A56C9D700DD42D3 /* BaseRouter.swift */; };
+		AE8D8D172A56CA5000DD42D3 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D8D162A56CA5000DD42D3 /* HttpMethod.swift */; };
+		AE8D8D192A56CA7000DD42D3 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D8D182A56CA7000DD42D3 /* StatusCode.swift */; };
+		AE8D8D1B2A56CA8700DD42D3 /* ProResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D8D1A2A56CA8700DD42D3 /* ProResult.swift */; };
+		AE8D8D1D2A56CA9900DD42D3 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D8D1C2A56CA9900DD42D3 /* NetworkErrors.swift */; };
+		AE8D8D1F2A56CAB300DD42D3 /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D8D1E2A56CAB300DD42D3 /* HttpHeader.swift */; };
+		AE8D8D222A56CAD800DD42D3 /* FailureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D8D212A56CAD800DD42D3 /* FailureModel.swift */; };
 		AEA295442A515CDD001D55E4 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA295432A515CDD001D55E4 /* RegisterModel.swift */; };
 		AEA295462A515CE8001D55E4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA295452A515CE8001D55E4 /* RegisterViewModel.swift */; };
 		AEA295482A515CF0001D55E4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA295472A515CF0001D55E4 /* RegisterViewController.swift */; };
@@ -34,6 +43,14 @@
 		AEA2956C2A51AD24001D55E4 /* Extension + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA2956B2A51AD24001D55E4 /* Extension + CollectionView.swift */; };
 		AEA2956E2A51B9E7001D55E4 /* OrdersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA2956D2A51B9E7001D55E4 /* OrdersCollectionViewCell.swift */; };
 		AEA295772A52A8CD001D55E4 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA295762A52A8CD001D55E4 /* NotificationsViewController.swift */; };
+		AEA68BFC2A5674EE00397E66 /* Polyline.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA68BFB2A5674EE00397E66 /* Polyline.xcframework */; };
+		AEA68BFD2A5674EE00397E66 /* Polyline.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA68BFB2A5674EE00397E66 /* Polyline.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEA68BFF2A5678CD00397E66 /* TrimbleMapsWebservicesClient.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA68BFE2A5678CD00397E66 /* TrimbleMapsWebservicesClient.xcframework */; };
+		AEA68C002A5678CD00397E66 /* TrimbleMapsWebservicesClient.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA68BFE2A5678CD00397E66 /* TrimbleMapsWebservicesClient.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEA68C032A5678FB00397E66 /* RoutePlugin.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA68C012A5678FB00397E66 /* RoutePlugin.xcframework */; };
+		AEA68C042A5678FB00397E66 /* RoutePlugin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA68C012A5678FB00397E66 /* RoutePlugin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEA68C052A5678FB00397E66 /* Turf.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA68C022A5678FB00397E66 /* Turf.xcframework */; };
+		AEA68C062A5678FB00397E66 /* Turf.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA68C022A5678FB00397E66 /* Turf.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEAE9F422A4E94190007B898 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE9F412A4E94190007B898 /* HomeViewController.swift */; };
 		AEAE9F452A4E946B0007B898 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE9F442A4E946B0007B898 /* BaseViewController.swift */; };
 		AEAE9F482A4E94D50007B898 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE9F472A4E94D50007B898 /* Coordinator.swift */; };
@@ -53,69 +70,6 @@
 		AEAE9F6C2A4EC4DE0007B898 /* SFSemibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEAE9F642A4EC4DE0007B898 /* SFSemibold.otf */; };
 		AEAE9F6D2A4EC4DE0007B898 /* SFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEAE9F652A4EC4DE0007B898 /* SFBold.otf */; };
 		AEC367692A55761D00CECAD2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367682A55761D00CECAD2 /* Token.swift */; };
-		AEC367B12A5576C500CECAD2 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3676A2A5576C400CECAD2 /* FavouritesRouter.swift */; };
-		AEC367B22A5576C500CECAD2 /* MapNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3676D2A5576C400CECAD2 /* MapNetworkRouter.swift */; };
-		AEC367B32A5576C500CECAD2 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3676E2A5576C400CECAD2 /* ForgotPassword.swift */; };
-		AEC367B42A5576C500CECAD2 /* AttributesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3676F2A5576C400CECAD2 /* AttributesRouter.swift */; };
-		AEC367B52A5576C500CECAD2 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367702A5576C400CECAD2 /* UserRouter.swift */; };
-		AEC367B62A5576C500CECAD2 /* AttributeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367712A5576C400CECAD2 /* AttributeRouter.swift */; };
-		AEC367B72A5576C500CECAD2 /* HomeNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367722A5576C400CECAD2 /* HomeNetworkRouter.swift */; };
-		AEC367B82A5576C500CECAD2 /* ProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367732A5576C400CECAD2 /* ProductRouter.swift */; };
-		AEC367B92A5576C500CECAD2 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367742A5576C400CECAD2 /* AuthRouter.swift */; };
-		AEC367BA2A5576C500CECAD2 /* AttributeRouter 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367752A5576C400CECAD2 /* AttributeRouter 2.swift */; };
-		AEC367BB2A5576C500CECAD2 /* ProfileeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367762A5576C400CECAD2 /* ProfileeRouter.swift */; };
-		AEC367BC2A5576C500CECAD2 /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367772A5576C400CECAD2 /* CategoryRouter.swift */; };
-		AEC367BD2A5576C500CECAD2 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367782A5576C400CECAD2 /* FavouritesRouter.swift */; };
-		AEC367BE2A5576C500CECAD2 /* FavouritesRouter 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367792A5576C400CECAD2 /* FavouritesRouter 2.swift */; };
-		AEC367BF2A5576C500CECAD2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3677A2A5576C400CECAD2 /* NetworkService.swift */; };
-		AEC367C02A5576C500CECAD2 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3677B2A5576C400CECAD2 /* BaseRouter.swift */; };
-		AEC367C12A5576C500CECAD2 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3677D2A5576C400CECAD2 /* StatusCode.swift */; };
-		AEC367C22A5576C500CECAD2 /* ProResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3677E2A5576C400CECAD2 /* ProResult.swift */; };
-		AEC367C32A5576C500CECAD2 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3677F2A5576C400CECAD2 /* NetworkErrors.swift */; };
-		AEC367C42A5576C500CECAD2 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367802A5576C400CECAD2 /* HttpMethod.swift */; };
-		AEC367C52A5576C500CECAD2 /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367812A5576C400CECAD2 /* HttpHeader.swift */; };
-		AEC367C62A5576C500CECAD2 /* FailureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367832A5576C400CECAD2 /* FailureModel.swift */; };
-		AEC367C72A5576C500CECAD2 /* FailureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367842A5576C400CECAD2 /* FailureModel.swift */; };
-		AEC367C82A5576C500CECAD2 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367852A5576C400CECAD2 /* UserRouter.swift */; };
-		AEC367C92A5576C500CECAD2 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367862A5576C400CECAD2 /* BaseRouter.swift */; };
-		AEC367CA2A5576C500CECAD2 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367872A5576C400CECAD2 /* MessageManager.swift */; };
-		AEC367CB2A5576C500CECAD2 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367882A5576C400CECAD2 /* ForgotPassword.swift */; };
-		AEC367CC2A5576C500CECAD2 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367892A5576C400CECAD2 /* NetworkErrors.swift */; };
-		AEC367CD2A5576C500CECAD2 /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3678A2A5576C400CECAD2 /* CategoryRouter.swift */; };
-		AEC367CE2A5576C500CECAD2 /* HomeNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3678B2A5576C500CECAD2 /* HomeNetworkRouter.swift */; };
-		AEC367CF2A5576C500CECAD2 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3678C2A5576C500CECAD2 /* UserDefaultsService.swift */; };
-		AEC367D02A5576C500CECAD2 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3678D2A5576C500CECAD2 /* StatusCode.swift */; };
-		AEC367D12A5576C500CECAD2 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3678E2A5576C500CECAD2 /* AuthRouter.swift */; };
-		AEC367D22A5576C500CECAD2 /* ProfileeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3678F2A5576C500CECAD2 /* ProfileeRouter.swift */; };
-		AEC367D32A5576C500CECAD2 /* ProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367902A5576C500CECAD2 /* ProductRouter.swift */; };
-		AEC367D42A5576C500CECAD2 /* AttributeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367912A5576C500CECAD2 /* AttributeRouter.swift */; };
-		AEC367D52A5576C500CECAD2 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367922A5576C500CECAD2 /* HttpMethod.swift */; };
-		AEC367D62A5576C500CECAD2 /* MapNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367942A5576C500CECAD2 /* MapNetworkRouter.swift */; };
-		AEC367D72A5576C500CECAD2 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367952A5576C500CECAD2 /* ForgotPassword.swift */; };
-		AEC367D82A5576C500CECAD2 /* AttributesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367962A5576C500CECAD2 /* AttributesRouter.swift */; };
-		AEC367D92A5576C500CECAD2 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367972A5576C500CECAD2 /* UserRouter.swift */; };
-		AEC367DA2A5576C500CECAD2 /* AttributeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367982A5576C500CECAD2 /* AttributeRouter.swift */; };
-		AEC367DB2A5576C500CECAD2 /* HomeNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367992A5576C500CECAD2 /* HomeNetworkRouter.swift */; };
-		AEC367DC2A5576C500CECAD2 /* ProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3679A2A5576C500CECAD2 /* ProductRouter.swift */; };
-		AEC367DD2A5576C500CECAD2 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3679B2A5576C500CECAD2 /* AuthRouter.swift */; };
-		AEC367DE2A5576C500CECAD2 /* AttributeRouter 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3679C2A5576C500CECAD2 /* AttributeRouter 2.swift */; };
-		AEC367DF2A5576C500CECAD2 /* ProfileeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3679D2A5576C500CECAD2 /* ProfileeRouter.swift */; };
-		AEC367E02A5576C500CECAD2 /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3679E2A5576C500CECAD2 /* CategoryRouter.swift */; };
-		AEC367E12A5576C500CECAD2 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3679F2A5576C500CECAD2 /* FavouritesRouter.swift */; };
-		AEC367E22A5576C500CECAD2 /* FavouritesRouter 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367A02A5576C500CECAD2 /* FavouritesRouter 2.swift */; };
-		AEC367E32A5576C500CECAD2 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367A22A5576C500CECAD2 /* StatusCode.swift */; };
-		AEC367E42A5576C500CECAD2 /* ProResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367A32A5576C500CECAD2 /* ProResult.swift */; };
-		AEC367E52A5576C500CECAD2 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367A42A5576C500CECAD2 /* NetworkErrors.swift */; };
-		AEC367E62A5576C500CECAD2 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367A52A5576C500CECAD2 /* HttpMethod.swift */; };
-		AEC367E72A5576C500CECAD2 /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367A62A5576C500CECAD2 /* HttpHeader.swift */; };
-		AEC367E82A5576C500CECAD2 /* FailureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367A82A5576C500CECAD2 /* FailureModel.swift */; };
-		AEC367E92A5576C500CECAD2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367A92A5576C500CECAD2 /* NetworkService.swift */; };
-		AEC367EA2A5576C500CECAD2 /* MapNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367AA2A5576C500CECAD2 /* MapNetworkRouter.swift */; };
-		AEC367EB2A5576C500CECAD2 /* ProResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367AB2A5576C500CECAD2 /* ProResult.swift */; };
-		AEC367EC2A5576C500CECAD2 /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367AC2A5576C500CECAD2 /* HttpHeader.swift */; };
-		AEC367ED2A5576C500CECAD2 /* FailureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367AE2A5576C500CECAD2 /* FailureModel.swift */; };
-		AEC367EE2A5576C500CECAD2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367AF2A5576C500CECAD2 /* DatabaseManager.swift */; };
-		AEC367EF2A5576C500CECAD2 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC367B02A5576C500CECAD2 /* GooglePlacesManager.swift */; };
 		AED4211C2A52D1EB009AD18A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4211B2A52D1EB009AD18A /* FilterViewController.swift */; };
 		AED421232A53EF3C009AD18A /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421222A53EF3C009AD18A /* OrderView.swift */; };
 		AED421262A53EF48009AD18A /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED421252A53EF48009AD18A /* OrderViewController.swift */; };
@@ -148,9 +102,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AEA68C062A5678FB00397E66 /* Turf.xcframework in Embed Frameworks */,
+				AEA68BFD2A5674EE00397E66 /* Polyline.xcframework in Embed Frameworks */,
 				AED4215D2A5528A7009AD18A /* TrimbleMapsAccounts.xcframework in Embed Frameworks */,
+				AEA68C002A5678CD00397E66 /* TrimbleMapsWebservicesClient.xcframework in Embed Frameworks */,
 				AED421592A5528A7009AD18A /* TrimbleMaps.xcframework in Embed Frameworks */,
 				AED4215B2A5528A7009AD18A /* JWTDecode.xcframework in Embed Frameworks */,
+				AEA68C042A5678FB00397E66 /* RoutePlugin.xcframework in Embed Frameworks */,
 				AED4215F2A5528A7009AD18A /* TrimbleMapsMobileEvents.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -184,6 +142,16 @@
 		AE4ADD432A4B58CE00E0B3E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE4ADD462A4B58CE00E0B3E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE4ADD482A4B58CE00E0B3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8D8D0B2A56C7A600DD42D3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AE8D8D0D2A56C86100DD42D3 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		AE8D8D112A56C91C00DD42D3 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		AE8D8D132A56C9D700DD42D3 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		AE8D8D162A56CA5000DD42D3 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		AE8D8D182A56CA7000DD42D3 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		AE8D8D1A2A56CA8700DD42D3 /* ProResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProResult.swift; sourceTree = "<group>"; };
+		AE8D8D1C2A56CA9900DD42D3 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		AE8D8D1E2A56CAB300DD42D3 /* HttpHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHeader.swift; sourceTree = "<group>"; };
+		AE8D8D212A56CAD800DD42D3 /* FailureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureModel.swift; sourceTree = "<group>"; };
 		AEA295432A515CDD001D55E4 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		AEA295452A515CE8001D55E4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		AEA295472A515CF0001D55E4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +167,10 @@
 		AEA2956B2A51AD24001D55E4 /* Extension + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + CollectionView.swift"; sourceTree = "<group>"; };
 		AEA2956D2A51B9E7001D55E4 /* OrdersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCollectionViewCell.swift; sourceTree = "<group>"; };
 		AEA295762A52A8CD001D55E4 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		AEA68BFB2A5674EE00397E66 /* Polyline.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Polyline.xcframework; path = Carthage/Build/Polyline.xcframework; sourceTree = "<group>"; };
+		AEA68BFE2A5678CD00397E66 /* TrimbleMapsWebservicesClient.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TrimbleMapsWebservicesClient.xcframework; path = Carthage/Build/TrimbleMapsWebservicesClient.xcframework; sourceTree = "<group>"; };
+		AEA68C012A5678FB00397E66 /* RoutePlugin.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RoutePlugin.xcframework; path = Carthage/Build/RoutePlugin.xcframework; sourceTree = "<group>"; };
+		AEA68C022A5678FB00397E66 /* Turf.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Turf.xcframework; path = Carthage/Build/Turf.xcframework; sourceTree = "<group>"; };
 		AEAE9F412A4E94190007B898 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AEAE9F442A4E946B0007B898 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AEAE9F472A4E94D50007B898 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -218,69 +190,6 @@
 		AEAE9F642A4EC4DE0007B898 /* SFSemibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFSemibold.otf; sourceTree = "<group>"; };
 		AEAE9F652A4EC4DE0007B898 /* SFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFBold.otf; sourceTree = "<group>"; };
 		AEC367682A55761D00CECAD2 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		AEC3676A2A5576C400CECAD2 /* FavouritesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesRouter.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers/FavouritesRouter.swift; sourceTree = "<group>"; };
-		AEC3676D2A5576C400CECAD2 /* MapNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapNetworkRouter.swift; sourceTree = "<group>"; };
-		AEC3676E2A5576C400CECAD2 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
-		AEC3676F2A5576C400CECAD2 /* AttributesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributesRouter.swift; sourceTree = "<group>"; };
-		AEC367702A5576C400CECAD2 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
-		AEC367712A5576C400CECAD2 /* AttributeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeRouter.swift; sourceTree = "<group>"; };
-		AEC367722A5576C400CECAD2 /* HomeNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNetworkRouter.swift; sourceTree = "<group>"; };
-		AEC367732A5576C400CECAD2 /* ProductRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRouter.swift; sourceTree = "<group>"; };
-		AEC367742A5576C400CECAD2 /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
-		AEC367752A5576C400CECAD2 /* AttributeRouter 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttributeRouter 2.swift"; sourceTree = "<group>"; };
-		AEC367762A5576C400CECAD2 /* ProfileeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileeRouter.swift; sourceTree = "<group>"; };
-		AEC367772A5576C400CECAD2 /* CategoryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
-		AEC367782A5576C400CECAD2 /* FavouritesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
-		AEC367792A5576C400CECAD2 /* FavouritesRouter 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavouritesRouter 2.swift"; sourceTree = "<group>"; };
-		AEC3677A2A5576C400CECAD2 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		AEC3677B2A5576C400CECAD2 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
-		AEC3677D2A5576C400CECAD2 /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
-		AEC3677E2A5576C400CECAD2 /* ProResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProResult.swift; sourceTree = "<group>"; };
-		AEC3677F2A5576C400CECAD2 /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
-		AEC367802A5576C400CECAD2 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
-		AEC367812A5576C400CECAD2 /* HttpHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHeader.swift; sourceTree = "<group>"; };
-		AEC367832A5576C400CECAD2 /* FailureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureModel.swift; sourceTree = "<group>"; };
-		AEC367842A5576C400CECAD2 /* FailureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FailureModel.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/NetworkComponents/FailureModel/FailureModel.swift; sourceTree = "<group>"; };
-		AEC367852A5576C400CECAD2 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRouter.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers/UserRouter.swift; sourceTree = "<group>"; };
-		AEC367862A5576C400CECAD2 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRouter.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/BaseRouter.swift; sourceTree = "<group>"; };
-		AEC367872A5576C400CECAD2 /* MessageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageManager.swift; path = ../../../Rentit/ios/Rentit/Services/MessageManager.swift; sourceTree = "<group>"; };
-		AEC367882A5576C400CECAD2 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPassword.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers/ForgotPassword.swift; sourceTree = "<group>"; };
-		AEC367892A5576C400CECAD2 /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkErrors.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/NetworkComponents/NetworkErrors.swift; sourceTree = "<group>"; };
-		AEC3678A2A5576C400CECAD2 /* CategoryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryRouter.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers/CategoryRouter.swift; sourceTree = "<group>"; };
-		AEC3678B2A5576C500CECAD2 /* HomeNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeNetworkRouter.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers/HomeNetworkRouter.swift; sourceTree = "<group>"; };
-		AEC3678C2A5576C500CECAD2 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsService.swift; path = ../../../Rentit/ios/Rentit/Services/UserDefaultsService.swift; sourceTree = "<group>"; };
-		AEC3678D2A5576C500CECAD2 /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusCode.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/NetworkComponents/StatusCode.swift; sourceTree = "<group>"; };
-		AEC3678E2A5576C500CECAD2 /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthRouter.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers/AuthRouter.swift; sourceTree = "<group>"; };
-		AEC3678F2A5576C500CECAD2 /* ProfileeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileeRouter.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers/ProfileeRouter.swift; sourceTree = "<group>"; };
-		AEC367902A5576C500CECAD2 /* ProductRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductRouter.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers/ProductRouter.swift; sourceTree = "<group>"; };
-		AEC367912A5576C500CECAD2 /* AttributeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttributeRouter.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers/AttributeRouter.swift; sourceTree = "<group>"; };
-		AEC367922A5576C500CECAD2 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpMethod.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/NetworkComponents/HttpMethod.swift; sourceTree = "<group>"; };
-		AEC367942A5576C500CECAD2 /* MapNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapNetworkRouter.swift; sourceTree = "<group>"; };
-		AEC367952A5576C500CECAD2 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
-		AEC367962A5576C500CECAD2 /* AttributesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributesRouter.swift; sourceTree = "<group>"; };
-		AEC367972A5576C500CECAD2 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
-		AEC367982A5576C500CECAD2 /* AttributeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeRouter.swift; sourceTree = "<group>"; };
-		AEC367992A5576C500CECAD2 /* HomeNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNetworkRouter.swift; sourceTree = "<group>"; };
-		AEC3679A2A5576C500CECAD2 /* ProductRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRouter.swift; sourceTree = "<group>"; };
-		AEC3679B2A5576C500CECAD2 /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
-		AEC3679C2A5576C500CECAD2 /* AttributeRouter 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttributeRouter 2.swift"; sourceTree = "<group>"; };
-		AEC3679D2A5576C500CECAD2 /* ProfileeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileeRouter.swift; sourceTree = "<group>"; };
-		AEC3679E2A5576C500CECAD2 /* CategoryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
-		AEC3679F2A5576C500CECAD2 /* FavouritesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
-		AEC367A02A5576C500CECAD2 /* FavouritesRouter 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavouritesRouter 2.swift"; sourceTree = "<group>"; };
-		AEC367A22A5576C500CECAD2 /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
-		AEC367A32A5576C500CECAD2 /* ProResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProResult.swift; sourceTree = "<group>"; };
-		AEC367A42A5576C500CECAD2 /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
-		AEC367A52A5576C500CECAD2 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
-		AEC367A62A5576C500CECAD2 /* HttpHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHeader.swift; sourceTree = "<group>"; };
-		AEC367A82A5576C500CECAD2 /* FailureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureModel.swift; sourceTree = "<group>"; };
-		AEC367A92A5576C500CECAD2 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/NetworkService.swift; sourceTree = "<group>"; };
-		AEC367AA2A5576C500CECAD2 /* MapNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapNetworkRouter.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers/MapNetworkRouter.swift; sourceTree = "<group>"; };
-		AEC367AB2A5576C500CECAD2 /* ProResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProResult.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/NetworkComponents/ProResult.swift; sourceTree = "<group>"; };
-		AEC367AC2A5576C500CECAD2 /* HttpHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpHeader.swift; path = ../../../Rentit/ios/Rentit/Services/NetworkService/NetworkComponents/HttpHeader.swift; sourceTree = "<group>"; };
-		AEC367AE2A5576C500CECAD2 /* FailureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureModel.swift; sourceTree = "<group>"; };
-		AEC367AF2A5576C500CECAD2 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = ../../../Rentit/ios/Rentit/Services/DatabaseManager.swift; sourceTree = "<group>"; };
-		AEC367B02A5576C500CECAD2 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesManager.swift; path = ../../../Rentit/ios/Rentit/Services/GooglePlacesManager.swift; sourceTree = "<group>"; };
 		AED4211B2A52D1EB009AD18A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		AED421222A53EF3C009AD18A /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		AED421252A53EF48009AD18A /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
@@ -310,10 +219,13 @@
 			files = (
 				AED421582A5528A7009AD18A /* TrimbleMaps.xcframework in Frameworks */,
 				AED4215E2A5528A7009AD18A /* TrimbleMapsMobileEvents.xcframework in Frameworks */,
-				AE02A46C2A55484700D4C5B0 /* Polyline in Frameworks */,
 				AED4215A2A5528A7009AD18A /* JWTDecode.xcframework in Frameworks */,
 				AED4215C2A5528A7009AD18A /* TrimbleMapsAccounts.xcframework in Frameworks */,
+				AEA68C032A5678FB00397E66 /* RoutePlugin.xcframework in Frameworks */,
+				AEA68BFF2A5678CD00397E66 /* TrimbleMapsWebservicesClient.xcframework in Frameworks */,
+				AEA68C052A5678FB00397E66 /* Turf.xcframework in Frameworks */,
 				4511E1425F011DAD2A8B5FC5 /* Pods_Cargo.framework in Frameworks */,
+				AEA68BFC2A5674EE00397E66 /* Polyline.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +304,7 @@
 		AE4ADD392A4B58CD00E0B3E6 /* Cargo */ = {
 			isa = PBXGroup;
 			children = (
-				AEC367672A55761000CECAD2 /* Service */,
+				AE8D8D0A2A56C79C00DD42D3 /* Service */,
 				AE4ADD3A2A4B58CD00E0B3E6 /* AppDelegate.swift */,
 				AEAE9F5B2A4E9C510007B898 /* R.generated.swift */,
 				AE4ADD3C2A4B58CD00E0B3E6 /* SceneDelegate.swift */,
@@ -415,6 +327,55 @@
 				AED4212B2A53F3A5009AD18A /* Extension + UINavigationBar.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE8D8D0A2A56C79C00DD42D3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AE8D8D0D2A56C86100DD42D3 /* UserDefaults.swift */,
+				AE8D8D0F2A56C91000DD42D3 /* NetworkService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AE8D8D0F2A56C91000DD42D3 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				AE8D8D0B2A56C7A600DD42D3 /* NetworkService.swift */,
+				AE8D8D132A56C9D700DD42D3 /* BaseRouter.swift */,
+				AE8D8D152A56CA3800DD42D3 /* NetworkComponents */,
+				AE8D8D102A56C91400DD42D3 /* Routers */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		AE8D8D102A56C91400DD42D3 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				AE8D8D112A56C91C00DD42D3 /* AuthRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		AE8D8D152A56CA3800DD42D3 /* NetworkComponents */ = {
+			isa = PBXGroup;
+			children = (
+				AE8D8D202A56CAC500DD42D3 /* FailureModel */,
+				AE8D8D162A56CA5000DD42D3 /* HttpMethod.swift */,
+				AE8D8D1E2A56CAB300DD42D3 /* HttpHeader.swift */,
+				AE8D8D1C2A56CA9900DD42D3 /* NetworkErrors.swift */,
+				AE8D8D182A56CA7000DD42D3 /* StatusCode.swift */,
+				AE8D8D1A2A56CA8700DD42D3 /* ProResult.swift */,
+			);
+			path = NetworkComponents;
+			sourceTree = "<group>";
+		};
+		AE8D8D202A56CAC500DD42D3 /* FailureModel */ = {
+			isa = PBXGroup;
+			children = (
+				AE8D8D212A56CAD800DD42D3 /* FailureModel.swift */,
+			);
+			path = FailureModel;
 			sourceTree = "<group>";
 		};
 		AEA2954B2A51952F001D55E4 /* TabBar */ = {
@@ -717,144 +678,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		AEC367672A55761000CECAD2 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				AEC367912A5576C500CECAD2 /* AttributeRouter.swift */,
-				AEC3678E2A5576C500CECAD2 /* AuthRouter.swift */,
-				AEC367862A5576C400CECAD2 /* BaseRouter.swift */,
-				AEC3678A2A5576C400CECAD2 /* CategoryRouter.swift */,
-				AEC367AF2A5576C500CECAD2 /* DatabaseManager.swift */,
-				AEC367AD2A5576C500CECAD2 /* FailureModel */,
-				AEC367842A5576C400CECAD2 /* FailureModel.swift */,
-				AEC3676A2A5576C400CECAD2 /* FavouritesRouter.swift */,
-				AEC367882A5576C400CECAD2 /* ForgotPassword.swift */,
-				AEC367B02A5576C500CECAD2 /* GooglePlacesManager.swift */,
-				AEC3678B2A5576C500CECAD2 /* HomeNetworkRouter.swift */,
-				AEC367AC2A5576C500CECAD2 /* HttpHeader.swift */,
-				AEC367922A5576C500CECAD2 /* HttpMethod.swift */,
-				AEC367AA2A5576C500CECAD2 /* MapNetworkRouter.swift */,
-				AEC367872A5576C400CECAD2 /* MessageManager.swift */,
-				AEC367A12A5576C500CECAD2 /* NetworkComponents */,
-				AEC367892A5576C400CECAD2 /* NetworkErrors.swift */,
-				AEC3676B2A5576C400CECAD2 /* NetworkService */,
-				AEC367A92A5576C500CECAD2 /* NetworkService.swift */,
-				AEC367902A5576C500CECAD2 /* ProductRouter.swift */,
-				AEC3678F2A5576C500CECAD2 /* ProfileeRouter.swift */,
-				AEC367AB2A5576C500CECAD2 /* ProResult.swift */,
-				AEC367932A5576C500CECAD2 /* Routers */,
-				AEC3678D2A5576C500CECAD2 /* StatusCode.swift */,
-				AEC3678C2A5576C500CECAD2 /* UserDefaultsService.swift */,
-				AEC367852A5576C400CECAD2 /* UserRouter.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		AEC3676B2A5576C400CECAD2 /* NetworkService */ = {
-			isa = PBXGroup;
-			children = (
-				AEC3676C2A5576C400CECAD2 /* Routers */,
-				AEC3677A2A5576C400CECAD2 /* NetworkService.swift */,
-				AEC3677B2A5576C400CECAD2 /* BaseRouter.swift */,
-				AEC3677C2A5576C400CECAD2 /* NetworkComponents */,
-			);
-			name = NetworkService;
-			path = ../../../Rentit/ios/Rentit/Services/NetworkService;
-			sourceTree = "<group>";
-		};
-		AEC3676C2A5576C400CECAD2 /* Routers */ = {
-			isa = PBXGroup;
-			children = (
-				AEC3676D2A5576C400CECAD2 /* MapNetworkRouter.swift */,
-				AEC3676E2A5576C400CECAD2 /* ForgotPassword.swift */,
-				AEC3676F2A5576C400CECAD2 /* AttributesRouter.swift */,
-				AEC367702A5576C400CECAD2 /* UserRouter.swift */,
-				AEC367712A5576C400CECAD2 /* AttributeRouter.swift */,
-				AEC367722A5576C400CECAD2 /* HomeNetworkRouter.swift */,
-				AEC367732A5576C400CECAD2 /* ProductRouter.swift */,
-				AEC367742A5576C400CECAD2 /* AuthRouter.swift */,
-				AEC367752A5576C400CECAD2 /* AttributeRouter 2.swift */,
-				AEC367762A5576C400CECAD2 /* ProfileeRouter.swift */,
-				AEC367772A5576C400CECAD2 /* CategoryRouter.swift */,
-				AEC367782A5576C400CECAD2 /* FavouritesRouter.swift */,
-				AEC367792A5576C400CECAD2 /* FavouritesRouter 2.swift */,
-			);
-			path = Routers;
-			sourceTree = "<group>";
-		};
-		AEC3677C2A5576C400CECAD2 /* NetworkComponents */ = {
-			isa = PBXGroup;
-			children = (
-				AEC3677D2A5576C400CECAD2 /* StatusCode.swift */,
-				AEC3677E2A5576C400CECAD2 /* ProResult.swift */,
-				AEC3677F2A5576C400CECAD2 /* NetworkErrors.swift */,
-				AEC367802A5576C400CECAD2 /* HttpMethod.swift */,
-				AEC367812A5576C400CECAD2 /* HttpHeader.swift */,
-				AEC367822A5576C400CECAD2 /* FailureModel */,
-			);
-			path = NetworkComponents;
-			sourceTree = "<group>";
-		};
-		AEC367822A5576C400CECAD2 /* FailureModel */ = {
-			isa = PBXGroup;
-			children = (
-				AEC367832A5576C400CECAD2 /* FailureModel.swift */,
-			);
-			path = FailureModel;
-			sourceTree = "<group>";
-		};
-		AEC367932A5576C500CECAD2 /* Routers */ = {
-			isa = PBXGroup;
-			children = (
-				AEC367942A5576C500CECAD2 /* MapNetworkRouter.swift */,
-				AEC367952A5576C500CECAD2 /* ForgotPassword.swift */,
-				AEC367962A5576C500CECAD2 /* AttributesRouter.swift */,
-				AEC367972A5576C500CECAD2 /* UserRouter.swift */,
-				AEC367982A5576C500CECAD2 /* AttributeRouter.swift */,
-				AEC367992A5576C500CECAD2 /* HomeNetworkRouter.swift */,
-				AEC3679A2A5576C500CECAD2 /* ProductRouter.swift */,
-				AEC3679B2A5576C500CECAD2 /* AuthRouter.swift */,
-				AEC3679C2A5576C500CECAD2 /* AttributeRouter 2.swift */,
-				AEC3679D2A5576C500CECAD2 /* ProfileeRouter.swift */,
-				AEC3679E2A5576C500CECAD2 /* CategoryRouter.swift */,
-				AEC3679F2A5576C500CECAD2 /* FavouritesRouter.swift */,
-				AEC367A02A5576C500CECAD2 /* FavouritesRouter 2.swift */,
-			);
-			name = Routers;
-			path = ../../../Rentit/ios/Rentit/Services/NetworkService/Routers;
-			sourceTree = "<group>";
-		};
-		AEC367A12A5576C500CECAD2 /* NetworkComponents */ = {
-			isa = PBXGroup;
-			children = (
-				AEC367A22A5576C500CECAD2 /* StatusCode.swift */,
-				AEC367A32A5576C500CECAD2 /* ProResult.swift */,
-				AEC367A42A5576C500CECAD2 /* NetworkErrors.swift */,
-				AEC367A52A5576C500CECAD2 /* HttpMethod.swift */,
-				AEC367A62A5576C500CECAD2 /* HttpHeader.swift */,
-				AEC367A72A5576C500CECAD2 /* FailureModel */,
-			);
-			name = NetworkComponents;
-			path = ../../../Rentit/ios/Rentit/Services/NetworkService/NetworkComponents;
-			sourceTree = "<group>";
-		};
-		AEC367A72A5576C500CECAD2 /* FailureModel */ = {
-			isa = PBXGroup;
-			children = (
-				AEC367A82A5576C500CECAD2 /* FailureModel.swift */,
-			);
-			path = FailureModel;
-			sourceTree = "<group>";
-		};
-		AEC367AD2A5576C500CECAD2 /* FailureModel */ = {
-			isa = PBXGroup;
-			children = (
-				AEC367AE2A5576C500CECAD2 /* FailureModel.swift */,
-			);
-			name = FailureModel;
-			path = ../../../Rentit/ios/Rentit/Services/NetworkService/NetworkComponents/FailureModel;
-			sourceTree = "<group>";
-		};
 		AED421162A52D1BD009AD18A /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -958,6 +781,10 @@
 		D85E9720E095768B98F0CF6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEA68C012A5678FB00397E66 /* RoutePlugin.xcframework */,
+				AEA68C022A5678FB00397E66 /* Turf.xcframework */,
+				AEA68BFE2A5678CD00397E66 /* TrimbleMapsWebservicesClient.xcframework */,
+				AEA68BFB2A5674EE00397E66 /* Polyline.xcframework */,
 				AE02A45C2A5547EF00D4C5B0 /* Carthage */,
 				AED421552A5528A6009AD18A /* JWTDecode.xcframework */,
 				AED421542A5528A6009AD18A /* TrimbleMaps.xcframework */,
@@ -988,7 +815,6 @@
 			);
 			name = Cargo;
 			packageProductDependencies = (
-				AE02A46B2A55484700D4C5B0 /* Polyline */,
 			);
 			productName = Cargo;
 			productReference = AE4ADD372A4B58CD00E0B3E6 /* Cargo.app */;
@@ -1095,116 +921,63 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEAE9F452A4E946B0007B898 /* BaseViewController.swift in Sources */,
+				AE8D8D192A56CA7000DD42D3 /* StatusCode.swift in Sources */,
 				AEA295482A515CF0001D55E4 /* RegisterViewController.swift in Sources */,
 				AE406D0F2A502B5600601D8E /* ForgotViewController.swift in Sources */,
 				AED4212E2A54E011009AD18A /* CellData.swift in Sources */,
-				AEC367B22A5576C500CECAD2 /* MapNetworkRouter.swift in Sources */,
-				AEC367C92A5576C500CECAD2 /* BaseRouter.swift in Sources */,
-				AEC367E12A5576C500CECAD2 /* FavouritesRouter.swift in Sources */,
-				AEC367DF2A5576C500CECAD2 /* ProfileeRouter.swift in Sources */,
-				AEC367D12A5576C500CECAD2 /* AuthRouter.swift in Sources */,
 				AEA2954F2A519796001D55E4 /* TabBarCoordinator.swift in Sources */,
-				AEC367C72A5576C500CECAD2 /* FailureModel.swift in Sources */,
-				AEC367D82A5576C500CECAD2 /* AttributesRouter.swift in Sources */,
-				AEC367C52A5576C500CECAD2 /* HttpHeader.swift in Sources */,
-				AEC367D62A5576C500CECAD2 /* MapNetworkRouter.swift in Sources */,
-				AEC367EB2A5576C500CECAD2 /* ProResult.swift in Sources */,
-				AEC367B72A5576C500CECAD2 /* HomeNetworkRouter.swift in Sources */,
-				AEC367C02A5576C500CECAD2 /* BaseRouter.swift in Sources */,
+				AE8D8D0E2A56C86100DD42D3 /* UserDefaults.swift in Sources */,
 				AED421232A53EF3C009AD18A /* OrderView.swift in Sources */,
-				AEC367CF2A5576C500CECAD2 /* UserDefaultsService.swift in Sources */,
-				AEC367CA2A5576C500CECAD2 /* MessageManager.swift in Sources */,
-				AEC367EC2A5576C500CECAD2 /* HttpHeader.swift in Sources */,
 				AEA2954D2A51953A001D55E4 /* TabBarController.swift in Sources */,
 				AEAE9F4A2A4E96780007B898 /* MainCoordinator.swift in Sources */,
-				AEC367BE2A5576C500CECAD2 /* FavouritesRouter 2.swift in Sources */,
-				AEC367B92A5576C500CECAD2 /* AuthRouter.swift in Sources */,
-				AEC367E52A5576C500CECAD2 /* NetworkErrors.swift in Sources */,
 				AEAE9F572A4E99090007B898 /* LoginViewModel.swift in Sources */,
+				AE8D8D1D2A56CA9900DD42D3 /* NetworkErrors.swift in Sources */,
 				AED421332A54E263009AD18A /* MapCoordinator.swift in Sources */,
 				AE4ADD3F2A4B58CD00E0B3E6 /* ViewController.swift in Sources */,
-				AEC367D22A5576C500CECAD2 /* ProfileeRouter.swift in Sources */,
 				AEAE9F592A4E9A650007B898 /* ForText.swift in Sources */,
-				AEC367DA2A5576C500CECAD2 /* AttributeRouter.swift in Sources */,
-				AEC367D42A5576C500CECAD2 /* AttributeRouter.swift in Sources */,
 				AED421532A551745009AD18A /* BonusView.swift in Sources */,
 				AED4214D2A5515D1009AD18A /* PersonalView.swift in Sources */,
 				AED421282A53F1C6009AD18A /* CreateOrderView.swift in Sources */,
-				AEC367BD2A5576C500CECAD2 /* FavouritesRouter.swift in Sources */,
 				AED421472A55046E009AD18A /* ProfileView.swift in Sources */,
 				AED4212A2A53F1CF009AD18A /* CreateOrderViewController.swift in Sources */,
 				AEA2955E2A5198DA001D55E4 /* ChatViewController.swift in Sources */,
-				AEC367B12A5576C500CECAD2 /* FavouritesRouter.swift in Sources */,
 				AEAE9F532A4E98F60007B898 /* LoginView.swift in Sources */,
 				AEA2954A2A515CF6001D55E4 /* RegisterView.swift in Sources */,
 				AEA295642A51995E001D55E4 /* ProfileViewController.swift in Sources */,
-				AEC367B32A5576C500CECAD2 /* ForgotPassword.swift in Sources */,
+				AE8D8D172A56CA5000DD42D3 /* HttpMethod.swift in Sources */,
 				AEA2956C2A51AD24001D55E4 /* Extension + CollectionView.swift in Sources */,
 				AEC367692A55761D00CECAD2 /* Token.swift in Sources */,
 				AEAE9F5C2A4E9C510007B898 /* R.generated.swift in Sources */,
 				AEA2956E2A51B9E7001D55E4 /* OrdersCollectionViewCell.swift in Sources */,
-				AEC367DD2A5576C500CECAD2 /* AuthRouter.swift in Sources */,
-				AEC367D32A5576C500CECAD2 /* ProductRouter.swift in Sources */,
-				AEC367D72A5576C500CECAD2 /* ForgotPassword.swift in Sources */,
-				AEC367EF2A5576C500CECAD2 /* GooglePlacesManager.swift in Sources */,
-				AEC367D02A5576C500CECAD2 /* StatusCode.swift in Sources */,
-				AEC367BB2A5576C500CECAD2 /* ProfileeRouter.swift in Sources */,
 				AEAE9F482A4E94D50007B898 /* Coordinator.swift in Sources */,
 				AEA295682A51A877001D55E4 /* HomeView.swift in Sources */,
-				AEC367EE2A5576C500CECAD2 /* DatabaseManager.swift in Sources */,
-				AEC367E82A5576C500CECAD2 /* FailureModel.swift in Sources */,
-				AEC367D92A5576C500CECAD2 /* UserRouter.swift in Sources */,
-				AEC367E02A5576C500CECAD2 /* CategoryRouter.swift in Sources */,
-				AEC367C62A5576C500CECAD2 /* FailureModel.swift in Sources */,
+				AE8D8D142A56C9D700DD42D3 /* BaseRouter.swift in Sources */,
 				AE4ADD3B2A4B58CD00E0B3E6 /* AppDelegate.swift in Sources */,
 				AED4214A2A5507D5009AD18A /* ProfileTableViewCell.swift in Sources */,
 				AED4212C2A53F3A5009AD18A /* Extension + UINavigationBar.swift in Sources */,
-				AEC367E72A5576C500CECAD2 /* HttpHeader.swift in Sources */,
-				AEC367B42A5576C500CECAD2 /* AttributesRouter.swift in Sources */,
-				AEC367C42A5576C500CECAD2 /* HttpMethod.swift in Sources */,
+				AE8D8D1B2A56CA8700DD42D3 /* ProResult.swift in Sources */,
+				AE8D8D0C2A56C7A600DD42D3 /* NetworkService.swift in Sources */,
 				AEAE9F512A4E98E90007B898 /* LoginModel.swift in Sources */,
+				AE8D8D1F2A56CAB300DD42D3 /* HttpHeader.swift in Sources */,
 				AED4214F2A5515DC009AD18A /* HistoryView.swift in Sources */,
+				AE8D8D122A56C91C00DD42D3 /* AuthRouter.swift in Sources */,
 				AED4211C2A52D1EB009AD18A /* FilterViewController.swift in Sources */,
-				AEC367BF2A5576C500CECAD2 /* NetworkService.swift in Sources */,
-				AEC367CD2A5576C500CECAD2 /* CategoryRouter.swift in Sources */,
 				AEA2955B2A5198A2001D55E4 /* ChatCoordinator.swift in Sources */,
-				AEC367E42A5576C500CECAD2 /* ProResult.swift in Sources */,
+				AE8D8D222A56CAD800DD42D3 /* FailureModel.swift in Sources */,
 				AE406D0D2A502B4900601D8E /* ForgotView.swift in Sources */,
-				AEC367ED2A5576C500CECAD2 /* FailureModel.swift in Sources */,
-				AEC367CC2A5576C500CECAD2 /* NetworkErrors.swift in Sources */,
-				AEC367BC2A5576C500CECAD2 /* CategoryRouter.swift in Sources */,
 				AE406D072A4FE5C300601D8E /* Extension + UIView.swift in Sources */,
-				AEC367DE2A5576C500CECAD2 /* AttributeRouter 2.swift in Sources */,
 				AE4ADD3D2A4B58CD00E0B3E6 /* SceneDelegate.swift in Sources */,
 				AEAE9F552A4E99000007B898 /* LoginViewController.swift in Sources */,
-				AEC367D52A5576C500CECAD2 /* HttpMethod.swift in Sources */,
 				AEA295462A515CE8001D55E4 /* RegisterViewModel.swift in Sources */,
 				AED421312A54E245009AD18A /* MapViewController.swift in Sources */,
-				AEC367EA2A5576C500CECAD2 /* MapNetworkRouter.swift in Sources */,
-				AEC367C22A5576C500CECAD2 /* ProResult.swift in Sources */,
 				AEA295562A519873001D55E4 /* HomeCoordinator.swift in Sources */,
-				AEC367B82A5576C500CECAD2 /* ProductRouter.swift in Sources */,
 				AEA295662A519982001D55E4 /* ProfileCoordinator.swift in Sources */,
-				AEC367CE2A5576C500CECAD2 /* HomeNetworkRouter.swift in Sources */,
 				AEA295442A515CDD001D55E4 /* RegisterModel.swift in Sources */,
-				AEC367DB2A5576C500CECAD2 /* HomeNetworkRouter.swift in Sources */,
-				AEC367C32A5576C500CECAD2 /* NetworkErrors.swift in Sources */,
-				AEC367C82A5576C500CECAD2 /* UserRouter.swift in Sources */,
-				AEC367E32A5576C500CECAD2 /* StatusCode.swift in Sources */,
-				AEC367C12A5576C500CECAD2 /* StatusCode.swift in Sources */,
 				AE406D0B2A502B3F00601D8E /* ForgotViewModel.swift in Sources */,
 				AEA295772A52A8CD001D55E4 /* NotificationsViewController.swift in Sources */,
-				AEC367BA2A5576C500CECAD2 /* AttributeRouter 2.swift in Sources */,
-				AEC367B62A5576C500CECAD2 /* AttributeRouter.swift in Sources */,
-				AEC367E92A5576C500CECAD2 /* NetworkService.swift in Sources */,
-				AEC367E62A5576C500CECAD2 /* HttpMethod.swift in Sources */,
-				AEC367E22A5576C500CECAD2 /* FavouritesRouter 2.swift in Sources */,
-				AEC367B52A5576C500CECAD2 /* UserRouter.swift in Sources */,
-				AEC367CB2A5576C500CECAD2 /* ForgotPassword.swift in Sources */,
 				AED421512A5515E8009AD18A /* PaymentView.swift in Sources */,
 				AE406D092A502B3600601D8E /* ForgotModel.swift in Sources */,
 				AEAE9F422A4E94190007B898 /* HomeViewController.swift in Sources */,
-				AEC367DC2A5576C500CECAD2 /* ProductRouter.swift in Sources */,
 				AED421262A53EF48009AD18A /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1418,13 +1191,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AE02A46B2A55484700D4C5B0 /* Polyline */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Polyline;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE4ADD2F2A4B58CD00E0B3E6 /* Project object */;
 }

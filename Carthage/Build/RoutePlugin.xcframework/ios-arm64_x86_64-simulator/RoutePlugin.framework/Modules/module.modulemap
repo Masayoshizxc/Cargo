@@ -1,0 +1,11 @@
+framework module RoutePlugin {
+  umbrella header "RoutePlugin.h"
+
+  export *
+  module * { export * }
+}
+
+module RoutePlugin.Swift {
+    header "RoutePlugin-Swift.h"
+    requires objc
+}

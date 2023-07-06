@@ -1,0 +1,1189 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-module-flags: -target armv7-apple-ios10.3 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TrimbleMapsWebservicesClient
+import CoreGraphics
+import CoreLocation
+import Foundation
+import Polyline
+import Polyline/*.LocationCoordinate2D*/
+import Polyline/*.decodePolyline*/
+import Polyline/*.encodeCoordinates*/
+import Swift
+import SwiftUI
+import TrimbleMapsAccounts
+@_exported import TrimbleMapsWebservicesClient
+import Turf
+import UIKit
+import _Concurrency
+public struct LaneIndication : Swift.OptionSet, Swift.CustomStringConvertible {
+  public var rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let sharpRight: TrimbleMapsWebservicesClient.LaneIndication
+  public static let right: TrimbleMapsWebservicesClient.LaneIndication
+  public static let slightRight: TrimbleMapsWebservicesClient.LaneIndication
+  public static let straightAhead: TrimbleMapsWebservicesClient.LaneIndication
+  public static let slightLeft: TrimbleMapsWebservicesClient.LaneIndication
+  public static let left: TrimbleMapsWebservicesClient.LaneIndication
+  public static let sharpLeft: TrimbleMapsWebservicesClient.LaneIndication
+  public static let uTurn: TrimbleMapsWebservicesClient.LaneIndication
+  public init?(descriptions: [Swift.String])
+  public var descriptions: [Swift.String] {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public typealias ArrayLiteralElement = TrimbleMapsWebservicesClient.LaneIndication
+  public typealias Element = TrimbleMapsWebservicesClient.LaneIndication
+  public typealias RawValue = Swift.Int
+}
+extension TrimbleMapsWebservicesClient.LaneIndication : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum RouteShapeFormat : Swift.String, Swift.Codable {
+  case geoJSON
+  case polyline
+  case polyline6
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RouteShapeResolution : Swift.String, Swift.Codable {
+  case none
+  case low
+  case full
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum MeasurementSystem : Swift.String, Swift.Codable {
+  case imperial
+  case metric
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct DirectionsPriority : Swift.Hashable, Swift.RawRepresentable {
+  public init(rawValue: Swift.Double)
+  public var rawValue: Swift.Double
+  public typealias RawValue = Swift.Double
+}
+public enum Ferry : Swift.Int, Swift.Codable {
+  case use
+  case discourage
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum Hazmat : Swift.Int, Swift.Codable {
+  case none
+  case general
+  case caustic
+  case explosives
+  case flammable
+  case inhalants
+  case radioactive
+  case harmfulToWater
+  case tunnel
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum VehicleType : Swift.String, Swift.Codable {
+  case auto
+  case lightTruck
+  case midsizeTruck
+  case truck
+  case bus
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Units : Swift.Int, Swift.Codable {
+  case english
+  case metric
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TollRoads : Swift.Int, Swift.Codable {
+  case alwaysAvoid
+  case avoidIfPossible
+  case use
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum RouteType : Swift.Int, Swift.Codable {
+  case practical
+  case shortest
+  case fastest
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TruckStyle : Swift.Int, Swift.Codable {
+  case none
+  case twentyeightDoubleTrailer
+  case fortyStraightTruck
+  case fortyeightSemitrailer
+  case fiftythreeSemitrailer
+  case fullSizeVan
+  case twentysixStraightTruck
+  case conventionalSchoolBus
+  case smallSchoolBus
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TunnelCategory : Swift.Int, Swift.Codable {
+  case none
+  case bcde
+  case cde
+  case de
+  case le
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum RestrictionZone : Swift.String, Swift.Codable {
+  case environmental
+  case congestion
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+open class DirectionsOptions : Swift.Codable {
+  required public init(waypoints: [TrimbleMapsWebservicesClient.Waypoint], profileIdentifier: TrimbleMapsWebservicesClient.DirectionsProfileIdentifier? = nil)
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+  open var waypoints: [TrimbleMapsWebservicesClient.Waypoint]
+  open var includesSteps: Swift.Bool
+  open var shapeFormat: TrimbleMapsWebservicesClient.RouteShapeFormat
+  open var routeShapeResolution: TrimbleMapsWebservicesClient.RouteShapeResolution
+  open var attributeOptions: TrimbleMapsWebservicesClient.AttributeOptions
+  open var locale: Foundation.Locale {
+    get
+    set
+  }
+  open var includesSpokenInstructions: Swift.Bool
+  open var distanceMeasurementSystem: TrimbleMapsWebservicesClient.MeasurementSystem
+  open var includesVisualInstructions: Swift.Bool
+  open var fetchStartDate: Foundation.Date?
+  open var useSites: Swift.Bool
+  open var vehicleType: TrimbleMapsWebservicesClient.VehicleType?
+  open var hazmatType: TrimbleMapsWebservicesClient.Hazmat?
+  open var generateCarving: Swift.Bool
+  open var isPropaneRestricted: Swift.Bool?
+  open var tunnelCategory: TrimbleMapsWebservicesClient.TunnelCategory?
+  open var ferries: TrimbleMapsWebservicesClient.Ferry?
+  open var routeType: TrimbleMapsWebservicesClient.RouteType?
+  open var tollRoads: TrimbleMapsWebservicesClient.TollRoads?
+  open var useOpenBorders: Swift.Bool?
+  open var elevationLimit: Swift.Int?
+  open var useStateAndNationalNetwork: Swift.Bool?
+  open var vehicleDimensionUnits: TrimbleMapsWebservicesClient.Units?
+  open var vehicleHeight: Swift.Double?
+  open var vehicleLength: Swift.Double?
+  open var vehicleWidth: Swift.Double?
+  open var vehicleWeight: Swift.Double?
+  open var weightPerAxle: Swift.Double?
+  open var vehicleProfile: TrimbleMapsWebservicesClient.TruckStyle?
+  open var restrictionZoneAllow: [TrimbleMapsWebservicesClient.RestrictionZone]?
+  open var restrictionZoneAvoid: [TrimbleMapsWebservicesClient.RestrictionZone]?
+  open var restrictionZoneWarn: [TrimbleMapsWebservicesClient.RestrictionZone]?
+  public func setProfile(_ profile: TrimbleMapsWebservicesClient.Profile)
+  open var urlQueryItems: [Foundation.URLQueryItem] {
+    get
+  }
+  @objc deinit
+}
+extension TrimbleMapsWebservicesClient.DirectionsOptions : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.DirectionsOptions, rhs: TrimbleMapsWebservicesClient.DirectionsOptions) -> Swift.Bool
+}
+public typealias OfflineVersion = Swift.String
+public typealias OfflineDownloaderCompletionHandler = (_ location: Foundation.URL?, _ response: Foundation.URLResponse?, _ error: Swift.Error?) -> Swift.Void
+public typealias OfflineDownloaderProgressHandler = (_ bytesWritten: Swift.Int64, _ totalBytesWritten: Swift.Int64, _ totalBytesExpectedToWrite: Swift.Int64) -> Swift.Void
+public typealias OfflineVersionsHandler = (_ version: [TrimbleMapsWebservicesClient.OfflineVersion]?, _ error: Swift.Error?) -> Swift.Void
+public protocol OfflineDirectionsProtocol {
+  func fetchAvailableOfflineVersions(completionHandler: @escaping TrimbleMapsWebservicesClient.OfflineVersionsHandler) -> Foundation.URLSessionDataTask
+  func downloadTiles(in coordinateBounds: Turf.BoundingBox, version: TrimbleMapsWebservicesClient.OfflineVersion, completionHandler: @escaping TrimbleMapsWebservicesClient.OfflineDownloaderCompletionHandler) -> Foundation.URLSessionDownloadTask
+}
+extension TrimbleMapsWebservicesClient.Directions : TrimbleMapsWebservicesClient.OfflineDirectionsProtocol {
+  public var availableVersionsURL: Foundation.URL {
+    get
+  }
+  public func tilesURL(for coordinateBounds: Turf.BoundingBox, version: TrimbleMapsWebservicesClient.OfflineVersion) -> Foundation.URL
+  @discardableResult
+  public func fetchAvailableOfflineVersions(completionHandler: @escaping TrimbleMapsWebservicesClient.OfflineVersionsHandler) -> Foundation.URLSessionDataTask
+  @discardableResult
+  public func downloadTiles(in coordinateBounds: Turf.BoundingBox, version: TrimbleMapsWebservicesClient.OfflineVersion, completionHandler: @escaping TrimbleMapsWebservicesClient.OfflineDownloaderCompletionHandler) -> Foundation.URLSessionDownloadTask
+}
+@_hasMissingDesignatedInitializers open class DirectionsResult : Swift.Codable {
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  final public let shape: Turf.LineString?
+  final public let legs: [TrimbleMapsWebservicesClient.RouteLeg]
+  public var legSeparators: [TrimbleMapsWebservicesClient.Waypoint?] {
+    get
+    set
+  }
+  final public let distance: Turf.LocationDistance
+  open var expectedTravelTime: Foundation.TimeInterval
+  open var typicalTravelTime: Foundation.TimeInterval?
+  open var speechLocale: Foundation.Locale?
+  open var fetchStartDate: Foundation.Date?
+  open var responseEndDate: Foundation.Date?
+  @objc deinit
+}
+extension TrimbleMapsWebservicesClient.DirectionsResult : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public struct TollCollection : Swift.Codable, Swift.Equatable {
+  public enum CollectionType : Swift.String, Swift.Codable {
+    case booth
+    case gantry
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let type: TrimbleMapsWebservicesClient.TollCollection.CollectionType
+  public init(type: TrimbleMapsWebservicesClient.TollCollection.CollectionType)
+  public static func == (a: TrimbleMapsWebservicesClient.TollCollection, b: TrimbleMapsWebservicesClient.TollCollection) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc open class TMGeocoderResponse : ObjectiveC.NSObject, Swift.Codable {
+  public var locations: [TrimbleMapsWebservicesClient.Location]
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@objc public class Location : ObjectiveC.NSObject, Swift.Codable {
+  public var address: TrimbleMapsWebservicesClient.Address?
+  public var coords: TrimbleMapsWebservicesClient.Coords?
+  public var region: Swift.Int?
+  public var pOITypeID: Swift.Int?
+  public var persistentPOIID: Swift.Int?
+  public var resultType: Swift.Int?
+  public var shortString: Swift.String?
+  public var placeId: Swift.String?
+  public var err: Swift.Int?
+  public var queryConfidence: Swift.Int?
+  public var trimblePlaceId: Swift.String?
+  public var placeName: Swift.String?
+  public var siteName: Swift.String?
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@objc public class Address : ObjectiveC.NSObject, Swift.Codable {
+  public var streetAddress: Swift.String?
+  public var city: Swift.String?
+  public var state: Swift.String?
+  public var zip: Swift.String?
+  public var county: Swift.String?
+  public var country: Swift.String?
+  public var countryFullName: Swift.String?
+  public var sPLC: Swift.String?
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@objc public class Coords : ObjectiveC.NSObject, Swift.Codable {
+  public var lat: Swift.String?
+  public var lon: Swift.String?
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public enum TransportType : Swift.String, Swift.Codable {
+  case automobile
+  case ferry
+  case movableBridge
+  case inaccessible
+  case walking
+  case cycling
+  case train
+  public init(from decoder: Swift.Decoder) throws
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ManeuverType : Swift.String, Swift.Codable {
+  case depart
+  case turn
+  case `continue`
+  case passNameChange
+  case merge
+  case takeOnRamp
+  case takeOffRamp
+  case reachFork
+  case reachEnd
+  case useLane
+  case takeRoundabout
+  case takeRotary
+  case turnAtRoundabout
+  case exitRoundabout
+  case exitRotary
+  case heedWarning
+  case arrive
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ManeuverDirection : Swift.String, Swift.Codable {
+  case sharpRight
+  case right
+  case slightRight
+  case straightAhead
+  case slightLeft
+  case left
+  case sharpLeft
+  case uTurn
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SignStandard : Swift.String, Swift.Codable {
+  case mutcd
+  case viennaConvention
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers open class RouteStep : Swift.Codable {
+  public init(transportType: TrimbleMapsWebservicesClient.TransportType, maneuverLocation: Turf.LocationCoordinate2D, maneuverType: TrimbleMapsWebservicesClient.ManeuverType, maneuverDirection: TrimbleMapsWebservicesClient.ManeuverDirection? = nil, instructions: Swift.String, initialHeading: Turf.LocationDirection? = nil, finalHeading: Turf.LocationDirection? = nil, drivingSide: TrimbleMapsWebservicesClient.DrivingSide, exitCodes: [Swift.String]? = nil, exitNames: [Swift.String]? = nil, phoneticExitNames: [Swift.String]? = nil, distance: Turf.LocationDistance, expectedTravelTime: Foundation.TimeInterval, typicalTravelTime: Foundation.TimeInterval? = nil, names: [Swift.String]? = nil, phoneticNames: [Swift.String]? = nil, codes: [Swift.String]? = nil, destinationCodes: [Swift.String]? = nil, destinations: [Swift.String]? = nil, intersections: [TrimbleMapsWebservicesClient.Intersection]? = nil, speedLimitSignStandard: TrimbleMapsWebservicesClient.SignStandard? = nil, speedLimitUnit: Foundation.UnitSpeed? = nil, instructionsSpokenAlongStep: [TrimbleMapsWebservicesClient.SpokenInstruction]? = nil, instructionsDisplayedAlongStep: [TrimbleMapsWebservicesClient.VisualInstructionBanner]? = nil, administrativeAreaContainerByIntersection: [Swift.Int?]? = nil, segmentIndicesByIntersection: [Swift.Int?]? = nil)
+  public func encode(to encoder: Swift.Encoder) throws
+  required convenience public init(from decoder: Swift.Decoder) throws
+  public var shape: Turf.LineString?
+  final public let transportType: TrimbleMapsWebservicesClient.TransportType
+  final public let maneuverLocation: Turf.LocationCoordinate2D
+  final public let maneuverType: TrimbleMapsWebservicesClient.ManeuverType
+  final public let maneuverDirection: TrimbleMapsWebservicesClient.ManeuverDirection?
+  final public let instructions: Swift.String
+  final public let initialHeading: Turf.LocationDirection?
+  final public let finalHeading: Turf.LocationDirection?
+  final public let drivingSide: TrimbleMapsWebservicesClient.DrivingSide
+  open var exitIndex: Swift.Int?
+  final public let exitCodes: [Swift.String]?
+  final public let exitNames: [Swift.String]?
+  final public let phoneticExitNames: [Swift.String]?
+  final public let distance: Turf.LocationDistance
+  open var expectedTravelTime: Foundation.TimeInterval
+  open var typicalTravelTime: Foundation.TimeInterval?
+  final public let names: [Swift.String]?
+  final public let phoneticNames: [Swift.String]?
+  final public let codes: [Swift.String]?
+  final public let destinationCodes: [Swift.String]?
+  final public let destinations: [Swift.String]?
+  final public let intersections: [TrimbleMapsWebservicesClient.Intersection]?
+  final public let administrativeAreaContainerByIntersection: [Swift.Int?]?
+  final public let segmentIndicesByIntersection: [Swift.Int?]?
+  final public let speedLimitSignStandard: TrimbleMapsWebservicesClient.SignStandard?
+  final public let speedLimitUnit: Foundation.UnitSpeed?
+  final public let instructionsSpokenAlongStep: [TrimbleMapsWebservicesClient.SpokenInstruction]?
+  final public let instructionsDisplayedAlongStep: [TrimbleMapsWebservicesClient.VisualInstructionBanner]?
+  @objc deinit
+}
+extension TrimbleMapsWebservicesClient.RouteStep : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.RouteStep, rhs: TrimbleMapsWebservicesClient.RouteStep) -> Swift.Bool
+}
+extension TrimbleMapsWebservicesClient.RouteStep : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+open class RouteLeg : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case source
+    case destination
+    case steps
+    case name
+    case distance
+    case expectedTravelTime
+    case typicalTravelTime
+    case annotation
+    case administrativeRegions
+    case incidents
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(steps: [TrimbleMapsWebservicesClient.RouteStep], name: Swift.String, distance: Turf.LocationDistance, expectedTravelTime: Foundation.TimeInterval, typicalTravelTime: Foundation.TimeInterval? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public var source: TrimbleMapsWebservicesClient.Waypoint?
+  public var destination: TrimbleMapsWebservicesClient.Waypoint?
+  final public let steps: [TrimbleMapsWebservicesClient.RouteStep]
+  public var segmentRangesByStep: [Swift.Range<Swift.Int>] {
+    get
+  }
+  open var segmentDistances: [Turf.LocationDistance]?
+  open var expectedSegmentTravelTimes: [Foundation.TimeInterval]?
+  open var segmentSpeeds: [TrimbleMapsWebservicesClient.LocationSpeed]?
+  open var segmentCongestionLevels: [TrimbleMapsWebservicesClient.CongestionLevel]?
+  open var segmentNumericCongestionLevels: [TrimbleMapsWebservicesClient.NumericCongestionLevel?]?
+  open var segmentMaximumSpeedLimits: [Foundation.Measurement<Foundation.UnitSpeed>?]?
+  public func regionCode(atStepIndex stepIndex: Swift.Int, intersectionIndex: Swift.Int) -> Swift.String?
+  final public let name: Swift.String
+  final public let distance: Turf.LocationDistance
+  open var expectedTravelTime: Foundation.TimeInterval
+  open var administrativeRegions: [TrimbleMapsWebservicesClient.AdministrativeRegion]?
+  open var incidents: [TrimbleMapsWebservicesClient.Incident]?
+  open var typicalTravelTime: Foundation.TimeInterval?
+  @objc deinit
+}
+extension TrimbleMapsWebservicesClient.RouteLeg : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.RouteLeg, rhs: TrimbleMapsWebservicesClient.RouteLeg) -> Swift.Bool
+}
+extension TrimbleMapsWebservicesClient.RouteLeg : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension Swift.Array where Element == TrimbleMapsWebservicesClient.RouteLeg {
+  public func populate(waypoints: [TrimbleMapsWebservicesClient.Waypoint])
+}
+@_inheritsConvenienceInitializers open class Route : TrimbleMapsWebservicesClient.DirectionsResult {
+  public init(legs: [TrimbleMapsWebservicesClient.RouteLeg], shape: Turf.LineString?, distance: Turf.LocationDistance, expectedTravelTime: Foundation.TimeInterval, typicalTravelTime: Foundation.TimeInterval? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+extension TrimbleMapsWebservicesClient.Route : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.Route, rhs: TrimbleMapsWebservicesClient.Route) -> Swift.Bool
+}
+public let TMDirectionsErrorDomain: Swift.String
+@objc @_hasMissingDesignatedInitializers open class Directions : TrimbleMapsWebservicesClient.TMBaseClient {
+  public typealias Session = (TrimbleMapsWebservicesClient.DirectionsOptions)
+  public typealias RouteCompletionHandler = (_ session: TrimbleMapsWebservicesClient.Directions.Session, _ result: Swift.Result<TrimbleMapsWebservicesClient.RouteResponse, TrimbleMapsWebservicesClient.DirectionsError>) -> Swift.Void
+  public static let shared: TrimbleMapsWebservicesClient.Directions
+  public init(accountManager: TrimbleMapsAccounts.AccountManager = AccountManager.default)
+  @discardableResult
+  open func calculate(_ options: TrimbleMapsWebservicesClient.RouteOptions, completionHandler: @escaping TrimbleMapsWebservicesClient.Directions.RouteCompletionHandler) -> Foundation.URLSessionDataTask
+  open func url(forCalculating options: TrimbleMapsWebservicesClient.DirectionsOptions) -> Foundation.URL
+  open func url(forCalculating options: TrimbleMapsWebservicesClient.DirectionsOptions, httpMethod: Swift.String) -> Foundation.URL
+  open func urlRequest(forCalculating options: TrimbleMapsWebservicesClient.DirectionsOptions) -> Foundation.URLRequest
+  @objc deinit
+}
+extension Swift.CodingUserInfoKey {
+  public static let options: Swift.CodingUserInfoKey
+  public static let httpResponse: Swift.CodingUserInfoKey
+  public static let credentials: Swift.CodingUserInfoKey
+  public static let responseIdentifier: Swift.CodingUserInfoKey
+  public static let routeIndex: Swift.CodingUserInfoKey
+  public static let startLegIndex: Swift.CodingUserInfoKey
+}
+open class SpokenInstruction : Swift.Codable {
+  public init(distanceAlongStep: Turf.LocationDistance, text: Swift.String, ssmlText: Swift.String)
+  final public let distanceAlongStep: Turf.LocationDistance
+  final public let text: Swift.String
+  final public let ssmlText: Swift.String
+  @objc deinit
+  open func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension TrimbleMapsWebservicesClient.SpokenInstruction : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.SpokenInstruction, rhs: TrimbleMapsWebservicesClient.SpokenInstruction) -> Swift.Bool
+}
+extension TrimbleMapsWebservicesClient.RouteLeg {
+  public struct Attributes : Swift.Equatable {
+    public var segmentDistances: [Turf.LocationDistance]?
+    public var expectedSegmentTravelTimes: [Foundation.TimeInterval]?
+    public var segmentSpeeds: [TrimbleMapsWebservicesClient.LocationSpeed]?
+    public var segmentCongestionLevels: [TrimbleMapsWebservicesClient.CongestionLevel]?
+    public var segmentNumericCongestionLevels: [TrimbleMapsWebservicesClient.NumericCongestionLevel?]?
+    public var segmentMaximumSpeedLimits: [Foundation.Measurement<Foundation.UnitSpeed>?]?
+    public static func == (a: TrimbleMapsWebservicesClient.RouteLeg.Attributes, b: TrimbleMapsWebservicesClient.RouteLeg.Attributes) -> Swift.Bool
+  }
+}
+extension TrimbleMapsWebservicesClient.RouteLeg.Attributes : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum DrivingSide : Swift.String, Swift.Codable {
+  case left
+  case right
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Intersection {
+  public init(location: Turf.LocationCoordinate2D, headings: [Turf.LocationDirection], approachIndex: Swift.Int, outletIndex: Swift.Int, outletIndexes: Foundation.IndexSet, approachLanes: [TrimbleMapsWebservicesClient.LaneIndication]?, usableApproachLanes: Foundation.IndexSet?, preferredApproachLanes: Foundation.IndexSet?, usableLaneIndication: TrimbleMapsWebservicesClient.ManeuverDirection?, outletRoadClasses: TrimbleMapsWebservicesClient.RoadClasses? = nil, tollCollection: TrimbleMapsWebservicesClient.TollCollection? = nil, tunnelName: Swift.String? = nil, restStop: TrimbleMapsWebservicesClient.RestStop? = nil, isUrban: Swift.Bool? = nil, regionCode: Swift.String? = nil, outletMapboxStreetsRoadClass: TrimbleMapsWebservicesClient.MapboxStreetsRoadClass? = nil)
+  public let location: Turf.LocationCoordinate2D
+  public let headings: [Turf.LocationDirection]
+  public let outletIndexes: Foundation.IndexSet
+  public let approachIndex: Swift.Int?
+  public let outletIndex: Swift.Int?
+  public let outletRoadClasses: TrimbleMapsWebservicesClient.RoadClasses?
+  public let outletMapboxStreetsRoadClass: TrimbleMapsWebservicesClient.MapboxStreetsRoadClass?
+  public let tunnelName: Swift.String?
+  public let tollCollection: TrimbleMapsWebservicesClient.TollCollection?
+  public let restStop: TrimbleMapsWebservicesClient.RestStop?
+  public let isUrban: Swift.Bool?
+  public var regionCode: Swift.String? {
+    get
+  }
+  public let approachLanes: [TrimbleMapsWebservicesClient.LaneIndication]?
+  public let usableApproachLanes: Foundation.IndexSet?
+  public let preferredApproachLanes: Foundation.IndexSet?
+  public let usableLaneIndication: TrimbleMapsWebservicesClient.ManeuverDirection?
+}
+extension TrimbleMapsWebservicesClient.Intersection : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension TrimbleMapsWebservicesClient.Intersection : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.Intersection, rhs: TrimbleMapsWebservicesClient.Intersection) -> Swift.Bool
+}
+public typealias Scale = CoreGraphics.CGFloat
+extension TrimbleMapsWebservicesClient.VisualInstruction {
+  public enum Component {
+    case delimiter(text: TrimbleMapsWebservicesClient.VisualInstruction.Component.TextRepresentation)
+    case text(text: TrimbleMapsWebservicesClient.VisualInstruction.Component.TextRepresentation)
+    case image(image: TrimbleMapsWebservicesClient.VisualInstruction.Component.ImageRepresentation, alternativeText: TrimbleMapsWebservicesClient.VisualInstruction.Component.TextRepresentation)
+    case guidanceView(image: TrimbleMapsWebservicesClient.GuidanceViewImageRepresentation, alternativeText: TrimbleMapsWebservicesClient.VisualInstruction.Component.TextRepresentation)
+    case exit(text: TrimbleMapsWebservicesClient.VisualInstruction.Component.TextRepresentation)
+    case exitCode(text: TrimbleMapsWebservicesClient.VisualInstruction.Component.TextRepresentation)
+    case lane(indications: TrimbleMapsWebservicesClient.LaneIndication, isUsable: Swift.Bool, preferredDirection: TrimbleMapsWebservicesClient.ManeuverDirection?)
+  }
+}
+extension TrimbleMapsWebservicesClient.VisualInstruction.Component {
+  public struct TextRepresentation : Swift.Equatable {
+    public init(text: Swift.String, abbreviation: Swift.String?, abbreviationPriority: Swift.Int?)
+    public let text: Swift.String
+    public let abbreviation: Swift.String?
+    public let abbreviationPriority: Swift.Int?
+    public static func == (a: TrimbleMapsWebservicesClient.VisualInstruction.Component.TextRepresentation, b: TrimbleMapsWebservicesClient.VisualInstruction.Component.TextRepresentation) -> Swift.Bool
+  }
+  public struct ImageRepresentation : Swift.Equatable {
+    public enum Format : Swift.String {
+      case png
+      case svg
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public init(imageBaseURL: Foundation.URL?)
+    public let imageBaseURL: Foundation.URL?
+    public func imageURL(scale: TrimbleMapsWebservicesClient.Scale? = nil, format: TrimbleMapsWebservicesClient.VisualInstruction.Component.ImageRepresentation.Format = .png) -> Foundation.URL?
+    public static func == (a: TrimbleMapsWebservicesClient.VisualInstruction.Component.ImageRepresentation, b: TrimbleMapsWebservicesClient.VisualInstruction.Component.ImageRepresentation) -> Swift.Bool
+  }
+}
+public struct GuidanceViewImageRepresentation : Swift.Equatable {
+  public init(imageURL: Foundation.URL?)
+  public let imageURL: Foundation.URL?
+  public static func == (a: TrimbleMapsWebservicesClient.GuidanceViewImageRepresentation, b: TrimbleMapsWebservicesClient.GuidanceViewImageRepresentation) -> Swift.Bool
+}
+extension TrimbleMapsWebservicesClient.VisualInstruction.Component : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension TrimbleMapsWebservicesClient.VisualInstruction.Component : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.VisualInstruction.Component, rhs: TrimbleMapsWebservicesClient.VisualInstruction.Component) -> Swift.Bool
+}
+open class VisualInstruction : Swift.Codable {
+  public init(text: Swift.String?, maneuverType: TrimbleMapsWebservicesClient.ManeuverType?, maneuverDirection: TrimbleMapsWebservicesClient.ManeuverDirection?, components: [TrimbleMapsWebservicesClient.VisualInstruction.Component], degrees: Turf.LocationDegrees? = nil)
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+  final public let text: Swift.String?
+  final public let components: [TrimbleMapsWebservicesClient.VisualInstruction.Component]
+  public var maneuverType: TrimbleMapsWebservicesClient.ManeuverType?
+  public var maneuverDirection: TrimbleMapsWebservicesClient.ManeuverDirection?
+  public var finalHeading: Turf.LocationDegrees?
+  @objc deinit
+}
+extension TrimbleMapsWebservicesClient.VisualInstruction : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.VisualInstruction, rhs: TrimbleMapsWebservicesClient.VisualInstruction) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers open class RouteOptions : TrimbleMapsWebservicesClient.DirectionsOptions {
+  required public init(waypoints: [TrimbleMapsWebservicesClient.Waypoint], profileIdentifier: TrimbleMapsWebservicesClient.DirectionsProfileIdentifier? = nil)
+  convenience public init(locations: [CoreLocation.CLLocation], profileIdentifier: TrimbleMapsWebservicesClient.DirectionsProfileIdentifier? = nil)
+  convenience public init(coordinates: [Turf.LocationCoordinate2D], profileIdentifier: TrimbleMapsWebservicesClient.DirectionsProfileIdentifier? = nil)
+  override public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+  open var allowsUTurnAtWaypoint: Swift.Bool
+  open var roadClassesToAvoid: TrimbleMapsWebservicesClient.RoadClasses
+  open var alleyPriority: TrimbleMapsWebservicesClient.DirectionsPriority?
+  open var walkwayPriority: TrimbleMapsWebservicesClient.DirectionsPriority?
+  open var speed: TrimbleMapsWebservicesClient.LocationSpeed?
+  open var includesAlternativeRoutes: Swift.Bool
+  open var includesExitRoundaboutManeuver: Swift.Bool
+  override open var urlQueryItems: [Foundation.URLQueryItem] {
+    get
+  }
+  @objc deinit
+}
+public typealias LocationSpeed = CoreLocation.CLLocationSpeed
+public typealias LocationAccuracy = CoreLocation.CLLocationAccuracy
+public struct GeocodingCredentials {
+  public var host: Foundation.URL {
+    get
+  }
+  public var authorization: Swift.String? {
+    get
+  }
+  public var region: Swift.String {
+    get
+  }
+  public init(credentials: TrimbleMapsAccounts.AccountManager)
+}
+public struct BlockedLanes : Swift.OptionSet, Swift.CustomStringConvertible {
+  public var rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let left: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let leftCenter: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let leftTurnLane: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let center: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let right: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let rightCenter: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let rightTurnLane: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let highOccupancyVehicle: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let side: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let shoulder: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let median: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let lane1: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let lane2: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let lane3: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let lane4: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let lane5: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let lane6: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let lane7: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let lane8: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let lane9: TrimbleMapsWebservicesClient.BlockedLanes
+  public static let lane10: TrimbleMapsWebservicesClient.BlockedLanes
+  public init?(descriptions: [Swift.String])
+  public var description: Swift.String {
+    get
+  }
+  public typealias ArrayLiteralElement = TrimbleMapsWebservicesClient.BlockedLanes
+  public typealias Element = TrimbleMapsWebservicesClient.BlockedLanes
+  public typealias RawValue = Swift.Int
+}
+extension TrimbleMapsWebservicesClient.BlockedLanes : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct RoadClasses : Swift.OptionSet, Swift.CustomStringConvertible {
+  public var rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let toll: TrimbleMapsWebservicesClient.RoadClasses
+  public static let restricted: TrimbleMapsWebservicesClient.RoadClasses
+  public static let motorway: TrimbleMapsWebservicesClient.RoadClasses
+  public static let ferry: TrimbleMapsWebservicesClient.RoadClasses
+  public static let tunnel: TrimbleMapsWebservicesClient.RoadClasses
+  public static let trunk: TrimbleMapsWebservicesClient.RoadClasses
+  public static let primary: TrimbleMapsWebservicesClient.RoadClasses
+  public static let tertiaryLink: TrimbleMapsWebservicesClient.RoadClasses
+  public static let primaryLink: TrimbleMapsWebservicesClient.RoadClasses
+  public static let street: TrimbleMapsWebservicesClient.RoadClasses
+  public static let streetLimited: TrimbleMapsWebservicesClient.RoadClasses
+  public static let pedestrian: TrimbleMapsWebservicesClient.RoadClasses
+  public init?(descriptions: [Swift.String])
+  public var description: Swift.String {
+    get
+  }
+  public typealias ArrayLiteralElement = TrimbleMapsWebservicesClient.RoadClasses
+  public typealias Element = TrimbleMapsWebservicesClient.RoadClasses
+  public typealias RawValue = Swift.Int
+}
+extension TrimbleMapsWebservicesClient.RoadClasses : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum MapboxStreetsRoadClass : Swift.String, Swift.Codable {
+  case motorway
+  case motorwayLink
+  case trunk
+  case trunkLink
+  case primary
+  case primaryLink
+  case secondary
+  case secondaryLink
+  case tertiary
+  case tertiaryLink
+  case street
+  case streetLimited
+  case pedestrian
+  case construction
+  case track
+  case service
+  case ferry
+  case path
+  case majorRail
+  case minorRail
+  case serviceRail
+  case aerialway
+  case golf
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc open class TMCustomRoutingProfilesResponse : ObjectiveC.NSObject, Swift.Codable {
+  public var href: Swift.String
+  public var offset: Swift.Int
+  public var limit: Swift.Int
+  public var size: Swift.Int
+  public var data: [TrimbleMapsWebservicesClient.Profile]
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public struct AdministrativeRegion : Swift.Codable, Swift.Equatable {
+  public var countryCodeAlpha3: Swift.String?
+  public var countryCode: Swift.String
+  public init(countryCode: Swift.String, countryCodeAlpha3: Swift.String)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public static func == (a: TrimbleMapsWebservicesClient.AdministrativeRegion, b: TrimbleMapsWebservicesClient.AdministrativeRegion) -> Swift.Bool
+}
+@available(*, deprecated, renamed: "DirectionsProfileIdentifier")
+public typealias MBDirectionsProfileIdentifier = TrimbleMapsWebservicesClient.DirectionsProfileIdentifier
+public struct DirectionsProfileIdentifier : Swift.Codable, Swift.Hashable, Swift.RawRepresentable {
+  public init(rawValue: Swift.String)
+  public var rawValue: Swift.String
+  public static let automobile: TrimbleMapsWebservicesClient.DirectionsProfileIdentifier
+  public static let automobileAvoidingTraffic: TrimbleMapsWebservicesClient.DirectionsProfileIdentifier
+  public static let cycling: TrimbleMapsWebservicesClient.DirectionsProfileIdentifier
+  public static let walking: TrimbleMapsWebservicesClient.DirectionsProfileIdentifier
+  public typealias RawValue = Swift.String
+}
+public struct RestStop : Swift.Codable, Swift.Equatable {
+  public enum StopType : Swift.String, Swift.Codable {
+    case serviceArea
+    case restArea
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let type: TrimbleMapsWebservicesClient.RestStop.StopType
+  public init(type: TrimbleMapsWebservicesClient.RestStop.StopType)
+  public static func == (a: TrimbleMapsWebservicesClient.RestStop, b: TrimbleMapsWebservicesClient.RestStop) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public let TMRoutingProfilesErrorDomain: Swift.String
+@objc @_hasMissingDesignatedInitializers open class TMRoutingProfiles : TrimbleMapsWebservicesClient.TMBaseClient {
+  public typealias CompletionHandler = (_ result: [TrimbleMapsWebservicesClient.Profile]?, _ error: Foundation.NSError?) -> Swift.Void
+  public static let shared: TrimbleMapsWebservicesClient.TMRoutingProfiles
+  public init(accountManager: TrimbleMapsAccounts.AccountManager = AccountManager.default)
+  @discardableResult
+  open func fetchRoutingProfiles(units: Swift.Int?, completionHandler: @escaping TrimbleMapsWebservicesClient.TMRoutingProfiles.CompletionHandler) -> Foundation.URLSessionDataTask
+  @discardableResult
+  open func fetchCustomRoutingProfiles(offset: Swift.Int?, limit: Swift.Int?, completionHandler: @escaping TrimbleMapsWebservicesClient.TMRoutingProfiles.CompletionHandler) -> Foundation.URLSessionDataTask
+  @objc deinit
+}
+public enum CongestionLevel : Swift.String, Swift.Codable, Swift.CaseIterable {
+  case unknown
+  case low
+  case moderate
+  case heavy
+  case severe
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [TrimbleMapsWebservicesClient.CongestionLevel]
+  public typealias RawValue = Swift.String
+  public static var allCases: [TrimbleMapsWebservicesClient.CongestionLevel] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public typealias NumericCongestionLevel = Swift.Int
+@objc open class TMRoutingProfilesResponse : ObjectiveC.NSObject, Swift.Codable {
+  public var message: Swift.String
+  public var data: TrimbleMapsWebservicesClient.ProfileData
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@objc open class ProfileData : ObjectiveC.NSObject, Swift.Codable {
+  public var profiles: [TrimbleMapsWebservicesClient.Profile]
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@objc open class Profile : ObjectiveC.NSObject, Swift.Codable {
+  public var name: Swift.String
+  public var vehicleType: TrimbleMapsWebservicesClient.VehicleType
+  public var units: TrimbleMapsWebservicesClient.Units
+  public var vehicleOptions: TrimbleMapsWebservicesClient.VehicleOptions?
+  public var routingOptions: TrimbleMapsWebservicesClient.RoutingOptions?
+  public var copilotOptions: TrimbleMapsWebservicesClient.CopilotOptions?
+  public init(name: Swift.String, vehicleType: TrimbleMapsWebservicesClient.VehicleType, units: TrimbleMapsWebservicesClient.Units, vehicleOptions: TrimbleMapsWebservicesClient.VehicleOptions? = nil, routingOptions: TrimbleMapsWebservicesClient.RoutingOptions? = nil, copilotOptions: TrimbleMapsWebservicesClient.CopilotOptions? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@objc open class VehicleOptions : ObjectiveC.NSObject, Swift.Codable {
+  public var vehicleConfig: TrimbleMapsWebservicesClient.VehicleConfig
+  public var governorSpeedLimit: Swift.Int?
+  public var hazmatType: TrimbleMapsWebservicesClient.Hazmat?
+  public var isPropaneRestricted: Swift.Bool?
+  public var tunnelCategory: TrimbleMapsWebservicesClient.TunnelCategory?
+  public init(vehicleConfig: TrimbleMapsWebservicesClient.VehicleConfig, hazmatType: TrimbleMapsWebservicesClient.Hazmat? = nil, governorSpeedLimit: Swift.Int? = nil, isPropaneRestricted: Swift.Bool? = nil, tunnelCategory: TrimbleMapsWebservicesClient.TunnelCategory? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@objc open class VehicleConfig : ObjectiveC.NSObject, Swift.Codable {
+  public var height: Swift.Double
+  public var width: Swift.Double
+  public var length: Swift.Double
+  public var weight: Swift.Double
+  public var maxWeightPerAxleGroup: Swift.Double
+  public init(height: Swift.Double, width: Swift.Double, length: Swift.Double, weight: Swift.Double, maxWeightPerAxleGroup: Swift.Double)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@objc open class RoutingOptions : ObjectiveC.NSObject, Swift.Codable {
+  public var ferries: TrimbleMapsWebservicesClient.Ferry?
+  public var restrictionZones: TrimbleMapsWebservicesClient.RestrictionZones?
+  public var useStateAndNationalNetwork: Swift.Bool?
+  public var routeType: TrimbleMapsWebservicesClient.RouteType?
+  public var tollRoads: TrimbleMapsWebservicesClient.TollRoads?
+  public var useOpenBorders: Swift.Bool?
+  public var elevationLimit: Swift.Int?
+  public init(ferries: TrimbleMapsWebservicesClient.Ferry? = nil, restrictionZones: TrimbleMapsWebservicesClient.RestrictionZones? = nil, routeType: TrimbleMapsWebservicesClient.RouteType? = nil, tollRoads: TrimbleMapsWebservicesClient.TollRoads? = nil, useOpenBorders: Swift.Bool? = nil, elevationLimit: Swift.Int? = nil, useStateAndNationalNetwork: Swift.Bool? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@objc open class RestrictionZones : ObjectiveC.NSObject, Swift.Codable {
+  public var allow: [TrimbleMapsWebservicesClient.RestrictionZone]?
+  public var avoid: [TrimbleMapsWebservicesClient.RestrictionZone]?
+  public var warn: [TrimbleMapsWebservicesClient.RestrictionZone]?
+  public init(allow: [TrimbleMapsWebservicesClient.RestrictionZone]? = nil, avoid: [TrimbleMapsWebservicesClient.RestrictionZone]? = nil, warn: [TrimbleMapsWebservicesClient.RestrictionZone]? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@objc open class CopilotOptions : ObjectiveC.NSObject, Swift.Codable {
+  public var displayRestrictions: Swift.Int
+  public init(displayRestrictions: Swift.Int)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public let TMGeocoderErrorDomain: Swift.String
+@objc open class TMGeocoderParams : ObjectiveC.NSObject {
+  @objc public init(region: Swift.String, query: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc open class TMGeocoder : TrimbleMapsWebservicesClient.TMBaseClient {
+  public typealias CompletionHandler = (_ result: TrimbleMapsWebservicesClient.TMGeocoderResponse?, _ error: Foundation.NSError?) -> Swift.Void
+  @objc(sharedGeocoder) public static let shared: TrimbleMapsWebservicesClient.TMGeocoder
+  public init(accountManager: TrimbleMapsAccounts.AccountManager = AccountManager.default)
+  @discardableResult
+  @objc(geocodeWithParams:completionHandler:) open func geocode(_ params: TrimbleMapsWebservicesClient.TMGeocoderParams, completionHandler: @escaping TrimbleMapsWebservicesClient.TMGeocoder.CompletionHandler) -> Foundation.URLSessionDataTask
+  @objc deinit
+}
+public struct Incident : Swift.Codable, Swift.Equatable {
+  public enum Kind : Swift.String {
+    case accident
+    case congestion
+    case construction
+    case disabledVehicle
+    case laneRestriction
+    case massTransit
+    case miscellaneous
+    case otherNews
+    case plannedEvent
+    case roadClosure
+    case roadHazard
+    case weather
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Impact : Swift.String, Swift.Codable {
+    case unknown
+    case critical
+    case major
+    case minor
+    case low
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var identifier: Swift.String
+  public var kind: TrimbleMapsWebservicesClient.Incident.Kind? {
+    get
+  }
+  public var description: Swift.String
+  public var creationDate: Foundation.Date
+  public var startDate: Foundation.Date
+  public var endDate: Foundation.Date
+  public var impact: TrimbleMapsWebservicesClient.Incident.Impact?
+  public var subtype: Swift.String?
+  public var subtypeDescription: Swift.String?
+  public var alertCodes: Swift.Set<Swift.Int>
+  public var lanesBlocked: TrimbleMapsWebservicesClient.BlockedLanes?
+  public var shapeIndexRange: Swift.Range<Swift.Int>
+  public init(identifier: Swift.String, type: TrimbleMapsWebservicesClient.Incident.Kind, description: Swift.String, creationDate: Foundation.Date, startDate: Foundation.Date, endDate: Foundation.Date, impact: TrimbleMapsWebservicesClient.Incident.Impact?, subtype: Swift.String?, subtypeDescription: Swift.String?, alertCodes: Swift.Set<Swift.Int>, lanesBlocked: TrimbleMapsWebservicesClient.BlockedLanes?, shapeIndexRange: Swift.Range<Swift.Int>)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public static func == (a: TrimbleMapsWebservicesClient.Incident, b: TrimbleMapsWebservicesClient.Incident) -> Swift.Bool
+}
+extension Turf.BoundingBox : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum GeometryError : Foundation.LocalizedError {
+  case cannotDecodePolyline(precision: Swift.Double)
+  public var failureReason: Swift.String? {
+    get
+  }
+  public var recoverySuggestion: Swift.String? {
+    get
+  }
+}
+public struct AttributeOptions : Swift.OptionSet, Swift.CustomStringConvertible {
+  public var rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let distance: TrimbleMapsWebservicesClient.AttributeOptions
+  public static let expectedTravelTime: TrimbleMapsWebservicesClient.AttributeOptions
+  public static let speed: TrimbleMapsWebservicesClient.AttributeOptions
+  public static let congestionLevel: TrimbleMapsWebservicesClient.AttributeOptions
+  public static let maximumSpeedLimit: TrimbleMapsWebservicesClient.AttributeOptions
+  public static let numericCongestionLevel: TrimbleMapsWebservicesClient.AttributeOptions
+  public init?(descriptions: [Swift.String])
+  public var description: Swift.String {
+    get
+  }
+  public typealias ArrayLiteralElement = TrimbleMapsWebservicesClient.AttributeOptions
+  public typealias Element = TrimbleMapsWebservicesClient.AttributeOptions
+  public typealias RawValue = Swift.Int
+}
+extension TrimbleMapsWebservicesClient.AttributeOptions : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+open class VisualInstructionBanner : Swift.Codable {
+  public init(distanceAlongStep: Turf.LocationDistance, primary: TrimbleMapsWebservicesClient.VisualInstruction, secondary: TrimbleMapsWebservicesClient.VisualInstruction?, tertiary: TrimbleMapsWebservicesClient.VisualInstruction?, quaternary: TrimbleMapsWebservicesClient.VisualInstruction?, drivingSide: TrimbleMapsWebservicesClient.DrivingSide)
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+  final public let distanceAlongStep: Turf.LocationDistance
+  final public let primaryInstruction: TrimbleMapsWebservicesClient.VisualInstruction
+  final public let secondaryInstruction: TrimbleMapsWebservicesClient.VisualInstruction?
+  final public let tertiaryInstruction: TrimbleMapsWebservicesClient.VisualInstruction?
+  final public let quaternaryInstruction: TrimbleMapsWebservicesClient.VisualInstruction?
+  public var drivingSide: TrimbleMapsWebservicesClient.DrivingSide
+  @objc deinit
+}
+extension TrimbleMapsWebservicesClient.VisualInstructionBanner : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.VisualInstructionBanner, rhs: TrimbleMapsWebservicesClient.VisualInstructionBanner) -> Swift.Bool
+}
+public class Waypoint : Swift.Codable {
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(coordinate: Turf.LocationCoordinate2D, coordinateAccuracy: TrimbleMapsWebservicesClient.LocationAccuracy? = nil, name: Swift.String? = nil)
+  public init(location: CoreLocation.CLLocation, heading: CoreLocation.CLHeading? = nil, name: Swift.String? = nil)
+  final public let coordinate: Turf.LocationCoordinate2D
+  public var coordinateAccuracy: TrimbleMapsWebservicesClient.LocationAccuracy?
+  public var targetCoordinate: Turf.LocationCoordinate2D?
+  public var allowsSnappingToClosedRoad: Swift.Bool
+  public var heading: Turf.LocationDirection?
+  public var headingAccuracy: Turf.LocationDirection?
+  open var allowsArrivingOnOppositeSide: Swift.Bool
+  public var name: Swift.String?
+  public var separatesLegs: Swift.Bool
+  @objc deinit
+}
+extension TrimbleMapsWebservicesClient.Waypoint : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.Waypoint, rhs: TrimbleMapsWebservicesClient.Waypoint) -> Swift.Bool
+}
+extension TrimbleMapsWebservicesClient.Waypoint : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum DirectionsError : Foundation.LocalizedError {
+  public init(code: Swift.String?, message: Swift.String?, response: Foundation.URLResponse?, underlyingError error: Swift.Error?)
+  case network(Foundation.URLError)
+  case noData
+  case invalidInput(message: Swift.String?)
+  case invalidResponse(Foundation.URLResponse?)
+  case unableToRoute
+  case noMatches
+  case tooManyCoordinates
+  case unableToLocate
+  case profileNotFound
+  case requestTooLarge
+  case rateLimited(rateLimitInterval: Foundation.TimeInterval?, rateLimit: Swift.UInt?, resetTime: Foundation.Date?)
+  case unknown(response: Foundation.URLResponse?, underlying: Swift.Error?, code: Swift.String?, message: Swift.String?)
+  public var failureReason: Swift.String? {
+    get
+  }
+  public var recoverySuggestion: Swift.String? {
+    get
+  }
+}
+extension TrimbleMapsWebservicesClient.DirectionsError : Swift.Equatable {
+  public static func == (lhs: TrimbleMapsWebservicesClient.DirectionsError, rhs: TrimbleMapsWebservicesClient.DirectionsError) -> Swift.Bool
+}
+public enum DirectionsCodingError : Swift.Error {
+  case missingOptions
+  case missingCredentials
+  public static func == (a: TrimbleMapsWebservicesClient.DirectionsCodingError, b: TrimbleMapsWebservicesClient.DirectionsCodingError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ResponseOptions {
+  case route(TrimbleMapsWebservicesClient.RouteOptions)
+}
+public struct RouteResponse {
+  public let httpResponse: Foundation.HTTPURLResponse?
+  public let identifier: Swift.String?
+  public var routes: [TrimbleMapsWebservicesClient.Route]?
+  public let waypoints: [TrimbleMapsWebservicesClient.Waypoint]?
+  public let options: TrimbleMapsWebservicesClient.ResponseOptions
+  public var created: Foundation.Date
+}
+extension TrimbleMapsWebservicesClient.RouteResponse : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc @_hasMissingDesignatedInitializers open class TMBaseClient : ObjectiveC.NSObject {
+  @objc deinit
+}
+extension TrimbleMapsWebservicesClient.RouteShapeFormat : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.RouteShapeFormat : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.RouteShapeFormat : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.RouteShapeResolution : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.RouteShapeResolution : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.RouteShapeResolution : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.MeasurementSystem : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.MeasurementSystem : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.MeasurementSystem : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.Ferry : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.Ferry : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.Ferry : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.Hazmat : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.Hazmat : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.Hazmat : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.VehicleType : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.VehicleType : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.VehicleType : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.Units : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.Units : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.Units : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.TollRoads : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.TollRoads : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.TollRoads : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.RouteType : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.RouteType : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.RouteType : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.TruckStyle : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.TruckStyle : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.TruckStyle : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.TunnelCategory : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.TunnelCategory : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.TunnelCategory : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.RestrictionZone : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.RestrictionZone : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.RestrictionZone : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.TollCollection.CollectionType : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.TollCollection.CollectionType : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.TollCollection.CollectionType : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.TransportType : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.TransportType : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.TransportType : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.ManeuverType : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.ManeuverType : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.ManeuverType : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.ManeuverDirection : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.ManeuverDirection : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.ManeuverDirection : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.SignStandard : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.SignStandard : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.SignStandard : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.RouteLeg.CodingKeys : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.RouteLeg.CodingKeys : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.RouteLeg.CodingKeys : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.DrivingSide : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.DrivingSide : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.DrivingSide : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.VisualInstruction.Component.ImageRepresentation.Format : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.VisualInstruction.Component.ImageRepresentation.Format : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.VisualInstruction.Component.ImageRepresentation.Format : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.MapboxStreetsRoadClass : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.MapboxStreetsRoadClass : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.MapboxStreetsRoadClass : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.RestStop.StopType : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.RestStop.StopType : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.RestStop.StopType : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.CongestionLevel : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.CongestionLevel : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.CongestionLevel : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.Incident.Kind : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.Incident.Kind : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.Incident.Kind : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.Incident.Impact : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.Incident.Impact : Swift.Hashable {}
+extension TrimbleMapsWebservicesClient.Incident.Impact : Swift.RawRepresentable {}
+extension TrimbleMapsWebservicesClient.DirectionsCodingError : Swift.Equatable {}
+extension TrimbleMapsWebservicesClient.DirectionsCodingError : Swift.Hashable {}

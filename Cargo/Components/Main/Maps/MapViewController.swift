@@ -43,6 +43,7 @@ import TrimbleMaps
 import TrimbleMapsAccounts
 
 
+
 class BasicMapViewController: UIViewController, AccountManagerDelegate {
     
     var coordinator: MapCoordinator?
@@ -80,7 +81,7 @@ class BasicMapViewController: UIViewController, AccountManagerDelegate {
         }
         
         mapView.setCenter(coord, animated: true)
-        print(userLocation)
+        
     }
     
     

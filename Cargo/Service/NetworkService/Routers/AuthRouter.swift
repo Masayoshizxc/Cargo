@@ -19,7 +19,7 @@ enum AuthRouter: BaseRouterLogin {
         case .signIn:
             return "/shipper/login"
         case .signUp:
-            return "/api/auth/signup"
+            return "/shipper/register"
         case .signInTrans:
             return "/transporter/login"
         case .logout:

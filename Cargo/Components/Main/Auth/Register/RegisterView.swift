@@ -34,49 +34,49 @@ class RegisterView: UIViewController {
     }()
     
     
-    private lazy var fName: ForText = {
+    lazy var fName: ForText = {
         let t = ForText()
         t.placeholder = "First name"
         t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         return t
     }()
     
-    private lazy var lName: ForText = {
+    lazy var lName: ForText = {
         let t = ForText()
         t.placeholder = "Last name"
         t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         return t
     }()
     
-    private lazy var emailField: ForText = {
+    lazy var emailField: ForText = {
         let t = ForText()
         t.placeholder = "Email"
         t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         return t
     }()
     
-    private lazy var numberField: ForText = {
+    lazy var numberField: ForText = {
         let t = ForText()
         t.placeholder = "Phone number"
         t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         return t
     }()
     
-    private lazy var passwordField: ForText = {
+    lazy var passwordField: ForText = {
         let t = ForText()
         t.placeholder = "Password"
         t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         return t
     }()
     
-    private lazy var confirmPasswordField: ForText = {
+    lazy var confirmPasswordField: ForText = {
         let t = ForText()
         t.placeholder = "Confirm password"
         t.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         return t
     }()
     
-    private lazy var loginButton: UIButton = {
+    lazy var loginButton: UIButton = {
         let b = UIButton()
         b.setTitle("Log in", for: .normal)
         b.setTitleColor(.black, for: .normal)
@@ -85,7 +85,7 @@ class RegisterView: UIViewController {
         return b
     }()
     
-    private lazy var registerButton: UIButton = {
+    lazy var registerButton: UIButton = {
         let b = UIButton()
         b.setTitle("Register", for: .normal)
         b.backgroundColor = R.color.goldYellow()
@@ -97,7 +97,7 @@ class RegisterView: UIViewController {
         return b
     }()
     
-    private lazy var remindLabel: UILabel = {
+    lazy var remindLabel: UILabel = {
         let l = UILabel()
         l.text = "Do you have an account? "
         l.font = R.font.light(size: 12)

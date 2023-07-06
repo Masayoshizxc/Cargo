@@ -7,11 +7,24 @@
 
 import UIKit
 import SnapKit
+import Alamofire
 
 class RegisterViewController: UIViewController {
     
     var coordinator: MainCoordinator?
-    var ui = RegisterView()
+    private var ui = RegisterView()
+    private let viewModel: RegisterViewModelProtocol
+    
+    init(viewModel: RegisterViewModelProtocol = RegisterViewModel()){
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     
     private lazy var image: UIImageView = {
         let i = UIImageView()
@@ -28,6 +41,7 @@ class RegisterViewController: UIViewController {
         setupConstraints()
         hideKeyboardWhenTappedAround()
         navigationItem.leftBarButtonItem = nil
+        ui.registerButton.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,21 +49,45 @@ class RegisterViewController: UIViewController {
         presentChild()
     }
     func presentChild() {
-        let childVC = RegisterView()
-        childVC.didDismiss = { [weak self] in
+        
+        ui.didDismiss = { [weak self] in
             self?.performActionAfterDismissal()
         }
-        if let vc = childVC.presentationController as? UISheetPresentationController {
+        if let vc = ui.presentationController as? UISheetPresentationController {
             vc.detents = [.medium(), .large()]
         }
-        childVC.isModalInPresentation = true
-        present(childVC, animated: true,completion: nil)
+        ui.isModalInPresentation = true
+        present(ui, animated: true,completion: nil)
     }
     
     func performActionAfterDismissal() {
         
         self.dismiss(animated: true)
         coordinator?.start()
+    }
+    
+    @objc func didTapRegisterButton() {
+        guard let firstName = ui.fName.text,
+              let lastName = ui.lName.text, let email = ui.emailField.text, let password = ui.passwordField.text, let phone = ui.numberField.text
+        else { return
+        }
+        let parameters: [String : Any] = [
+            "name" : "\(firstName) \(lastName)",
+            "description" : "",
+            "email" : email,
+            "password" : password,
+            "phone" : phone
+        ]
+        viewModel.signUp(params: parameters) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success:
+                let sheet = UIAlertController(title: "Success", message: "Confirm registration in your email", preferredStyle: .alert)
+                self.performActionAfterDismissal()
+            case .failure:
+                print("error")
+            }
+        }
     }
     
 }
